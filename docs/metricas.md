@@ -11,9 +11,9 @@ Um arquivo só, uma linha por medida. É daqui que saem o README, o vídeo e o p
 
 ## Tabela
 
-| ID | O que medimos | Antes | Depois | Como medimos | Data | Quem | O que significa (1 frase) |
-|---|---|---|---|---|---|---|---|
-| M1 | Tempo para o aluno sair das respostas marcadas e chegar a "quais erros custaram mais" | ainda não medi | ainda não medi | Cronometrar 3 pessoas fazendo à mão (gabarito + planilha) e depois na ferramenta | | | |
-| M2 | Erro da estimativa de nota contra a nota oficial, por área | ainda não medi neste repositório | ainda não medi | Comparar a estimativa com notas oficiais de provas que já têm resultado | | | |
-| M3 | Alunos que testaram com dado deles, sem nos dar dado pessoal | 0 | ainda não medi | Contar quem usou a demo | | | |
-| M4 | Tempo da demo no ar, do primeiro acesso ao mapa de erros | ainda não medi | ainda não medi | Cronometrar na demo hospedada | | | |
+| ID | O que medimos | Antes | Depois | Como medimos | Data | Quem | O que significa (1 frase) | Ligado a (decisão, PR) |
+|---|---|---|---|---|---|---|---|---|
+| M1 | Tempo para o aluno sair das respostas marcadas e chegar a "quais erros custaram mais" | ainda não medi | ainda não medi | Cronometrar 3 pessoas fazendo à mão (gabarito + planilha) e depois na ferramenta | | | | |
+| M2 | Erro da estimativa de nota contra a nota oficial, por área | ainda não medi neste repositório | ainda não medi | Comparar a estimativa com notas oficiais de provas que já têm resultado | | | | |
+| M3 | Alunos que testaram com dado deles, sem nos dar dado pessoal | 0 | ainda não medi | Contar quem usou a demo | | | | |
+| M4 | Tempo da demo no ar, do primeiro acesso ao mapa de erros | ainda não medi | ainda não medi | Cronometrar na demo hospedada | | | | |

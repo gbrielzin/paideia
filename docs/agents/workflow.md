@@ -7,6 +7,26 @@ Rascunho v0. Siga na ordem. Pule um passo só se a pessoa disser que pode.
 - [ ] Sei qual é a tarefa em uma frase. Se não souber, pergunto.
 - [ ] Estou numa branch própria (`feat/...`, `fix/...`, `docs/...`), nunca direto na `main`.
 
+## 1b. Gancho de história (antes de começar uma funcionalidade)
+**Pare e pergunte** antes de escrever o código, quando a tarefa for:
+- uma funcionalidade nova que o aluno vai ver, **ou**
+- algo que troca um passo manual por um automático, **ou**
+- uma decisão de arquitetura ou de framework com mais de uma opção.
+
+Não pergunte em ajuste pequeno, correção de texto ou refatoração sem efeito visível.
+
+A pergunta é sempre esta, curta:
+> "Isto pode virar uma história de antes e depois? (1) Qual é o problema, em uma frase? (2) Dá para medir o jeito manual **agora**, antes de construir (tempo, passos ou erros)? (3) Que número vamos registrar?"
+
+Se a resposta for sim:
+1. Meça o "antes" **primeiro** e registre em `docs/metricas.md` (commit só do "antes").
+2. Construa a funcionalidade.
+3. Meça o "depois" do mesmo jeito e complete a linha da tabela.
+4. Se houve escolha de arquitetura, registre em `docs/decisions/` e ligue o ID na linha da tabela.
+
+Assim o histórico mostra o "antes" medido **antes** do código, e ninguém precisa lembrar de cabeça.
+Se a resposta for não, anote "sem história" no PR e siga em frente.
+
 ## 2. Durante
 - Mudanças pequenas. Um assunto por commit e por PR.
 - Mensagem de commit em uma linha, no formato `tipo(área): o que mudou`.

@@ -27,5 +27,8 @@ jobs:
       - name: R1, procurar segredo em todo o histórico
         run: gitleaks detect --redact --verbose
 
+      - name: R9, nada fora do mapa de pastas
+        run: sh scripts/check-structure.sh
+
       - name: R4, mensagens de commit sem IA como coautora
         run: git log --format=%B | sh scripts/check-commit-message.sh

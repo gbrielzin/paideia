@@ -34,7 +34,8 @@ Cada regra diz o que fazer, por quê e como é conferida. Se uma regra atrapalha
 - `docs/metricas.md`: um arquivo só, uma linha por número medido (antes, depois, como medimos).
 - `docs/arquitetura.md`: um arquivo só, criado depois da call: diagrama, como funciona o fluxo e links para as decisões (stack e framework).
 - `scratch/fontes/`: material bruto de terceiros, **ignorado pelo git**.
-- Código e site: pastas definidas após a call (stack ainda em aberto).
+- Código e site: pastas definidas após a call (stack ainda em aberto). `web/`, `api/` e `data/` estão reservadas.
+- **Este mapa é conferido por máquina:** `scripts/check-structure.sh` (rodado na CI) falha se existir algo fora dele. Ao criar algo novo, atualize o mapa e as listas do script no mesmo PR.
 
 ## Prioridades de esforço (orientação, não regra inviolável)
 Quando o tempo apertar, nesta ordem. Os 4 critérios do evento valem o mesmo (25 pontos cada).
@@ -48,6 +49,7 @@ Quando o tempo apertar, nesta ordem. Os 4 critérios do evento valem o mesmo (25
 
 ## Como trabalhar
 - Passo a passo (antes, durante, antes de dizer "pronto"): [`docs/agents/workflow.md`](docs/agents/workflow.md)
+- **Antes de qualquer funcionalidade nova, pare e faça a pergunta do "gancho de história"** (seção 1b do fluxo): dá para medir o jeito manual agora e virar um antes e depois em `docs/metricas.md`?
 - Como responder ao time: [`docs/agents/resposta.md`](docs/agents/resposta.md)
 - Decisões importantes viram arquivo em `docs/decisions/`. O padrão é [`docs/templates/problema.md`](docs/templates/problema.md).
 
