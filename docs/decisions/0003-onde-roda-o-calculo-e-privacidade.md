@@ -1,8 +1,8 @@
 # 0003: onde roda o cálculo da TRI e o que dizemos sobre privacidade
 
 - **Data:** 05/11/2026
-- **Quem participou:** Gabriel e Murilo (a decidir)
-- **Estado:** **DECIDIDA em 05/11/2026: opção A** (o Murilo concordou). Falta verificar no código que a API realmente não guarda nada.
+- **Quem participou:** Gabriel e Murilo
+- **Estado:** **DECIDIDA em 05/11/2026: opção A** (o Murilo concordou). Falta verificar no código que a API realmente não guarda nada. [Conferido - Murilo]
 
 ## Problema
 O README diz que os dados do aluno ficam só no aparelho e que nenhum dado é enviado a servidores. Mas o desenho atual (`docs/arquitetura.md`) manda as respostas marcadas para a API Spring em `server/`. As duas coisas não podem ser verdade ao mesmo tempo, e o jurado pode apontar isso.
