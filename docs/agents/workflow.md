@@ -27,6 +27,14 @@ Se a resposta for sim:
 Assim o histórico mostra o "antes" medido **antes** do código, e ninguém precisa lembrar de cabeça.
 Se a resposta for não, anote "sem história" no PR e siga em frente.
 
+## 1c. Heurísticas de decisão (regras de bolso)
+Toda decisão em `docs/decisions/` diz qual heurística usou e mostra o trade-off na tabela "Alternativas consideradas".
+1. **Núcleo na stack que a pessoa domina.** Novidade só onde pode falhar sem derrubar a demo.
+2. **Demo no ar vale mais que tecnologia nova.** O jurado julga o que abre (regulamento 7.3).
+3. **Meça antes de construir** (gancho de história, seção 1b).
+4. **Na dúvida, corte da camada mais externa** (acessibilidade, voz, foto), nunca do núcleo.
+5. **Prefira o que dá para desfazer.** Decisão difícil de reverter pede uma linha a mais de justificativa.
+
 ## 2. Durante
 - Mudanças pequenas. Um assunto por commit e por PR.
 - Mensagem de commit em uma linha, no formato `tipo(área): o que mudou`.
