@@ -33,7 +33,7 @@ O **Paideia** é uma plataforma open-source que traduz os parâmetros estatísti
 
 | Módulo | Tecnologia | Descrição |
 | :--- | :--- | :--- |
-| **API Backend** | Java 21 + Spring Boot 4.1.2[[cite:1](docs/decisions/0001-java-21-spring-boot-4-1.md)] | ... |
+| **API Backend** | Java 21 + Spring Boot 4.1.2(ver [decisão 0001](docs/decisions/0001-java-21-spring-boot-4-1.md)) | ... |
 | **TRI Data Engine** | Python | ... |
 | **Frontend UI** | React | ... |
 | **AI Agents & Tooling** | Antigravity, Claude Code, JunieAI, | ... |
@@ -44,11 +44,11 @@ O **Paideia** é uma plataforma open-source que traduz os parâmetros estatísti
 
 ## ⚙️ Como Executar o Projeto Localmente
 
-Pré-requisitos
-Java 21+
-Maven 3.8+
-Node.js xx
-Python xx
+**Pré-requisitos:**
+- Java 21+
+- Maven 3.8+
+- Node.js xx
+- Python xx
 
 ### 1. Clonar repositório
 
