@@ -24,6 +24,10 @@ A escolher. Ver alternativas.
 - Vantagem: acessibilidade com quem conhece, e carga mais equilibrada.
 - Trade-off: o núcleo (cálculo da TRI) fica em Java com quem tem menos prática nessa stack. Contraria a heurística 1 justamente no núcleo.
 
+## O que já sabemos
+- O Gabriel trabalha mais com Python. O conforto com React e com Java/Spring não foi medido.
+- Uma forma de aproveitar o Python em qualquer opção: o Gabriel escreve a **implementação de referência da TRI em Python** e gera casos de teste (entrada e saída esperada), que o código Java do `server/` precisa reproduzir. Assim o Python valida o Java.
+
 ## Para decidir (perguntas)
 1. Gabriel: qual o seu conforto com React + Tailwind, de 1 a 5, e com Java/Spring?
 2. Murilo: dá para acumular front e back-end nos dias até 19/11?
