@@ -1,0 +1,47 @@
+# Segredos: repo PUBLICO, nunca commitar
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials*.json
+
+# Bancos e dados (dado de aluno nunca entra no repo)
+*.db
+*.sqlite
+*.sqlite3
+data/raw/
+data/private/
+*.zip
+
+# Java / Spring
+target/
+build/
+out/
+.gradle/
+*.class
+*.jar
+*.iml
+
+# Node / React
+node_modules/
+dist/
+.next/
+coverage/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editores e sistema
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs e rascunhos locais
+*.log
+scratch/
