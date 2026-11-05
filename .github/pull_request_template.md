@@ -16,4 +16,5 @@
 - [ ] Nenhum código copiado de fora (R2)
 - [ ] Commits sem IA como coautor (R4)
 - [ ] Estimativas têm aviso e erro medido (R5)
+- [ ] Desenho preparado se mexe em fluxo, arquitetura, dados ou pastas (R11), ou escrito "sem desenho"
 - [ ] Números têm fonte ou estão como "ainda não medi" (R6)

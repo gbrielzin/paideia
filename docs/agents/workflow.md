@@ -35,6 +35,13 @@ Toda decisão em `docs/decisions/` diz qual heurística usou e mostra o trade-of
 4. **Na dúvida, corte da camada mais externa** (acessibilidade, voz, foto), nunca do núcleo.
 5. **Prefira o que dá para desfazer.** Decisão difícil de reverter pede uma linha a mais de justificativa.
 
+## 1d. Visualização (desenho preparado junto)
+Se a tarefa mexe em **fluxo, arquitetura, modelo de dados ou layout de pastas**, prepare o desenho **antes de pedir revisão**, não depois.
+- **Simples:** Mermaid ou árvore de pastas dentro do `.md` da decisão ou de `docs/arquitetura.md` (o GitHub desenha o Mermaid sozinho).
+- **Complexo:** Excalidraw em `docs/evidence/diagrams/`, com o PNG exportado ao lado, e o link no `.md`.
+- Atualize `docs/arquitetura.md` se o fluxo principal mudou.
+- Sem desenho necessário? Escreva "sem desenho" no PR.
+
 ## 2. Durante
 - Mudanças pequenas. Um assunto por commit e por PR.
 - Mensagem de commit em uma linha, no formato `tipo(área): o que mudou`.

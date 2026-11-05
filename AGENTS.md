@@ -22,6 +22,7 @@ Cada regra diz o que fazer, por quê e como é conferida. Se uma regra atrapalha
 | R8 | Texto, artigo, transcrição ou imagem de terceiros, por inteiro, só em `scratch/fontes/` (ignorado pelo git). No repositório vai apenas um resumo em palavras próprias, com link e data, em `docs/referencias.md` | Direitos autorais e regulamento | Revisão humana do diff |
 | R9 | Não criar pasta nem arquivo fora do mapa abaixo. Se faltar lugar, atualize o mapa no mesmo PR e diga por quê | Evitar bagunça: tudo tem um lugar só | Revisão humana do diff |
 | R10 | Documentação com termo técnico quando couber (trade-off, deploy, endpoint, ADR, pipeline). Na primeira vez, explicar entre parênteses | O público avalia implementação e comunicação; o termo certo mostra domínio e é mais preciso | Revisão humana do texto |
+| R11 | Se a funcionalidade, a decisão ou o PR envolver fluxo, arquitetura, modelo de dados ou layout de pastas, **entregar o desenho no mesmo PR**. Preferir Mermaid ou árvore de pastas no próprio `.md`; Excalidraw (com PNG exportado) em `docs/evidence/diagrams/` quando for complexo | Desenho versionado junto do código se mantém atualizado e vira material do vídeo e do README | Revisão humana do PR |
 
 ## Onde as coisas ficam (mapa único)
 - Raiz: `AGENTS.md`, `CLAUDE.md`, `README.md` e os arquivos de configuração (`.gitignore`, `.gitattributes`, `.env.example`, `LICENSE`).
