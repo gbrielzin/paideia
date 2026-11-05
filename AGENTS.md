@@ -19,6 +19,28 @@ Cada regra diz o que fazer, por quê e como é conferida. Se uma regra atrapalha
 | R5 | Estimativa nunca aparece como nota oficial. Sempre com aviso e erro medido | Honestidade com o aluno e com o jurado | Revisão da tela |
 | R6 | Nunca inventar número, fonte ou resultado. Sem medida, escreva "ainda não medi" e como vai medir | Credibilidade | Revisão do texto |
 | R7 | Não reescrever histórico nem fazer force push sem pedir | Os commits são acompanhados pela organização | Humano |
+| R8 | Texto, artigo, transcrição ou imagem de terceiros, por inteiro, só em `scratch/fontes/` (ignorado pelo git). No repositório vai apenas um resumo em palavras próprias, com link e data, em `docs/referencias.md` | Direitos autorais e regulamento | Revisão humana do diff |
+| R9 | Não criar pasta nem arquivo fora do mapa abaixo. Se faltar lugar, atualize o mapa no mesmo PR e diga por quê | Evitar bagunça: tudo tem um lugar só | Revisão humana do diff |
+
+## Onde as coisas ficam (mapa único)
+- `AGENTS.md`, `CLAUDE.md`, `README.md`: raiz, e só esses.
+- `docs/hackbrasil/`: regras do evento e resumo da live.
+- `docs/agents/`: fluxo de trabalho e estilo de resposta.
+- `docs/decisions/`: uma decisão por arquivo, no modelo de `docs/templates/problema.md`.
+- `docs/journey/`: linha do tempo escrita. `docs/evidence/`: prints e diagramas aprovados, com legenda no `journey/`.
+- `docs/referencias.md`: um arquivo só, uma linha por fonte (link, data, o que aprendemos).
+- `scratch/fontes/`: material bruto de terceiros, **ignorado pelo git**.
+- Código e site: pastas definidas após a call (stack ainda em aberto).
+
+## Prioridades de esforço (orientação, não regra inviolável)
+Quando o tempo apertar, nesta ordem. Os 4 critérios do evento valem o mesmo (25 pontos cada).
+1. **Demo ponta a ponta, no ar e funcionando** (execução técnica).
+2. **Vídeo de até 3 minutos** mostrando o produto funcionando (comunicação).
+3. **Encaixe na trilha:** o problema e o público dentro de "Acesso à educação" (regulamento 5.4).
+4. **Código legível**, com decisões registradas em `docs/decisions/` (implementação).
+5. **Documentação e prints** ao redor de tudo isso, em torno de 10% do tempo. É uma estimativa do time, não uma regra do evento.
+
+**Regra de corte:** se atrasar, tire da camada mais externa para a mais interna (acessibilidade, depois voz, depois foto). A tabela manual, o mapa de erros e o "o que revisar agora" não saem.
 
 ## Como trabalhar
 - Passo a passo (antes, durante, antes de dizer "pronto"): [`docs/agents/workflow.md`](docs/agents/workflow.md)
