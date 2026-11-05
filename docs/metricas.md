@@ -17,3 +17,4 @@ Um arquivo só, uma linha por medida. É daqui que saem o README, o vídeo e o p
 | M2 | Erro da estimativa de nota contra a nota oficial, por área | ainda não medi neste repositório | ainda não medi | Comparar a estimativa com notas oficiais de provas que já têm resultado | | | | |
 | M3 | Alunos que testaram com dado deles, sem nos dar dado pessoal | 0 | ainda não medi | Contar quem usou a demo | | | | |
 | M4 | Tempo da demo no ar, do primeiro acesso ao mapa de erros | ainda não medi | ainda não medi | Cronometrar na demo hospedada | | | | |
+| M5 | Entrevistas de validação do problema com estudantes (meta: 5), sem coletar dado pessoal | 0 | ainda não medi | Contar entrevistas feitas; perguntas em `docs/journey/` do dia | | | | |

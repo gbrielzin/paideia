@@ -21,6 +21,21 @@ Antes de resolver qualquer decisão, escreva o plano em 4 linhas (no resumo do d
 4. **Qual o próximo passo** se a resposta for sim, e se for não.
 Só depois disso abra o `docs/decisions/NNNN`.
 
+## 1f. Oportunidade de documentar (o agente cobra)
+O agente fica atento e **pergunta na hora**, em uma frase, quando acontecer algo da tabela:
+
+| Gatilho | O que cobrar |
+|---|---|
+| Call ou reunião (começou, terminou ou foi combinada) | Início, fim, **onde** (Discord, WhatsApp, Meet), **por quê**, qual era o problema, o que saiu. Vai para "Tempo juntos" do dia. Horas reais, nunca estimadas (R6) |
+| Decisão tomada em conversa | Registrar em `docs/decisions/` ou marcar "pendente de registro" |
+| Conversa de WhatsApp que mostra um problema, uma decisão ou um combinado | Sugerir print. Antes: o outro concordou em aparecer? Telefone e nome ocultos (R3). Salvar em `docs/evidence/screenshots/NN_descricao_AAAA-MM-DD.png` e legenda em `docs/journey/` |
+| Conversa ou entrevista com aluno ou pessoa de teste | Perfil **sem nome**, perguntas, resposta. Conta na linha M5 de `docs/metricas.md` (meta: 5). Pedir permissão |
+| Passo manual que poderia ser medido | Gancho de história (seção 1b) |
+
+Formato da cobrança: "Vi uma chance de documentar: [o quê]. Registro agora ou deixo pendente no resumo do dia?"
+Se a resposta for "pendente", entra em **Pendências de documentação** do dia, e o fechamento lista o que ficou sem registro.
+Limites: não interromper tarefa pequena e cobrar uma vez por gatilho. O agente só sabe o que você conta: ele não enxerga o WhatsApp nem a call.
+
 ## 1b. Gancho de história (antes de começar uma funcionalidade)
 **Pare e pergunte** antes de escrever o código, quando a tarefa for:
 - uma funcionalidade nova que o aluno vai ver, **ou**
@@ -78,13 +93,17 @@ Se a tarefa mexe em **fluxo, arquitetura, modelo de dados ou layout de pastas**,
 - Segredo foi commitado: **parar**, avisar o time, revogar a chave. Apagar o arquivo não basta, o histórico guarda.
 - Dúvida sobre regra do evento: ver `docs/hackbrasil/regras-do-evento.md` e, se preciso, escrever para oi@hackbrasil.com.
 
-## 6. Fechamento do dia (quando pararem)
-Quando alguém disser "vamos parar", "encerrar" ou "resumo do dia", o agente cria ou atualiza `docs/journey/AAAA-MM-DD.md` com:
-1. **Feito hoje** (decisões com ID, PRs, o que foi publicado).
-2. **Números medidos** (ou "nada medido").
-3. **Decisões pendentes, em ordem de dependência**, com um diagrama Mermaid.
-4. **Em andamento com** (quem está com qual arquivo).
-5. **Próximos passos**, no máximo 5, na ordem em que devem acontecer.
+## 6. Fechamento do dia (e quando o projeto para)
+Se o trabalho parar, por fim de dia ou por qualquer motivo ("vamos parar", "encerrar", "resumo do dia"), **o resumo é atualizado antes**. O agente cria ou completa `docs/journey/AAAA-MM-DD.md` a partir de `docs/templates/dia.md`:
+1. **Feito hoje**: decisões com ID, PRs, o que foi publicado.
+2. **Tempo juntos**: calls e sessões com início, fim, horas, onde, por quê, problema e resultado.
+3. **Números medidos** (ou "nada medido").
+4. **Decisões pendentes**, em ordem de dependência, com diagrama Mermaid.
+5. **Em andamento com**: quem está com qual arquivo.
+6. **Evidências**: prints tirados e prints a tirar (com consentimento e R3 conferidos).
+7. **Pendências de documentação** (seção 1f) e **entrevistas em aberto**.
+8. **Próximos passos**, no máximo 5, na ordem.
 
-Formato visual: Mermaid dentro do `.md`. Se o dia teve fluxo complexo, o agente oferece também um Excalidraw em `docs/evidence/diagrams/`.
-Termine fazendo commit e push do resumo, para o outro ver ao puxar.
+Atualizações menores durante o dia: quando muda quem está com um arquivo, só a linha de "Em andamento com"; quando uma decisão fecha, "Feito hoje" e "Decisões pendentes".
+Formato visual: Mermaid dentro do `.md`; Excalidraw em `docs/evidence/diagrams/` se o dia teve fluxo complexo.
+Termine com commit e push, para o outro ver ao puxar.
