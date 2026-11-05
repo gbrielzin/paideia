@@ -7,6 +7,19 @@ Rascunho v0. Siga na ordem. Pule um passo só se a pessoa disser que pode.
 - [ ] Sei qual é a tarefa em uma frase. Se não souber, pergunto.
 - [ ] Estou numa branch própria (`feat/...`, `fix/...`, `docs/...`), nunca direto na `main`.
 
+## 0. Abertura do dia (máximo 10 minutos)
+Antes de qualquer trabalho, os dois respondem estas perguntas e o agente escreve o **Plano do dia** no topo de `docs/journey/AAAA-MM-DD.md`:
+1. **Onde paramos?** Ler "Próximos passos" e "Em andamento com" do último resumo.
+2. **Quanto tempo temos?** Dias até 30/11 às 23h59 e horas reais de cada um hoje (lembrar as datas de pouca disponibilidade).
+3. **Qual é o resultado de hoje, em uma frase?** Um só. Se forem dois, o segundo vira "se sobrar".
+4. **O que está bloqueado ou depende de decisão?** Listar em ordem de dependência (seção 1e).
+5. **Tem algo para medir antes de construir?** Gancho de história (seção 1b).
+6. **Quem está com qual arquivo hoje?** Preencher "Em andamento com" (seção 1a).
+7. **Estamos no prazo?** Se não, qual camada cortamos (regra de corte do `AGENTS.md`)?
+8. **O que vamos documentar hoje?** Call, prints, entrevistas (seção 1f).
+
+Depois disso, siga para a seção 1a e comece.
+
 ## 1a. Sincronizar e ver quem está com o quê
 Antes de editar qualquer coisa:
 - [ ] `git pull --rebase` (no dia 05/11 um push foi recusado porque o Murilo tinha subido um README no meio).

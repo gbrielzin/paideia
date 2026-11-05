@@ -1,5 +1,14 @@
 # Resumo do dia: AAAA-MM-DD
 
+## Plano do dia (preencher na abertura, seção 0 do fluxo)
+- **Onde paramos:**
+- **Tempo de hoje (horas reais de cada um):**
+- **Resultado de hoje, em uma frase:**
+- **Bloqueado ou dependente de decisão:**
+- **Medir antes de construir:**
+- **Estamos no prazo? Se não, o que cortamos:**
+- **O que vamos documentar hoje:**
+
 ## Feito hoje
 -
 
