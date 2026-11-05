@@ -1,0 +1,3 @@
+#!/bin/sh
+# R4: bloqueia IA como coautora na mensagem do commit.
+exec "$(git rev-parse --show-toplevel)/scripts/check-commit-message.sh" < "$1"

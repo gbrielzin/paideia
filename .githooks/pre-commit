@@ -1,0 +1,9 @@
+#!/bin/sh
+# R1: procura segredo nas mudanças que vão para o commit.
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "AVISO (R1): gitleaks não está instalado, a checagem local foi pulada." >&2
+  echo "Instale (Windows: winget install Gitleaks.Gitleaks) para ter a trava local." >&2
+  echo "A CI ainda confere depois do push." >&2
+  exit 0
+fi
+exec gitleaks protect --staged --redact --verbose

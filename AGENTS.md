@@ -12,10 +12,10 @@ Cada regra diz o que fazer, por quê e como é conferida. Se uma regra atrapalha
 
 | # | Regra | Por quê | Como é conferida |
 |---|---|---|---|
-| R1 | Nunca commitar segredo: senha, chave de API, token, `.env`, banco de dados. Só nomes em `.env.example` | Repositório público | gitleaks (a configurar) + revisão antes de cada commit |
+| R1 | Nunca commitar segredo: senha, chave de API, token, `.env`, banco de dados. Só nomes em `.env.example` | Repositório público | Hook `pre-commit` com gitleaks + CI + revisão antes de cada commit |
 | R2 | Nenhum código de fora deste repositório. Só biblioteca ou open source já público, com a licença citada | Regulamento 6.1/6.2: desclassifica | Revisão humana do diff |
 | R3 | Nenhum dado pessoal real de aluno ou de terceiros, nem em teste, exemplo ou print | Regulamento 6.9 e LGPD | Revisão humana do diff |
-| R4 | Commits sem IA como coautor: nada de `Co-Authored-By` de IA nem "Generated with" | A autoria é das pessoas do time | Hook `commit-msg` (a criar) + CI |
+| R4 | Commits sem IA como coautor: nada de `Co-Authored-By` de IA nem "Generated with" | A autoria é das pessoas do time | Hook `commit-msg` + CI |
 | R5 | Estimativa nunca aparece como nota oficial. Sempre com aviso e erro medido | Honestidade com o aluno e com o jurado | Revisão da tela |
 | R6 | Nunca inventar número, fonte ou resultado. Sem medida, escreva "ainda não medi" e como vai medir | Credibilidade | Revisão do texto |
 | R7 | Não reescrever histórico nem fazer force push sem pedir | Os commits são acompanhados pela organização | Humano |
@@ -23,7 +23,9 @@ Cada regra diz o que fazer, por quê e como é conferida. Se uma regra atrapalha
 | R9 | Não criar pasta nem arquivo fora do mapa abaixo. Se faltar lugar, atualize o mapa no mesmo PR e diga por quê | Evitar bagunça: tudo tem um lugar só | Revisão humana do diff |
 
 ## Onde as coisas ficam (mapa único)
-- `AGENTS.md`, `CLAUDE.md`, `README.md`: raiz, e só esses.
+- Raiz: `AGENTS.md`, `CLAUDE.md`, `README.md` e os arquivos de configuração (`.gitignore`, `.gitattributes`, `.env.example`, `LICENSE`).
+- `.githooks/` e `scripts/`: travas locais (R1 e R4). Depois de clonar, rode `sh scripts/setup-hooks.sh` e instale o gitleaks (`winget install Gitleaks.Gitleaks`).
+- `.github/`: modelo de PR e `workflows/guardrails.yml` (a CI que confere R1 e R4 depois do push).
 - `docs/hackbrasil/`: regras do evento e resumo da live.
 - `docs/agents/`: fluxo de trabalho e estilo de resposta.
 - `docs/decisions/`: uma decisão por arquivo, no modelo de `docs/templates/problema.md`.
