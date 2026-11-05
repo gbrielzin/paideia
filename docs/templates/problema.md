@@ -9,6 +9,9 @@ Quem é afetado, o que dói, e a evidência. Se não mediu, escreva "ainda não 
 ## Ação
 O que foi feito, com nomes de ferramentas e dados.
 
+## Alternativas consideradas (para decisões de arquitetura ou de ferramenta)
+O que mais poderia ser usado e por que escolhemos esta opção. Como funciona, em poucas linhas.
+
 ## Colaboração
 Quem fez o quê.
 

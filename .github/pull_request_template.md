@@ -4,6 +4,12 @@
 ## Como conferir
 (passos para testar; diga o que **não** foi testado)
 
+## Número medido (se houver)
+(antes → depois, e como mediu; registre em `docs/metricas.md`. Sem medida, escreva "nada medido".)
+
+## Decisão registrada (se houver)
+(link para o arquivo em `docs/decisions/`, ou "nenhuma decisão nova")
+
 ## Checklist
 - [ ] Li o diff completo e não há segredo, `.env`, banco ou chave (R1)
 - [ ] Nenhum dado pessoal real, nem em print ou exemplo (R3)

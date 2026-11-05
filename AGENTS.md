@@ -31,6 +31,8 @@ Cada regra diz o que fazer, por quê e como é conferida. Se uma regra atrapalha
 - `docs/decisions/`: uma decisão por arquivo, no modelo de `docs/templates/problema.md`.
 - `docs/journey/`: linha do tempo escrita. `docs/evidence/`: prints e diagramas aprovados, com legenda no `journey/`.
 - `docs/referencias.md`: um arquivo só, uma linha por fonte (link, data, o que aprendemos).
+- `docs/metricas.md`: um arquivo só, uma linha por número medido (antes, depois, como medimos).
+- `docs/arquitetura.md`: um arquivo só, criado depois da call: diagrama, como funciona o fluxo e links para as decisões (stack e framework).
 - `scratch/fontes/`: material bruto de terceiros, **ignorado pelo git**.
 - Código e site: pastas definidas após a call (stack ainda em aberto).
 
