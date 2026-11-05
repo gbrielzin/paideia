@@ -2,8 +2,10 @@
 # R9: confere se só existem arquivos e pastas previstos no mapa do AGENTS.md.
 # Para criar algo novo, atualize o mapa do AGENTS.md E as listas abaixo no mesmo PR.
 
-# Raiz. As pastas web, api e data estão reservadas para o código; ajuste depois da call da stack.
-ROOT_OK=".env.example .gitattributes .githooks .github .gitignore AGENTS.md CLAUDE.md LICENSE README.md api data docs scripts web"
+# Raiz. O front (React) fica na raiz e o Java fica em server/ (decisão 0002).
+# Os nomes de arquivo do front são os padrões do Vite/React/Tailwind; ajuste se o gerador criar outros.
+# data/ está reservada para scripts de dados em Python, se forem usados.
+ROOT_OK=".env.example .gitattributes .githooks .github .gitignore AGENTS.md CLAUDE.md LICENSE README.md data docs scripts server eslint.config.js index.html package-lock.json package.json postcss.config.js public src tailwind.config.js tsconfig.app.json tsconfig.json tsconfig.node.json vite.config.js vite.config.ts"
 # Dentro de docs/
 DOCS_OK="agents arquitetura.md decisions evidence hackbrasil journey metricas.md referencias.md templates"
 

@@ -34,7 +34,7 @@ Cada regra diz o que fazer, por quê e como é conferida. Se uma regra atrapalha
 - `docs/metricas.md`: um arquivo só, uma linha por número medido (antes, depois, como medimos).
 - `docs/arquitetura.md`: um arquivo só, criado depois da call: diagrama, como funciona o fluxo e links para as decisões (stack e framework).
 - `scratch/fontes/`: material bruto de terceiros, **ignorado pelo git**.
-- Código e site: pastas definidas após a call (stack ainda em aberto). `web/`, `api/` e `data/` estão reservadas.
+- **Front (React)** na raiz do repositório (`src/`, `public/`, `package.json` etc.). **Back-end Java/Spring** em `server/`. `data/` reservada para scripts de dados, se houver. Decisão: [`0002`](docs/decisions/0002-front-na-raiz-java-em-server.md).
 - **Este mapa é conferido por máquina:** `scripts/check-structure.sh` (rodado na CI) falha se existir algo fora dele. Ao criar algo novo, atualize o mapa e as listas do script no mesmo PR.
 
 ## Prioridades de esforço (orientação, não regra inviolável)
