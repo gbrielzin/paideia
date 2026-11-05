@@ -7,6 +7,20 @@ Rascunho v0. Siga na ordem. Pule um passo só se a pessoa disser que pode.
 - [ ] Sei qual é a tarefa em uma frase. Se não souber, pergunto.
 - [ ] Estou numa branch própria (`feat/...`, `fix/...`, `docs/...`), nunca direto na `main`.
 
+## 1a. Sincronizar e ver quem está com o quê
+Antes de editar qualquer coisa:
+- [ ] `git pull --rebase` (no dia 05/11 um push foi recusado porque o Murilo tinha subido um README no meio).
+- [ ] Olhe a seção "Em andamento com" do resumo do dia mais recente em `docs/journey/`.
+- [ ] **Não edite um arquivo que está com outra pessoa** sem avisar. Se for urgente, proponha a mudança em vez de aplicar.
+
+## 1e. Planejar antes de decidir
+Antes de resolver qualquer decisão, escreva o plano em 4 linhas (no resumo do dia ou na decisão):
+1. **O que precisa ser decidido** e **quem decide**.
+2. **Do que depende** (ordem: decida primeiro o que destrava os outros).
+3. **O que verificar antes** (fato, medida ou teste barato).
+4. **Qual o próximo passo** se a resposta for sim, e se for não.
+Só depois disso abra o `docs/decisions/NNNN`.
+
 ## 1b. Gancho de história (antes de começar uma funcionalidade)
 **Pare e pergunte** antes de escrever o código, quando a tarefa for:
 - uma funcionalidade nova que o aluno vai ver, **ou**
@@ -63,3 +77,14 @@ Se a tarefa mexe em **fluxo, arquitetura, modelo de dados ou layout de pastas**,
 ## 5. Se algo der errado
 - Segredo foi commitado: **parar**, avisar o time, revogar a chave. Apagar o arquivo não basta, o histórico guarda.
 - Dúvida sobre regra do evento: ver `docs/hackbrasil/regras-do-evento.md` e, se preciso, escrever para oi@hackbrasil.com.
+
+## 6. Fechamento do dia (quando pararem)
+Quando alguém disser "vamos parar", "encerrar" ou "resumo do dia", o agente cria ou atualiza `docs/journey/AAAA-MM-DD.md` com:
+1. **Feito hoje** (decisões com ID, PRs, o que foi publicado).
+2. **Números medidos** (ou "nada medido").
+3. **Decisões pendentes, em ordem de dependência**, com um diagrama Mermaid.
+4. **Em andamento com** (quem está com qual arquivo).
+5. **Próximos passos**, no máximo 5, na ordem em que devem acontecer.
+
+Formato visual: Mermaid dentro do `.md`. Se o dia teve fluxo complexo, o agente oferece também um Excalidraw em `docs/evidence/diagrams/`.
+Termine fazendo commit e push do resumo, para o outro ver ao puxar.

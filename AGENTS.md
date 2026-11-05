@@ -52,6 +52,7 @@ Quando o tempo apertar, nesta ordem. Os 4 critérios do evento valem o mesmo (25
 ## Como trabalhar
 - Passo a passo (antes, durante, antes de dizer "pronto"): [`docs/agents/workflow.md`](docs/agents/workflow.md)
 - **Antes de qualquer funcionalidade nova, pare e faça a pergunta do "gancho de história"** (seção 1b do fluxo): dá para medir o jeito manual agora e virar um antes e depois em `docs/metricas.md`?
+- **Ao começar:** sincronize e veja quem está com cada arquivo (seção 1a). **Ao decidir:** planeje antes (seção 1e). **Ao parar:** faça o resumo do dia em `docs/journey/` (seção 6).
 - Como responder ao time: [`docs/agents/resposta.md`](docs/agents/resposta.md)
 - Decisões importantes viram arquivo em `docs/decisions/`. O padrão é [`docs/templates/problema.md`](docs/templates/problema.md).
 
