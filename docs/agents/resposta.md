@@ -2,7 +2,7 @@
 
 Rascunho v0. Isto é estilo, não regra inviolável.
 
-- **Idioma:** português, simples, sem jargão desnecessário.
+- **Idioma:** português, frases curtas. Use o **termo técnico** quando ele couber (trade-off, deploy, build, endpoint, pipeline, ADR, stack, CI/CD). Na primeira vez, explique entre parênteses. Não troque o termo por uma explicação longa.
 - **Primeiro a resposta**, depois o detalhe. Frases curtas.
 - **Diga o que ficou sem verificar.** Se não rodou o teste, escreva "não rodei".
 - **Todo número fecha com uma frase** do que ele significa. Exemplo: "em 12 testes, 8 passaram e 4 falharam, gerando 3 ajustes".

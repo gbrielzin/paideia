@@ -13,12 +13,35 @@ Precisamos definir onde fica o front (React) e onde fica o back-end (Java/Spring
 - `data/` fica reservada para scripts de dados em Python, se forem usados.
 - Atualizados o mapa do `AGENTS.md` e as listas de `scripts/check-structure.sh`. As pastas `web/` e `api/`, que estavam reservadas, foram retiradas.
 
-## Alternativas consideradas
-| Opção | Ganha | Perde |
-|---|---|---|
-| Front na raiz + `server/` (escolhida) | É o formato que o gerador do React (Vite) cria por padrão; o Murilo propôs porque é o que ele conhece | A raiz fica com vários arquivos do front misturados com `docs/` e `scripts/` |
-| `web/` + `server/` | Raiz limpa, cada parte isolada | Mais um nível de pasta; o gerador do front precisa ser apontado para `web/` |
-| `web/` + `api/` (primeiro rascunho) | Nomes mais claros | Já foi trocado por esta |
+## Alternativas consideradas (trade-offs)
+
+**Opção A (escolhida): front na raiz + `server/`**
+```
+paideia/
+├── src/            front (React + Tailwind)
+├── public/
+├── package.json
+├── server/         back-end (Java 21 + Spring Boot)
+├── docs/
+└── scripts/
+```
+- Vantagem: é o layout que o gerador do front (Vite) cria por padrão, e é o que o Murilo conhece.
+- Trade-off: a raiz mistura arquivos do front com `docs/` e `scripts/`.
+
+**Opção B: `web/` + `server/`**
+```
+paideia/
+├── web/            front
+├── server/         back-end
+├── docs/
+└── scripts/
+```
+- Vantagem: raiz limpa, cada parte isolada.
+- Trade-off: um nível de pasta a mais, e o gerador do front precisa ser apontado para `web/`.
+
+**Opção C: `web/` + `api/`** (primeiro rascunho, já descartada)
+- Vantagem: nomes mais explícitos.
+- Trade-off: o mesmo da opção B, sem ganho extra sobre ela.
 
 ## Colaboração
 Proposta do Murilo, registrada pelo Gabriel. Heurística 1 do fluxo de trabalho: usar o formato que a pessoa domina.

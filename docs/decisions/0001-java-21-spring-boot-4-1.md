@@ -12,12 +12,19 @@ Usar **Java 21** (LTS) com **Spring Boot 4.1.2**.
 
 Verificado em 05/11: a documentação oficial do Spring Boot 4.0 diz que ele exige no mínimo o Java 17 e é compatível até o Java 25, então o Java 21 está dentro do intervalo. A página oficial indicava o Spring Boot 4.1.0 como o estável mais recente. **Não verificamos** o intervalo de Java da versão 4.1.x nem que a 4.1.2 existe: confirmar ao gerar o projeto.
 
-## Alternativas consideradas
-| Opção | Ganha | Perde |
-|---|---|---|
-| Java 21 + Spring Boot 4.1.2 (escolhida) | Mais tutoriais, plugins e imagens prontas; menos risco na hospedagem; o Murilo já vai trabalhar com ela | Menos recente |
-| Java 25 + Spring Boot 4.x | Versão LTS mais nova | A hospedagem pode não conhecer; exigiria Dockerfile desde o início |
-| Sem back-end (só front) | Quase impossível cair | Perde arquitetura e a leitura por foto |
+## Alternativas consideradas (trade-offs)
+
+**Opção A (escolhida): Java 21 + Spring Boot 4.1.2**
+- Vantagem: mais material pronto (tutoriais, plugins, imagens de contêiner), menor risco de deploy, e o Murilo já vai trabalhar com ela.
+- Trade-off: não é a versão LTS mais recente.
+
+**Opção B: Java 25 + Spring Boot 4.x**
+- Vantagem: LTS mais nova.
+- Trade-off: o serviço de hospedagem pode não oferecer o Java 25, o que exigiria Dockerfile desde o início.
+
+**Opção C: sem back-end (só front)**
+- Vantagem: quase nenhum risco de a demo cair.
+- Trade-off: perde a demonstração de arquitetura (critério de implementação) e a leitura por foto.
 
 ## Colaboração
 O Murilo escolheu a versão. O Gabriel levantou o risco de hospedagem e registrou a decisão.

@@ -9,8 +9,9 @@ Quem é afetado, o que dói, e a evidência. Se não mediu, escreva "ainda não 
 ## Ação
 O que foi feito, com nomes de ferramentas e dados.
 
-## Alternativas consideradas (para decisões de arquitetura ou de ferramenta)
-O que mais poderia ser usado e por que escolhemos esta opção. Como funciona, em poucas linhas.
+## Alternativas consideradas (trade-offs)
+Para cada opção: vantagem e trade-off. Use a heurística de `docs/agents/workflow.md` (seção 1c) que justificou a escolha.
+Se ajudar a visualizar, desenhe a estrutura em blocos de código (árvore de pastas ou fluxo).
 
 ## Colaboração
 Quem fez o quê.
