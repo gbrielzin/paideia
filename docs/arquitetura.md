@@ -7,6 +7,7 @@
 |---|---|---|
 | Back-end | Java 21 + Spring Boot 4.1.2, em `server/` | [0001](decisions/0001-java-21-spring-boot-4-1.md) |
 | Front | React + Tailwind, na raiz do repositório | [0002](decisions/0002-front-na-raiz-java-em-server.md) |
+| Cálculo da TRI | Na API Spring, que não armazena as respostas | [0003](decisions/0003-onde-roda-o-calculo-e-privacidade.md) |
 | Hospedagem, dados, leitura por foto | **a decidir** | |
 
 ## Fluxo principal (proposta)
