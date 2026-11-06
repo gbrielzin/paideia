@@ -6,7 +6,6 @@ function App() {
           <header className="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
               <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                      <span className="text-2xl font-black tracking-wider text-blue-500">PAIDEIA</span>
                       <span className="text-xs bg-blue-500/10 text-blue-400 border border-blue-500/20 px-2.5 py-0.5 rounded-full font-medium">
               Trilha 03: Educação
             </span>
@@ -22,11 +21,15 @@ function App() {
           <main className="max-w-4xl mx-auto px-6 py-12 space-y-16">
               <section className="text-center space-y-6">
                   <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-                      O Mapa de Erros Inteligente <br />
-                      <span className="text-blue-500">para o Estudante do ENEM</span>
+                      <span className="text-blue-500">PAIDEIA</span>
                   </h1>
 
-                  <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                  <h2 className="text-3xl sm:text-2xl font-extrabold tracking-tight text-white leading-tight">
+                      O Mapa de Erros Inteligente,
+                      <span className="text-blue-500"> para o Estudante do ENEM</span>
+                  </h2>
+
+                  <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed text-justify">
                       Descubra exatamente quantos pontos cada erro custou na sua nota final e saiba quais os <strong className="text-white">3 temas prioritários</strong> você precisa revisar agora.
                   </p>
 
@@ -34,7 +37,7 @@ function App() {
                       <span>🔒 100% Privado: Suas respostas ficam salvas apenas no seu aparelho (Regra 6.9).</span>
                   </div>
               </section>
-              <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-4">
+              <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-4 text-justify">
                   <h2 className="text-xl font-bold text-blue-400 flex items-center gap-2">
                       🎯 Para quem é o Paideia?
                   </h2>
