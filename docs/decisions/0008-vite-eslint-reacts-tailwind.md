@@ -16,7 +16,7 @@ Estrutura principal da parte de front-end do projeto.
 Definido por Murilo e Gabriel.
 
 ## Resultado com evidência
-Ainda não medi. Como medir: Projeto criado com tailwind instalado.
+Projeto criado com Vite+React e Tailwind configurado. Como medir: Projeto criado com tailwind instalado.
 
 ## Aprendizado
 A preencher depois da publicação. Limites do plano gratuito da Vercel: não verificados.
