@@ -35,7 +35,7 @@ O **Paideia** é uma plataforma open-source que traduz os parâmetros estatísti
 | :--- | :--- | :--- |
 | **API Backend** | Java 21 + Spring Boot 4.1.2(ver [decisão 0001](docs/decisions/0001-java-21-spring-boot-4-1.md)) | ... |
 | **TRI Data Engine** | Python | ... |
-| **Frontend UI** | React | ... |
+| **Frontend UI** | Vite+React+Tailwind(ver [decisão 0008](docs/decisions/0008-vite-react-tailwind.md)) | ... |
 | **AI Agents & Tooling** | Antigravity, Claude Code, JunieAI, | ... |
 | **Deploy** | Vercel | ... |
 | **IDEs** | Intellij IDEA, | ... |
