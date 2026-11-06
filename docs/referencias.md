@@ -38,7 +38,8 @@ Estão instaladas só na máquina do Gabriel. O Murilo não as tem, e nada delas
 |---|---|---|
 | [Regulamento](https://hackbrasil.com/regulamento) | 05/11/2026 | Não menciona "rascunho". Créditos aparecem como prêmios (item 10.3). Resumo em `docs/hackbrasil/regras-do-evento.md` |
 | [Site oficial e FAQ](https://hackbrasil.com) | 05/11/2026 | O FAQ cita salvar rascunhos em /painel/projeto. Não menciona edições anteriores. Créditos aparecem como prêmios para vencedores e finalistas |
-| Live de abertura (04/11) | 04/11/2026 | O vídeo diz que o rascunho libera créditos em 24 a 48 horas. **Não achamos isso por escrito**: confirmar no painel ou em oi@hackbrasil.com |
+| Painel, etapa "02 rascunho inicial" | 06/11/2026 | Confirma por escrito: a organização revisa o rascunho para liberar os créditos de patrocinadores por integrante, e a etapa não bloqueia a submissão final. Pede trilha, repositório público (README com 300+ caracteres), vídeo de cerca de 3 min com cada integrante na câmera (público ou não listado) e página pública em HTTPS com título. **Prazo do rascunho e tempo de liberação não aparecem na tela** |
+| Live de abertura (04/11) | 04/11/2026 | O vídeo diz que o rascunho libera créditos em 24 a 48 horas. O painel confirma os créditos, mas não esse prazo |
 
 ## 3. Hackathons de educação (padrão de julgamento)
 
