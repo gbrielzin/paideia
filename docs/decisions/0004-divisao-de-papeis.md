@@ -1,14 +1,14 @@
 # 0004: divisão de papéis (quem faz o quê)
 
 - **Data:** 05/11/2026
-- **Quem participou:** Gabriel e Murilo (a decidir)
-- **Estado:** **PENDENTE.** Decidir antes de começar o código. Sem desenho necessário (decisão sobre pessoas, não sobre fluxo).
+- **Quem participou:** Gabriel e Murilo
+- **Estado:** **DECIDIDA em 06/11/2026: opção D** (flexível, proposta pelo Gabriel; o Murilo concordou por mensagem).
 
 ## Problema
 Temos duas pessoas, ~25 dias até 30/11 e três frentes: **front** (React + Tailwind, na raiz), **back-end** (Java 21 + Spring Boot em `server/`, que roda o cálculo da TRI, decisão [0003](0003-onde-roda-o-calculo-e-privacidade.md)) e **dados** (parâmetros dos itens do INEP, hoje previstos em Python). A **acessibilidade** vive no front e é a camada que o Murilo já conhece. O Murilo prefere back-end, mas disse que fica com os dois se o time precisar. A disponibilidade de cada um varia até 19/11 (Murilo) e em 08 e 15/11 (Gabriel).
 
 ## Ação
-A escolher. Ver alternativas.
+**Opção D:** na call ou quando trabalham juntos, definem na hora quem faz o quê naquele dia, em tarefas separadas. Sozinho, cada um pode mexer em qualquer parte (front, back-end, dados) sem pedir. Duas regras: antes de começar, `git pull` e avisar o outro em uma linha o que vai mexer; tudo por PR pequeno, que o outro revisa quando puder, sem travar. Se alguém ficar sobrecarregado, trocam e registram aqui.
 
 ## Alternativas consideradas (trade-offs)
 
@@ -24,8 +24,15 @@ A escolher. Ver alternativas.
 - Vantagem: acessibilidade com quem conhece, e carga mais equilibrada.
 - Trade-off: o núcleo (cálculo da TRI) fica em Java com quem tem menos prática nessa stack. Contraria a heurística 1 justamente no núcleo.
 
+**Opção D (a escolhida): papéis flexíveis**
+- Vantagem: ninguém fica parado esperando o outro; o front é fácil de dividir em React, segundo o Murilo; a carga se ajusta à disponibilidade de cada um.
+- Trade-off: sem dono por área, pode haver conflito de merge ou trabalho repetido; as duas regras (aviso e PR pequeno) existem para reduzir isso.
+
+O Murilo chegou a sugerir a opção B antes de ver a D, condicionada aos créditos de IA do rascunho.
+
 ## O que já sabemos
-- O Gabriel trabalha mais com Python. O conforto com React e com Java/Spring não foi medido.
+- O app de ENEM do Gabriel é em React Native e não usa Tailwind (conferido no `package.json` dele). Esse código não entra aqui (R2). O conforto com Java/Spring não foi medido.
+- O Murilo disse ter gerenciado um projeto em React (declaração dele, sem evidência no repositório).
 - Uma forma de aproveitar o Python em qualquer opção: o Gabriel escreve a **implementação de referência da TRI em Python** e gera casos de teste (entrada e saída esperada), que o código Java do `server/` precisa reproduzir. Assim o Python valida o Java.
 
 ## Para decidir (perguntas)
@@ -40,4 +47,4 @@ Levantado pelo Gabriel ao discutir a acessibilidade.
 Ainda não medi. Como medir: depois de decidir, registrar quem entregou o quê por PR e conferir se a divisão se manteve na semana seguinte.
 
 ## Aprendizado
-A preencher depois da decisão.
+A preencher depois do primeiro PR de front. Como medir: quem abriu cada PR e se houve conflito de merge na primeira semana.

@@ -40,6 +40,10 @@ Cada regra diz o que fazer, por quê e como é conferida. Se uma regra atrapalha
 - **Front (React)** na raiz do repositório (`src/`, `public/`, `package.json` etc.). **Back-end Java/Spring** em `server/`. `data/` reservada para scripts de dados, se houver. Decisão: [`0002`](docs/decisions/0002-front-na-raiz-java-em-server.md).
 - **Este mapa é conferido por máquina:** `scripts/check-structure.sh` (rodado na CI) falha se existir algo fora dele. Ao criar algo novo, atualize o mapa e as listas do script no mesmo PR.
 
+## Convenções
+- **Código em inglês:** nomes de classes, variáveis, funções e endpoints. Interface, README, `docs/` e mensagens de commit ficam em português. Decidido em 06/11/2026 por Gabriel, com o ok do Murilo.
+- **Papéis:** na call, as tarefas do dia são divididas na hora. Sozinho, cada um pode mexer em qualquer parte, com `git pull` antes, aviso de uma linha ao outro e PR pequeno. Decisão [`0004`](docs/decisions/0004-divisao-de-papeis.md).
+
 ## Prioridades de esforço (orientação, não regra inviolável)
 Quando o tempo apertar, nesta ordem. Os 4 critérios do evento valem o mesmo (25 pontos cada).
 1. **Demo ponta a ponta, no ar e funcionando** (execução técnica).
@@ -58,5 +62,4 @@ Quando o tempo apertar, nesta ordem. Os 4 critérios do evento valem o mesmo (25
 - Decisões importantes viram arquivo em `docs/decisions/`. O padrão é [`docs/templates/problema.md`](docs/templates/problema.md).
 
 ## Pontos em aberto (decidir na call)
-- Idioma do código e do README.
-- Stack final e divisão de papéis.
+- Idioma do README (hoje em português).

@@ -2,7 +2,7 @@
 
 - **Data:** 06/11/2026
 - **Quem participou:** Murilo (criou) e Gabriel (confirmar)
-- **Estado:** **PENDENTE.** 
+- **Estado:** **DECIDIDA em 06/11/2026:** group `br.com.paideia`, artifact `paideia-backend`. Spring Dotenv fica para quando houver uma chave, e o SpringDoc só entra depois de conferir compatibilidade com o Spring Boot 4.1.2 (não verificada). Confirmado por Gabriel e Murilo.
 
 ## Problema
 Para facilitar o desenvolvimento em **Spring** desde o início do projeto e manter uma arquitetura e estrutura de dados coerentes, é preciso definir nomes dos pacotes Java e quais serão as dependências iniciais do projeto.
