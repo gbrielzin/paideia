@@ -20,6 +20,10 @@ Publicar na **Vercel** o front React da raiz do repositório (decisão [0002](00
 - Vantagem: a página não depende do estado do front.
 - Trade-off: dois lugares para manter; arrisca contrariar o mapa único de pastas (R9).
 
+## Pendente
+- Criar a página mínima: título, problema, solução e links do repositório e do vídeo (o vídeo como "em breve" até gravarem).
+- Confirmar quem cria a conta da Vercel e se o acesso ao repositório `gbrielzin/paideia` funciona para um colaborador (não verificado).
+
 ## Colaboração
 Proposta pelo Gabriel; o Murilo perguntou se a página seria o futuro front, e ficou a opção A.
 
