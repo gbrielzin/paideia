@@ -20,7 +20,10 @@ target/
 build/
 out/
 .gradle/
-.mvn/
+HELP.md
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 *.class
 *.jar
 *.iml
@@ -42,6 +45,7 @@ venv/
 
 # Editores e sistema
 .idea/
+.idea
 */.idea/
 .vscode/
 .DS_Store
@@ -53,6 +57,8 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+*.iws
+*.ipr
 
 # Logs e rascunhos locais
 *.log
@@ -63,3 +69,13 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
