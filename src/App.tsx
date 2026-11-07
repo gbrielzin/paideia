@@ -7,7 +7,7 @@ function App() {
               <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                   <div className="flex items-center gap-3">
                       <span className="text-xs bg-blue-500/10 text-blue-400 border border-blue-500/20 px-2.5 py-0.5 rounded-full font-medium">
-              Trilha 03: Educação
+              Trilha: Acesso à educação
             </span>
                   </div>
                   <a
@@ -30,11 +30,11 @@ function App() {
                   </h2>
 
                   <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed text-justify">
-                      Descubra exatamente quantos pontos cada erro custou na sua nota final e saiba quais os <strong className="text-white">3 temas prioritários</strong> você precisa revisar agora.
+                      Descubra exatamente quantos pontos cada erro custou na sua nota final e saiba quais são os <strong className="text-white">temas de maior impacto</strong> que você deve revisar primeiro.
                   </p>
 
                   <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs px-3 py-1.5 rounded-md">
-                      <span>🔒 100% Privado: Suas respostas ficam salvas apenas no seu aparelho (Regra 6.9).</span>
+                      <span>🔒 Privacidade: o cálculo roda na nossa API, que não armazena as suas respostas.</span>
                   </div>
               </section>
               <section className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-4 text-justify">
@@ -52,11 +52,11 @@ function App() {
                       </li>
                       <li className="bg-slate-950 p-4 rounded-xl border border-slate-800/80">
                           <strong className="block text-white mb-1">Alunos que Exigem Acessibilidade</strong>
-                          Interface preparada com leitor de voz, alto contraste e simplificação de texto para promover inclusão real.
+                          Planejado: leitor de voz, alto contraste e simplificação de texto, pensados desde o início do projeto.
                       </li>
                       <li className="bg-slate-950 p-4 rounded-xl border border-slate-800/80">
                           <strong className="block text-white mb-1">Usuários Focados em Privacidade</strong>
-                          Quem deseja conferir respostas sem registrar dados pessoais ou cadastros em servidores externos.
+                          Quem quer conferir as respostas sem que elas sejam guardadas depois do cálculo.
                       </li>
                   </ul>
               </section>
@@ -69,19 +69,19 @@ function App() {
                       <div className="bg-slate-900/60 border border-slate-800 p-5 rounded-xl space-y-2">
                           <div className="w-8 h-8 bg-blue-500/20 text-blue-400 font-bold rounded-lg flex items-center justify-center text-sm">1</div>
                           <h3 className="font-semibold text-white text-base">Entrada Flexível</h3>
-                          <p className="text-xs text-slate-400">Preenchimento manual garantido, com suporte a foto do cartão de respostas (OCR) e comando de voz.</p>
+                          <p className="text-xs text-slate-400">Preenchimento manual primeiro. Foto do cartão de respostas e comando de voz estão planejados.</p>
                       </div>
 
                       <div className="bg-slate-900/60 border border-slate-800 p-5 rounded-xl space-y-2">
                           <div className="w-8 h-8 bg-blue-500/20 text-blue-400 font-bold rounded-lg flex items-center justify-center text-sm">2</div>
                           <h3 className="font-semibold text-white text-base">Custo Real do Erro</h3>
-                          <p className="text-xs text-slate-400">O motor TRI calcula a estimativa com margem de erro medido e mostra: <i>"Esta questão custou 18,5 pontos"</i>.</p>
+                          <p className="text-xs text-slate-400">O cálculo da TRI estima quanto cada erro custou na nota. É sempre uma estimativa, nunca a nota oficial, e a margem de erro ainda será medida.</p>
                       </div>
 
                       <div className="bg-slate-900/60 border border-slate-800 p-5 rounded-xl space-y-2">
                           <div className="w-8 h-8 bg-blue-500/20 text-blue-400 font-bold rounded-lg flex items-center justify-center text-sm">3</div>
                           <h3 className="font-semibold text-white text-base">O Que Revisar Agora</h3>
-                          <p className="text-xs text-slate-400">Gera um plano acionável destacando os 3 temas de maior impacto para você estudar primeiro.</p>
+                          <p className="text-xs text-slate-400">Planejado: um plano destacando os temas de maior impacto para você estudar primeiro.</p>
                       </div>
                   </div>
               </section>
@@ -89,13 +89,13 @@ function App() {
                   <h2 className="font-bold text-slate-200">Demonstração & Pitch (Rascunho Inicial)</h2>
                   <div className="w-full aspect-video bg-slate-950 rounded-xl border border-slate-800 flex flex-col items-center justify-center gap-2 text-slate-500">
                       <span className="text-3xl">▶️</span>
-                      <p className="text-sm font-medium">Vídeo de demonstração de até 3 minutos</p>
+                      <p className="text-sm font-medium">Vídeo em breve</p>
                       <span className="text-xs text-slate-600">Hack Brasil 2026</span>
                   </div>
               </section>
           </main>
           <footer className="border-t border-slate-900 bg-slate-950 py-6 text-center text-xs text-slate-500">
-              <p>Paideia • Projeto desenvolvido para o Hack Brasil 2026</p>
+              <p>Paideia • Projeto em construção para o Hack Brasil 2026 • <a className="underline hover:text-slate-300" href="https://github.com/gbrielzin/paideia">Repositório no GitHub</a></p>
           </footer>
       </div>
   )

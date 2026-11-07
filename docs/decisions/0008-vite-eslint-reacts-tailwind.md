@@ -19,4 +19,4 @@ Definido por Murilo e Gabriel.
 Projeto criado com Vite+React e Tailwind configurado. Como medir: Projeto criado com tailwind instalado.
 
 ## Aprendizado
-A preencher depois da publicação. Limites do plano gratuito da Vercel: não verificados.
+A preencher. Pendente (Murilo): alternativas consideradas com trade-offs e o motivo de escolher o ESLint ("mais estável", ainda não verificado).
