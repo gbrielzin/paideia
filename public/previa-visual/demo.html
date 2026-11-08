@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Paideia: mapa de exemplo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --bg:#050505; --ink:#f3f0ea; --muted:#b3aea4; --line:rgba(243,240,234,.35); --pen:#ff5a4a; --pad:clamp(20px,5vw,72px);
+          --title:"Barlow Condensed","Arial Narrow",sans-serif; --body:"Barlow",system-ui,sans-serif; }
+  * { box-sizing: border-box; }
+  html { background: var(--bg); color: var(--ink); }
+  body { margin: 0; font-family: var(--body); line-height: 1.5; }
+  a { color: inherit; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 22px var(--pad); }
+  .brand { font-family: var(--title); font-weight: 700; font-size: 26px; letter-spacing: .22em; text-decoration: none; }
+  main { max-width: 980px; margin: 0 auto; padding: 24px var(--pad) 80px; }
+  h1 { font-family: var(--title); font-weight: 700; text-transform: uppercase; font-size: clamp(40px, 7vw, 84px); line-height: .95; margin: 0 0 14px; }
+  h1 em { font-style: normal; color: var(--pen); }
+  .lead { color: var(--muted); max-width: 60ch; margin: 0 0 8px; font-size: 18px; }
+  .aviso { display: inline-block; margin: 10px 0 32px; padding: 6px 12px; border: 1px solid var(--line); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: start; }
+  h2 { font-family: var(--title); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: 15px; color: var(--muted); margin: 0 0 12px; }
+  .q { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid rgba(243,240,234,.15); }
+  .q .n { width: 22px; color: var(--muted); }
+  .q .t { flex: 1; }
+  .q .t small { display: block; color: var(--muted); font-size: 13px; }
+  .q button { font: inherit; padding: 8px 14px; border: 1px solid var(--line); background: none; color: var(--ink); cursor: pointer; min-width: 84px; }
+  .q button[aria-pressed="true"] { background: var(--pen); border-color: var(--pen); color: #000; }
+  .q button:focus-visible, .acoes button:focus-visible, a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  .res { border: 1px solid var(--line); padding: 18px; min-height: 220px; }
+  .res ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+  .res li { display: grid; gap: 6px; }
+  .res .nome { display: flex; justify-content: space-between; gap: 12px; }
+  .res .nome span:last-child { color: var(--muted); font-size: 14px; }
+  .barra { height: 12px; background: var(--pen); transition: width .35s ease; }
+  .vazio { color: var(--muted); margin: 0; }
+  .acoes { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .acoes button { font: inherit; padding: 10px 16px; border: 1px solid var(--line); background: none; color: var(--ink); cursor: pointer; }
+  .nota { margin-top: 28px; color: var(--muted); font-size: 14px; max-width: 70ch; }
+  @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { .barra { transition: none; } }
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="/">PAIDEIA</a>
+  <a href="/#como">Como funciona</a>
+</header>
+<main>
+  <h1>Mapa de <em>exemplo</em></h1>
+  <p class="lead">Marque as questões que você errou. O Paideia ordena o que revisar primeiro. Sem cadastro, e nada sai do seu navegador.</p>
+  <span class="aviso">Questões e pesos de exemplo. Não são itens reais do ENEM.</span>
+
+  <div class="grid">
+    <section aria-labelledby="h-q">
+      <h2 id="h-q">1 · Quais você errou?</h2>
+      <div id="lista"></div>
+    </section>
+    <section aria-labelledby="h-r">
+      <h2 id="h-r">2 · O que revisar primeiro</h2>
+      <div class="res" aria-live="polite" id="res"><p class="vazio">Marque ao menos um erro para ver o mapa.</p></div>
+      <div class="acoes"><button type="button" id="limpar">Limpar</button><button type="button" id="copiar">Copiar a lista</button></div>
+    </section>
+  </div>
+
+  <p class="nota">Regra deste exemplo: errar uma questão que muita gente acerta pesa mais do que errar uma muito difícil. Na versão real, o peso virá dos parâmetros dos itens publicados pelo INEP, e o resultado continuará sendo uma estimativa.</p>
+</main>
+<script>
+  const itens = [
+    { t: 'Porcentagem em compras', a: 'Matemática', n: 'Fácil' },
+    { t: 'Razão e proporção em receita', a: 'Matemática', n: 'Média' },
+    { t: 'Interpretação de texto de opinião', a: 'Linguagens', n: 'Fácil' },
+    { t: 'Gêneros textuais', a: 'Linguagens', n: 'Média' },
+    { t: 'Cadeia alimentar', a: 'Natureza', n: 'Fácil' },
+    { t: 'Circuito elétrico simples', a: 'Natureza', n: 'Difícil' },
+    { t: 'República Velha', a: 'Humanas', n: 'Média' },
+    { t: 'Urbanização', a: 'Humanas', n: 'Difícil' }
+  ];
+  const peso = { 'Fácil': 3, 'Média': 2, 'Difícil': 1 };
+  const marcados = new Set();
+  const lista = document.getElementById('lista'), res = document.getElementById('res');
+  itens.forEach((it, i) => {
+    const d = document.createElement('div'); d.className = 'q';
+    d.innerHTML = '<span class="n">' + (i + 1) + '</span><span class="t">' + it.t + '<small>' + it.a + ' · ' + it.n + '</small></span>';
+    const b = document.createElement('button'); b.type = 'button'; b.textContent = 'Errei'; b.setAttribute('aria-pressed', 'false');
+    b.setAttribute('aria-label', 'Errei a questão ' + (i + 1) + ': ' + it.t);
+    b.addEventListener('click', () => {
+      const on = !marcados.has(i); on ? marcados.add(i) : marcados.delete(i);
+      b.setAttribute('aria-pressed', on); b.textContent = on ? 'Errado' : 'Errei'; render();
+    });
+    d.appendChild(b); lista.appendChild(d);
+  });
+  function ranking() {
+    return [...marcados].map(i => ({ ...itens[i], p: peso[itens[i].n] })).sort((x, y) => y.p - x.p || x.t.localeCompare(y.t));
+  }
+  function render() {
+    const r = ranking();
+    if (!r.length) { res.innerHTML = '<p class="vazio">Marque ao menos um erro para ver o mapa.</p>'; return; }
+    const max = Math.max(...r.map(x => x.p));
+    res.innerHTML = '<ol>' + r.map((x, k) => '<li><div class="nome"><span>' + (k + 1) + 'º ' + x.t + '</span><span>' + x.a + ' · ' + x.n + '</span></div><div class="barra" style="width:' + (x.p / max * 100) + '%"></div></li>').join('') + '</ol>';
+  }
+  document.getElementById('limpar').addEventListener('click', () => {
+    marcados.clear(); lista.querySelectorAll('button').forEach(b => { b.setAttribute('aria-pressed', 'false'); b.textContent = 'Errei'; }); render();
+  });
+  document.getElementById('copiar').addEventListener('click', () => {
+    const txt = ranking().map((x, k) => (k + 1) + 'º ' + x.t + ' (' + x.a + ')').join('\n');
+    if (txt && navigator.clipboard) navigator.clipboard.writeText(txt).then(() => { const b = document.getElementById('copiar'); b.textContent = 'Copiado'; setTimeout(() => b.textContent = 'Copiar a lista', 1500); }).catch(() => {});
+  });
+</script>
+</body>
+</html>
