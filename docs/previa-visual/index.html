@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Paideia: prévia 2 (mistura)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #050505;
+    --ink: #f3f0ea;
+    --muted: #b3aea4;
+    --line: rgba(243, 240, 234, 0.35);
+    --pen: #ff5a4a;
+    --pad: clamp(20px, 5vw, 72px);
+    --title: "Barlow Condensed", "Arial Narrow", sans-serif;
+    --body: "Barlow", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--bg); color: var(--ink); scroll-behavior: smooth; }
+  body { margin: 0; font-family: var(--body); line-height: 1.5; }
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV (padrão SpaceX: marca à esquerda, links em caixa alta, caixa à direita) */
+  .nav { position: fixed; z-index: 20; inset: 0 0 auto 0; display: flex; align-items: center; gap: 36px;
+         padding: 22px var(--pad); background: linear-gradient(to bottom, rgba(0,0,0,.65), transparent); }
+  .brand { font-family: var(--title); font-weight: 700; font-size: 26px; letter-spacing: .22em; }
+  .nav ul { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; }
+  .nav a.l { font-family: var(--title); font-weight: 600; font-size: 17px; letter-spacing: .06em; text-transform: uppercase; }
+  .nav a.l:hover { color: var(--pen); }
+  a.box:hover { border-color: var(--ink); }
+  .box { margin-left: auto; border: 1px solid var(--line); padding: 8px 14px; font-size: 12px; letter-spacing: .06em;
+         text-transform: uppercase; background: rgba(0,0,0,.35); }
+
+  /* BLOCO DE TEXTO (padrão SpaceX: título gigante em caixa alta, parágrafo curto, botão vazado) */
+  .block { max-width: 640px; }
+  .block h1, .block h2 { margin: 0; font-family: var(--title); font-weight: 700; text-transform: uppercase;
+          font-size: clamp(44px, 8vw, 104px); line-height: .95; letter-spacing: .005em; }
+  .block h1 em, .block h2 em { font-style: normal; color: var(--pen); }
+  a.u { text-decoration: underline; text-underline-offset: 3px; }
+  a.u:hover { color: var(--ink); }
+  .block .date { margin: 22px 0 6px; font-size: 14px; letter-spacing: .04em; color: var(--muted); }
+  .block p { margin: 18px 0 0; max-width: 44ch; font-size: 17px; color: var(--ink); }
+  .btn { display: inline-flex; align-items: center; gap: 12px; margin-top: 28px; padding: 15px 22px; border: 1px solid var(--line);
+         font-family: var(--title); font-weight: 600; font-size: 15px; letter-spacing: .08em; text-transform: uppercase;
+         background: rgba(0,0,0,.25); transition: background .2s, border-color .2s; }
+  .btn:hover { background: rgba(255,255,255,.12); border-color: var(--ink); }
+
+  /* HERO: imagem de fundo em tela cheia, texto embaixo à esquerda */
+  .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; padding: 0 var(--pad) 12vh; isolation: isolate; overflow: hidden; }
+  .hero video, .hero .poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;
+          filter: contrast(1.1) brightness(.78) saturate(.85); }
+  .hero::after { content: ""; position: absolute; inset: 0; z-index: -1;
+          background: linear-gradient(90deg, rgba(0,0,0,.75) 0%, rgba(0,0,0,.2) 55%, transparent 80%),
+                      linear-gradient(0deg, rgba(0,0,0,.7) 0%, transparent 45%); }
+  .scrollhint { position: absolute; right: var(--pad); bottom: 28px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+
+  /* SEÇÕES: texto à esquerda, o "objeto" do outro lado (padrão SpaceX); camadas do padrão Scale */
+  .stage-wrap { height: 230vh; position: relative; }
+  .stage { position: sticky; top: 0; height: 100svh; display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+           align-items: end; padding: 0 var(--pad) 12vh; gap: 40px; overflow: hidden; }
+  .stage .block h2 { font-size: clamp(38px, 5.2vw, 76px); }
+  .stage .block { position: relative; z-index: 2; }
+  .stage .objeto { padding-right: 7vw; justify-items: end; z-index: 1; align-self: center; perspective: 1500px; display: grid; place-items: center; }
+  .stack { position: relative; width: min(540px, 33vw); margin-left: auto; aspect-ratio: 16 / 9; transform-style: preserve-3d;
+           transform: rotateX(calc(16deg - var(--p, 0) * 4deg)) rotateY(calc(-28deg + var(--p, 0) * 14deg)); }
+  .layer { position: absolute; inset: 0; border: 1px solid var(--line); border-radius: 4px; padding: 1.3vw 1.5vw; background: #0c0c0c;
+           box-shadow: 0 30px 60px rgba(0,0,0,.6);
+           transform: translate3d(calc((2 - var(--i)) * var(--p, 0) * 2.6vw), calc((var(--i) - 1) * var(--p, 0) * 3.4vw), calc(var(--i) * var(--p, 0) * 7vw)); }
+  .layer .name { font-family: var(--title); font-weight: 600; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .rows { margin-top: 1vw; display: grid; gap: clamp(6px, .9vw, 13px); }
+  .row { display: flex; align-items: center; gap: clamp(6px, .9vw, 13px); }
+  .row .q { width: 18px; font-size: 13px; color: var(--muted); }
+  .b { width: clamp(22px, 2.6vw, 38px); height: clamp(22px, 2.6vw, 38px); border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; font-size: clamp(9px, .9vw, 13px); color: var(--muted); font-style: normal; }
+  .b.on { background: var(--ink); color: #000; border-color: var(--ink); }
+  .b.bad { background: var(--pen); color: #000; border-color: var(--pen); }
+  .tick { margin-left: auto; font-size: 14px; color: var(--pen); }
+  .bar { height: 12px; background: var(--pen); }
+  .rank { display: grid; gap: 18px; margin-top: 22px; }
+  .rank div { display: flex; align-items: center; gap: 14px; font-family: var(--title); font-size: 22px; font-weight: 600; }
+  .note { margin-top: 24px; font-size: 13px; color: var(--muted); }
+
+  .bgvid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; filter: grayscale(1) contrast(1.1) brightness(.4); }
+  .sec#limites { isolation: isolate; }
+  .sec#limites::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,.35) 60%, rgba(0,0,0,.6) 100%); }
+  .vwrap { height: 210vh; position: relative; }
+  .vwrap .sec { position: sticky; top: 0; }
+  .sec { min-height: 100svh; position: relative; display: flex; align-items: flex-end; padding: 0 var(--pad) 12vh; border-top: 1px solid rgba(255,255,255,.08); }
+  .sec .side { position: absolute; right: var(--pad); top: 50%; transform: translateY(-50%); width: min(38vw, 460px);
+               display: grid; gap: 0; border-top: 1px solid var(--line); }
+  .sec .side div { padding: 18px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 44px 1fr; font-size: 17px; }
+  .sec .side .n { font-family: var(--title); font-weight: 600; color: var(--pen); }
+  .video { position: absolute; right: var(--pad); top: 50%; transform: translateY(-50%); width: min(46vw, 640px); aspect-ratio: 16/9;
+           border: 1px dashed var(--line); display: grid; place-items: center; color: var(--muted);
+           font-family: var(--title); font-size: 20px; letter-spacing: .1em; text-transform: uppercase; }
+
+  /* SEÇÃO DO EVENTO: cartões espalhados (padrão Scale) + caracteres piscando em vermelho e rótulos de terminal (padrão Hack Brasil) */
+  .evento { position: relative; min-height: 100svh; overflow: hidden; border-top: 1px solid rgba(255,255,255,.08); isolation: isolate;
+            display: grid; place-items: center; padding: 120px var(--pad) 90px; }
+  canvas.ascii { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; opacity: .9; }
+  .evento-in { text-align: center; max-width: 560px; position: relative; z-index: 2; }
+  .evento .br { display: flex; align-items: center; gap: 14px; justify-content: center; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+                font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .evento .br b { color: var(--pen); font-weight: 400; }
+  .evento .br i { flex: 0 0 60px; border-top: 1px dashed var(--line); }
+  .evento h2 { margin: 22px 0 0; font-family: var(--title); font-weight: 700; text-transform: uppercase; font-size: clamp(40px, 6vw, 84px); line-height: .95; }
+  .evento h2 em { font-style: normal; color: var(--pen); }
+  .cur { color: var(--pen); animation: blink 1.05s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .evento .lead { margin: 20px auto 0; max-width: 40ch; color: var(--muted); }
+  .tile { position: absolute; left: var(--x); top: var(--y); padding: 12px 18px; border: 1px solid var(--line); border-radius: 14px;
+          background: rgba(12,12,12,.82); backdrop-filter: blur(2px); z-index: 1;
+          transform: translate3d(0, calc((var(--sp, .5) - .5) * var(--d, 60) * -1px), 0); }
+  .tile small { display: block; font-family: ui-monospace, Consolas, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .tile span { display: block; margin-top: 4px; font-family: var(--title); font-weight: 600; font-size: clamp(16px, 1.7vw, 24px); letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
+  .tile.premio { border-color: rgba(255,90,74,.6); }
+  .tile.premio small { color: var(--pen); }
+  .evento .aviso { position: absolute; left: var(--pad); right: var(--pad); bottom: 28px; margin: 0; text-align: center; font-size: 13px; color: var(--muted); z-index: 2; }
+  footer { padding: 36px var(--pad) 56px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,.08); }
+
+
+  /* EFEITO DAS LETRAS: caem de cima, começam cinzas e ganham a cor final ao chegar */
+  .c { display: inline-block; will-change: transform, opacity;
+       transform: translate3d(calc((1 - var(--qp, 1)) * var(--x, 0px)), calc((1 - var(--qp, 1)) * -42vh), 0) rotate(calc((1 - var(--qp, 1)) * var(--r, 0deg)));
+       opacity: calc(.08 + var(--q, 1) * .92);
+       color: color-mix(in srgb, var(--final, currentColor) calc(var(--q, 1) * 100%), #4b4b4b); }
+  .w { display: inline-block; white-space: nowrap; }
+
+
+  /* FAIXA DE PARCEIROS: carrossel contínuo no pé do topo (padrão do site do Hack Brasil) */
+  .faixa { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 22px; padding: 0 var(--pad);
+           height: 74px; border-top: 1px solid rgba(255,255,255,.14); background: linear-gradient(0deg, rgba(0,0,0,.75), rgba(0,0,0,.35)); z-index: 3; }
+  .faixa .rot { flex: 0 0 auto; font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .faixa .pista { position: relative; flex: 1 1 auto; overflow: hidden; height: 100%; display: flex; align-items: center;
+                  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); }
+  .faixa .trilho { display: flex; align-items: center; gap: 56px; width: max-content; animation: corre 46s linear infinite; }
+  .faixa.pausada .trilho, .faixa:hover .trilho { animation-play-state: paused; }
+  .faixa .trilho span { font-family: var(--title); font-weight: 600; font-size: 22px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+  .faixa .trilho svg { height: 22px; width: auto; color: var(--muted); display: block; }
+  @keyframes corre { to { transform: translateX(-50%); } }
+  .faixa button { flex: 0 0 auto; background: none; border: 0; color: var(--muted); font-family: ui-monospace, Consolas, monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; cursor: pointer; }
+  .faixa button:hover { color: var(--ink); }
+  .hero { padding-bottom: calc(12vh + 40px); }
+  canvas.ruido { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; transition: opacity 1.2s ease; }
+  .hero .block { position: relative; z-index: 2; }
+
+  @media (max-width: 860px) {
+    .evento { display: block; min-height: 0; padding: 90px var(--pad) 40px; }
+    .tile { position: static; display: inline-block; margin: 6px 6px 0 0; transform: none; }
+    .evento .aviso { position: static; margin-top: 28px; text-align: left; }
+    .evento-in { text-align: left; margin-bottom: 20px; }
+    .evento .br { justify-content: flex-start; }
+    .evento .lead { margin-left: 0; }
+    .nav ul { display: none; }
+    .stage-wrap { height: 220vh; }
+    .stage { grid-template-columns: 1fr; align-items: end; gap: 18px; padding: 84px var(--pad) 7vh; }
+    .stage .block h2 { font-size: clamp(30px, 8.4vw, 44px); }
+    .stage .objeto { order: -1; padding: 0; align-self: start; justify-items: stretch; perspective: 900px; }
+    .stack { transform: rotateX(calc(10deg - var(--p, 0) * 10deg)); width: 100%; aspect-ratio: auto; height: 330px; margin: 0; }
+    .layer { position: absolute; left: 0; right: 0; top: 0; height: 170px; padding: 12px 14px; overflow: hidden; box-shadow: 0 -14px 30px rgba(0,0,0,.55);
+             background: #0c0c0c; transform: translate3d(0, calc(var(--i) * var(--p, 0) * 80px), calc(var(--i) * var(--p, 0) * 20px)); }
+    .layer .name { font-size: 12px; }
+    .rows { margin-top: 8px; gap: 6px; }
+    .rank { gap: 8px; margin-top: 10px; }
+    .rank div { font-size: 18px; }
+    .note { margin-top: 10px; font-size: 12px; }
+    .b { width: 26px; height: 26px; font-size: 10px; }
+    .row { gap: 8px; }
+    .nav .box { display: none; }
+    .vwrap { height: 190vh; }
+    .sec .side, .video { position: static; transform: none; width: 100%; margin-bottom: 40px; }
+    .sec { flex-direction: column; justify-content: flex-end; }
+  }
+  @media (prefers-reduced-motion: reduce) {html:not(.mov) { scroll-behavior: auto; }html:not(.mov) .cur { animation: none; }html:not(.mov) .faixa .trilho { animation: none; }html:not(.mov) canvas.ruido { display: none; }html:not(.mov) .tile { transform: none !important; }html:not(.mov) .c { transform: none !important; opacity: 1 !important; color: var(--final, currentColor) !important; }html:not(.mov) .hero video,html:not(.mov) .bgvid { display: none; }html:not(.mov) .stack { transform: rotateX(10deg) rotateY(-12deg); }html:not(.mov) .layer { transform: translate3d(calc((var(--i) - 1) * -24px), calc((var(--i) - 1) * 20px), calc(var(--i) * 40px)); }
+  }
+
+  /* faixa com logos */
+  .faixa .trilho img { display: block; width: auto; opacity: .72; transition: opacity .2s; }
+  .faixa .trilho img:hover { opacity: 1; }
+
+  /* seção do evento em duas colunas, com o anel 3D à direita */
+  .evento { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 32px; align-items: center; place-items: initial; }
+  .evento-in { text-align: left; max-width: 520px; }
+  .evento .br { justify-content: flex-start; }
+  .evento .lead { margin-left: 0; }
+  .anel-box { position: relative; height: min(600px, 74vh); perspective: 1500px; display: grid; place-items: center; cursor: grab; touch-action: pan-y; z-index: 1; }
+  .anel-box:active { cursor: grabbing; }
+  .anel { --cw: clamp(116px, 11vw, 168px); list-style: none; margin: 0; padding: 0; position: relative; width: var(--cw); height: calc(var(--cw) * .6);
+          transform-style: preserve-3d; transform: rotateX(-24deg); }
+  .carta { position: absolute; inset: 0; display: grid; place-items: center; align-content: center; gap: 8px; padding: 10px; border: 1px solid var(--line); border-radius: 14px;
+           background: rgba(12,12,12,.92); will-change: transform, opacity; }
+  .carta img { display: block; width: auto; max-width: 82%; }
+  .carta small { font-family: ui-monospace, Consolas, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .carta.premio { border-color: rgba(255,90,74,.6); }
+  .carta.premio small { color: var(--pen); }
+  .carta .txt { font-family: var(--title); font-weight: 600; font-size: clamp(18px, 1.9vw, 26px); letter-spacing: .05em; text-transform: uppercase; color: #d9d5cc; }
+  .anel-pausa { position: absolute; left: 50%; bottom: 4px; transform: translateX(-50%); background: none; border: 1px solid var(--line); color: var(--muted);
+                padding: 6px 14px; font-family: ui-monospace, Consolas, monospace; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; cursor: pointer; }
+  .anel-pausa:hover { color: var(--ink); border-color: var(--ink); }
+  @media (max-width: 860px) {
+    .evento { grid-template-columns: 1fr; padding: 90px var(--pad) 40px; display: grid; }
+    .anel-box { height: 340px; }
+    .anel { --cw: 88px; }
+    .carta .txt { font-size: 15px; }
+    .carta small { font-size: 8px; letter-spacing: .08em; }
+    .evento .aviso { position: static; margin-top: 12px; text-align: left; }
+  }
+  @media (prefers-reduced-motion: reduce) {html:not(.mov) .anel-box { cursor: default; } }
+
+  /* anel sem cartão: só o logo (ou o nome) e o rótulo; título do evento embaixo */
+  .evento { grid-template-columns: 1fr; justify-items: center; align-content: center; gap: 8px; min-height: 100svh; padding: 110px var(--pad) 110px; }
+  .evento-in { text-align: center; max-width: 620px; order: 2; }
+  .evento .br { justify-content: center; }
+  .evento .lead { margin-left: auto; margin-right: auto; }
+  .evento h2 { font-size: clamp(36px, 5vw, 70px); }
+  .anel-box { order: 1; width: 100%; height: min(500px, 62vh); }
+  .carta { border: 0 !important; background: none !important; backdrop-filter: none; }
+  .carta img { filter: drop-shadow(0 0 10px #050505) drop-shadow(0 0 4px #050505); }
+  .carta .txt { text-shadow: 0 0 10px #050505, 0 0 4px #050505; }
+  .carta small { text-shadow: 0 0 8px #050505; }
+  .centro { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: grid; justify-items: center; gap: 10px; text-align: center;
+            font-family: ui-monospace, Consolas, monospace; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); pointer-events: none; z-index: 0; }
+  .centro .ponto { width: 9px; height: 9px; border-radius: 50%; background: var(--pen); box-shadow: 0 0 0 0 rgba(255,90,74,.6); animation: pulsa 2s ease-out infinite; }
+  @keyframes pulsa { 70% { box-shadow: 0 0 0 14px rgba(255,90,74,0); } 100% { box-shadow: 0 0 0 0 rgba(255,90,74,0); } }
+  @media (max-width: 860px) { .anel-box { height: 340px; } .evento { padding: 90px var(--pad) 40px; } }
+  @media (prefers-reduced-motion: reduce) {html:not(.mov) .centro .ponto { animation: none; } }
+
+  /* GLITCH no título do topo: rajadas curtas a cada poucos segundos */
+  .hero h1 { animation: glitch 5.5s infinite; }
+  @keyframes glitch {
+    0%, 90%, 100% { transform: none; text-shadow: none; clip-path: none; }
+    91% { transform: translate(-4px, 0) skewX(-3deg); text-shadow: 4px 0 rgba(255,90,74,.85), -4px 0 rgba(80,220,255,.75); }
+    93% { transform: translate(5px, 1px); text-shadow: -5px 0 rgba(255,90,74,.85), 5px 0 rgba(80,220,255,.75); clip-path: inset(18% 0 52% 0); }
+    95% { transform: translate(-3px, -1px) skewX(2deg); text-shadow: 3px 0 rgba(255,90,74,.85), -3px 0 rgba(80,220,255,.75); clip-path: inset(58% 0 12% 0); }
+    97% { transform: translate(2px, 0); text-shadow: -2px 0 rgba(255,90,74,.85), 2px 0 rgba(80,220,255,.75); clip-path: none; }
+  }
+
+  /* MENU: ao passar o mouse, o texto cresce, "salta" e dá um glitch */
+  .nav a.l, .nav .brand { display: inline-block; transition: transform .18s cubic-bezier(.2,1.6,.4,1), color .15s; transform-origin: 50% 60%; }
+  .nav a.l:hover, .nav a.l:focus-visible, .nav .brand:hover, .nav .brand:focus-visible {
+    transform: scale(1.28); color: var(--ink); animation: glitchMenu .4s steps(2) infinite; }
+  @keyframes glitchMenu {
+    0% { text-shadow: 2px 0 rgba(255,90,74,.9), -2px 0 rgba(80,220,255,.8); }
+    50% { text-shadow: -2px 1px rgba(255,90,74,.9), 2px -1px rgba(80,220,255,.8); }
+    100% { text-shadow: 1px 0 rgba(255,90,74,.9), -1px 0 rgba(80,220,255,.8); }
+  }
+
+  /* GATO COM FOLHA DE GABARITO atravessando a tela em loop (desenho próprio, inspirado no meme do gato com arco-íris) */
+  .gato { position: absolute; top: 14%; left: 0; width: 132px; z-index: 1; pointer-events: none; animation: cruza 15s linear infinite; }
+  .gato svg { display: block; width: 100%; height: auto; shape-rendering: crispEdges; animation: pula .5s steps(2) infinite; }
+  .gato .faixa-cor { animation: onda .5s steps(2) infinite; }
+  .gato .faixa-cor:nth-child(even) { animation-delay: -.25s; }
+  .gato .pata { animation: pata .5s steps(2) infinite; }
+  .gato .pata.b { animation-delay: -.25s; }
+  @keyframes cruza { from { transform: translateX(-190px); } to { transform: translateX(calc(100vw + 30px)); } }
+  @keyframes pula { 50% { transform: translateY(-4px); } }
+  @keyframes onda { 50% { transform: translateY(2px); } }
+  @keyframes pata { 50% { transform: translateY(-2px); } }
+  @media (prefers-reduced-motion: reduce) {html:not(.mov) .hero h1 { animation: none; }html:not(.mov) .gato { display: none; }html:not(.mov) .nav a.l:hover,html:not(.mov) .nav .brand:hover { animation: none; }
+  }
+
+  /* MINHOCA: o gato passa pela página inteira em zigue-zague, com um arco-íris contínuo em preto, branco e cinza */
+  .gato { display: none !important; }
+  #minhoca { position: absolute; left: 0; top: 0; width: 100%; overflow: hidden; pointer-events: none; z-index: 6; }
+  #minhoca svg.trilha-gris { position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: visible; }
+  .gato2 { position: absolute; left: 0; top: 0; width: 112px; will-change: transform; }
+  .gato2 svg { display: block; width: 100%; height: auto; shape-rendering: crispEdges; animation: pula .35s steps(2) infinite; }
+  .gato2 .pata { animation: pata .35s steps(2) infinite; }
+  .gato2 .pata.b { animation-delay: -.175s; }
+  .gato2.parado svg, .gato2.parado .pata { animation: none; }
+  @media (prefers-reduced-motion: reduce) {html:not(.mov) #minhoca { display: none; } }
+  .hero { min-height: max(100svh, 820px); }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#topo">PAIDEIA</a>
+  <ul>
+    <li><a class="l" href="#como">Como funciona</a></li>
+    <li><a class="l" href="#limites">Limites</a></li>
+    <li><a class="l" href="#video">Vídeo</a></li>
+    <li><a class="l" href="#evento">Evento</a></li>
+    <li><a class="l" href="https://github.com/gbrielzin/paideia">Código</a></li>
+  </ul>
+  <a class="box" href="https://hackbrasil.com" target="_blank" rel="noopener">Hack Brasil 2026 · Acesso à educação ↗</a>
+</header>
+
+<main id="topo">
+  <section class="hero">
+    <img class="poster" src="hero3.jpg" alt="" />
+    <canvas class="ruido" id="ruido" aria-hidden="true"></canvas>
+    <video src="hero3_loop.mp4" poster="hero3.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+    <div class="block">
+      <h1>Quais erros custaram <em>mais pontos?</em></h1>
+      <div class="date">Em construção · Feito para o <a class="u" href="https://hackbrasil.com" target="_blank" rel="noopener">Hack Brasil 2026</a></div>
+      <p>Depois do ENEM, o Paideia estima quanto cada erro pesou na sua nota e mostra o que revisar primeiro.</p>
+      <a class="btn" href="#como">Ver como funciona <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="faixa" id="faixa">
+      <span class="rot">No evento</span>
+      <div class="pista"><div class="trilho" id="trilho"><img src="logos/firecrawl.svg" alt="Firecrawl" style="height:24px"><img src="logos/google.svg" alt="Google for Startups" style="height:22px"><img src="logos/cognition.svg" alt="Cognition" style="height:22px"><img src="logos/puentes.svg" alt="Antigravity (Puentes)" style="height:20px"><img src="logos/resend.svg" alt="Resend" style="height:16px"><img src="logos/capivarafy.svg" alt="Capivarafy" style="height:22px"><img src="logos/jumpstart.svg" alt="GoJumpStart" style="height:20px"><img src="logos/vibespace.svg" alt="Vibespace" style="height:22px"><img src="logos/fundaoestudar.svg" alt="Fundação Estudar" style="height:30px"><span>Convex</span><span>AbacatePay</span><span>WorkOS</span></div></div>
+      <button type="button" id="pausar" aria-pressed="false">Pausar</button>
+    </div>
+  </section>
+
+  <div class="stage-wrap" id="como">
+    <div class="stage" id="stageEl">
+      <div class="block">
+        <h2>Você marca. Calculamos. <em>Você revisa.</em></h2>
+        <p>Primeiro por tabela. Foto do cartão e voz estão planejadas. O resultado é sempre uma estimativa.</p>
+        <a class="btn" href="https://github.com/gbrielzin/paideia">Ver o código <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="objeto">
+        <div class="stack" id="stack" role="img" aria-label="Ilustração do conceito: o gabarito, os erros anotados e a ordem do que revisar, em três camadas">
+          <div class="layer" style="--i:2">
+            <div class="name">1 · seu gabarito</div>
+            <div class="rows">
+              <div class="row"><span class="q">1</span><i class="b">A</i><i class="b">B</i><i class="b on">C</i><i class="b">D</i><i class="b">E</i></div>
+              <div class="row"><span class="q">2</span><i class="b on">A</i><i class="b">B</i><i class="b">C</i><i class="b">D</i><i class="b">E</i></div>
+              <div class="row"><span class="q">3</span><i class="b">A</i><i class="b">B</i><i class="b">C</i><i class="b">D</i><i class="b on">E</i></div>
+              <div class="row"><span class="q">4</span><i class="b">A</i><i class="b on">B</i><i class="b">C</i><i class="b">D</i><i class="b">E</i></div>
+            </div>
+          </div>
+          <div class="layer" style="--i:1">
+            <div class="name">2 · erros anotados</div>
+            <div class="rows">
+              <div class="row"><span class="q">1</span><i class="b">A</i><i class="b">B</i><i class="b">C</i><i class="b">D</i><i class="b">E</i></div>
+              <div class="row"><span class="q">2</span><i class="b bad">A</i><i class="b">B</i><i class="b">C</i><i class="b">D</i><i class="b">E</i><span class="tick">erro</span></div>
+              <div class="row"><span class="q">3</span><i class="b">A</i><i class="b">B</i><i class="b">C</i><i class="b">D</i><i class="b">E</i></div>
+              <div class="row"><span class="q">4</span><i class="b">A</i><i class="b bad">B</i><i class="b">C</i><i class="b">D</i><i class="b">E</i><span class="tick">erro</span></div>
+            </div>
+          </div>
+          <div class="layer" style="--i:0">
+            <div class="name">3 · o que revisar primeiro</div>
+            <div class="rank">
+              <div><span style="width:44px">1º</span><span class="bar" style="width:72%"></span></div>
+              <div><span style="width:44px">2º</span><span class="bar" style="width:40%"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec" id="limites">
+    <video class="bgvid" src="caderno_loop.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+    <div class="block">
+      <h2>Sem promessas <em>falsas.</em></h2>
+      <p>Dizemos o que já existe e o que ainda é plano. A margem de erro vai ser medida antes de ser mostrada.</p>
+    </div>
+    <div class="side">
+      <div><span class="n">01</span><span>Estimativa, nunca a nota oficial.</span></div>
+      <div><span class="n">02</span><span>A API calcula e não armazena as suas respostas.</span></div>
+      <div><span class="n">03</span><span>Margem de erro: ainda será medida.</span></div>
+      <div><span class="n">04</span><span>Foto, voz e acessibilidade: planejadas, ainda não construídas.</span></div>
+    </div>
+  </section>
+
+  <div class="vwrap" id="videoWrap">
+  <section class="sec" id="video">
+    <div class="block">
+      <h2>Vídeo em <em>breve.</em></h2>
+      <p>Gabriel e Murilo, dois estudantes, explicam a ideia em poucos minutos.</p>
+    </div>
+    <div class="video">Vídeo em breve</div>
+  </section>
+  </div>
+
+  <section class="evento" id="evento">
+    <canvas class="ascii" aria-hidden="true"></canvas>
+    <div class="anel-box" id="anelBox" aria-label="Patrocinadores e parceiros do Hack Brasil 2026, em um anel que gira">
+      <div class="centro" aria-hidden="true"><span class="ponto"></span><span>Patrocinadores<br>e parceiros<br>do evento</span></div>
+      <ul class="anel" id="anel">
+        <li class="carta"><img src="logos/firecrawl.svg" alt="Firecrawl" style="height:27px"><small>Parceiro</small></li>
+        <li class="carta"><img src="logos/google.svg" alt="Google for Startups" style="height:25px"><small>Sede da final</small></li>
+        <li class="carta"><img src="logos/cognition.svg" alt="Cognition" style="height:25px"><small>Parceiro</small></li>
+        <li class="carta premio"><img src="logos/puentes.svg" alt="Antigravity (Puentes)" style="height:23px"><small>Prêmio</small></li>
+        <li class="carta premio"><img src="logos/resend.svg" alt="Resend" style="height:18px"><small>Prêmio</small></li>
+        <li class="carta"><img src="logos/capivarafy.svg" alt="Capivarafy" style="height:25px"><small>Parceiro</small></li>
+        <li class="carta"><img src="logos/jumpstart.svg" alt="GoJumpStart" style="height:23px"><small>Parceiro</small></li>
+        <li class="carta"><img src="logos/vibespace.svg" alt="Vibespace" style="height:25px"><small>Parceiro</small></li>
+        <li class="carta"><img src="logos/fundaoestudar.svg" alt="Fundação Estudar" style="height:34px"><small>Parceiro</small></li>
+        <li class="carta premio"><span class="txt">Convex</span><small>Prêmio</small></li>
+        <li class="carta premio"><span class="txt">AbacatePay</span><small>Prêmio</small></li>
+        <li class="carta"><span class="txt">WorkOS</span><small>Parceiro</small></li>
+      </ul>
+    </div>
+    <div class="evento-in">
+      <div class="br"><i></i><span>[ <b>01</b> ] evento</span><i></i></div>
+      <h2>Hack Brasil <em>2026</em><span class="cur" aria-hidden="true">_</span></h2>
+      <p class="lead">Final presencial em São Paulo, em 12 de dezembro. O Paideia concorre na trilha Acesso à educação.</p>
+      <a class="btn" href="https://hackbrasil.com" target="_blank" rel="noopener">Site do Hack Brasil <span aria-hidden="true">↗</span></a>
+    </div>
+    <p class="aviso">Patrocinadores e parceiros do evento, segundo o site do Hack Brasil em 07/11/2026. O Paideia não é afiliado a eles nem foi aprovado por eles.</p>
+  </section>
+</main>
+
+<footer>
+  <span>Paideia, projeto em construção para o <a class="u" href="https://hackbrasil.com" target="_blank" rel="noopener">Hack Brasil 2026</a>.</span>
+  <a href="https://github.com/gbrielzin/paideia">github.com/gbrielzin/paideia</a>
+</footer>
+
+<div id="minhoca" aria-hidden="true"><svg class="trilha-gris" xmlns="http://www.w3.org/2000/svg"><path class="faixa-gris" data-k="1.00" stroke="#050505" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path class="faixa-gris" data-k="0.86" stroke="#4a4a4a" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path class="faixa-gris" data-k="0.70" stroke="#707070" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path class="faixa-gris" data-k="0.55" stroke="#9a9a9a" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path class="faixa-gris" data-k="0.39" stroke="#c4c4c4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path class="faixa-gris" data-k="0.23" stroke="#ececec" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="gato2" id="gato2"><svg viewBox="20 2 46 28" aria-hidden="true" focusable="false"><rect x="22" y="12" width="4" height="3" fill="#8d8d92"/><rect x="26" y="5" width="25" height="19" fill="#ece8df" stroke="#1b1b1d" stroke-width="1.5"/><rect x="29" y="9" width="2" height="2" fill="#9a958b"/><rect x="33" y="9" width="2" height="2" fill="#9a958b"/><rect x="37" y="9" width="2" height="2" fill="#9a958b"/><rect x="41" y="9" width="2" height="2" fill="#9a958b"/><rect x="45" y="9" width="2" height="2" fill="#9a958b"/><rect x="29" y="14" width="2" height="2" fill="#9a958b"/><rect x="33" y="14" width="2" height="2" fill="#9a958b"/><rect x="37" y="14" width="2" height="2" fill="#9a958b"/><rect x="41" y="14" width="2" height="2" fill="#9a958b"/><rect x="45" y="14" width="2" height="2" fill="#9a958b"/><rect x="41" y="14" width="2" height="2" fill="#ff5a4a"/><rect x="48" y="9" width="16" height="14" fill="#8d8d92" stroke="#1b1b1d" stroke-width="1.5"/><rect x="48" y="5" width="4" height="5" fill="#8d8d92" stroke="#1b1b1d" stroke-width="1"/><rect x="60" y="5" width="4" height="5" fill="#8d8d92" stroke="#1b1b1d" stroke-width="1"/><rect x="52" y="14" width="2" height="3" fill="#1b1b1d"/><rect x="59" y="14" width="2" height="3" fill="#1b1b1d"/><rect x="55" y="18" width="3" height="1" fill="#1b1b1d"/><rect x="50" y="18" width="2" height="2" fill="#ff8fa3"/><rect x="61" y="18" width="2" height="2" fill="#ff8fa3"/><rect class="pata a" x="28" y="24" width="4" height="4" fill="#8d8d92" stroke="#1b1b1d" stroke-width="1"/><rect class="pata b" x="35" y="24" width="4" height="4" fill="#8d8d92" stroke="#1b1b1d" stroke-width="1"/><rect class="pata a" x="43" y="24" width="4" height="4" fill="#8d8d92" stroke="#1b1b1d" stroke-width="1"/><rect class="pata b" x="50" y="24" width="4" height="4" fill="#8d8d92" stroke="#1b1b1d" stroke-width="1"/></svg></div></div>
+<script>
+  if (new URLSearchParams(location.search).get('fundo') === 'preto') {
+    document.querySelectorAll('video, .poster').forEach(e => e.remove());
+  }
+  /* na prévia, os efeitos rodam mesmo com "reduzir movimento" ligado no sistema; para testar o modo acessível, abra com ?reduzir=1 */
+  const forcar = !/[?&]reduzir=1/.test(location.search); if (forcar) document.documentElement.classList.add('mov');
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches && !forcar;
+  const clamp = (v) => Math.min(1, Math.max(0, v));
+
+  /* separa o título em palavras e letras, guardando a cor final de cada trecho */
+  function split(el) {
+    el.setAttribute('aria-label', el.textContent.trim().replace(/\s+/g, ' '));
+    const letters = [];
+    (function walk(node) {
+      [...node.childNodes].forEach(n => {
+        if (n.nodeType === 3) {
+          const final = getComputedStyle(node).color;
+          const frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(tok => {
+            if (!tok) return;
+            if (/^\s+$/.test(tok)) { frag.appendChild(document.createTextNode(' ')); return; }
+            const w = document.createElement('span'); w.className = 'w'; w.setAttribute('aria-hidden', 'true');
+            [...tok].forEach(ch => {
+              const c = document.createElement('span'); c.className = 'c'; c.textContent = ch;
+              c.style.setProperty('--final', final);
+              c.style.setProperty('--r', ((Math.random() - .5) * 50).toFixed(1) + 'deg');
+              c.style.setProperty('--x', ((Math.random() - .5) * 90).toFixed(0) + 'px');
+              w.appendChild(c); letters.push(c);
+            });
+            frag.appendChild(w);
+          });
+          node.replaceChild(frag, n);
+        } else if (n.nodeType === 1 && !n.classList.contains('cur')) walk(n);
+      });
+    })(el);
+    return letters;
+  }
+  function paint(letters, p) {
+    const N = letters.length;
+    letters.forEach((c, i) => {
+      const q = clamp((p - (i / N) * 0.6) / 0.4);
+      c.style.setProperty('--q', q.toFixed(3));
+      c.style.setProperty('--qp', (1 - Math.pow(1 - q, 3)).toFixed(3));
+    });
+  }
+
+  /* o efeito das letras fica só no título "Vídeo em breve" */
+  const alvo = document.querySelector('#video .block h2');
+  const alvoL = split(alvo);
+  const vwrap = document.getElementById('videoWrap');
+  const narrow = () => false;
+
+  const wrap = document.getElementById('como');
+  const stack = document.getElementById('stack');
+  function update() {
+    if (!still) {
+      const r = wrap.getBoundingClientRect();
+      stack.style.setProperty('--p', clamp(-r.top / (r.height - innerHeight)).toFixed(3));
+    }
+    /* a seção do vídeo fica fixa na tela enquanto as letras caem; o progresso vem de quanto você rolou nela */
+    const top = vwrap.getBoundingClientRect().top;
+    const p = narrow() ? 1 : clamp((innerHeight * 0.5 - top) / (innerHeight * 1.5));
+    paint(alvoL, still ? 1 : p);
+  }
+  addEventListener('scroll', update, { passive: true });
+  addEventListener('resize', update);
+  update();
+
+  /* caracteres em vermelho (inspirado nos cartões do Hack Brasil, que usam verde); só roda enquanto a seção está visível */
+  (function () {
+    const sec = document.getElementById('evento');
+    const cv = sec.querySelector('canvas.ascii');
+    const ctx = cv.getContext('2d');
+    const chars = ['.', '.', '.', ':', ';', '-', '+', '*', '@'];
+    const CW = 11, CH = 20;
+    let cols = 0, rows = 0, grid = [], timer = null;
+    function size() {
+      const dpr = Math.min(devicePixelRatio || 1, 2);
+      cv.width = sec.clientWidth * dpr; cv.height = sec.clientHeight * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cols = Math.ceil(sec.clientWidth / CW); rows = Math.ceil(sec.clientHeight / CH);
+      grid = Array.from({ length: cols * rows }, () => Math.random() < 0.9 ? 0 : 1 + Math.floor(Math.random() * 8));
+      draw();
+    }
+    function draw() {
+      ctx.clearRect(0, 0, sec.clientWidth, sec.clientHeight);
+      ctx.font = '13px ui-monospace, Consolas, monospace'; ctx.textBaseline = 'top';
+      for (let i = 0; i < grid.length; i++) {
+        const g = grid[i]; if (!g) continue;
+        ctx.fillStyle = g >= 7 ? 'rgba(255,90,74,.75)' : 'rgba(255,90,74,.18)';
+        ctx.fillText(chars[g], (i % cols) * CW, Math.floor(i / cols) * CH);
+      }
+    }
+    function step() {
+      const n = Math.max(6, Math.floor(grid.length * 0.012));
+      for (let k = 0; k < n; k++) { const i = Math.floor(Math.random() * grid.length); grid[i] = Math.random() < 0.55 ? 0 : 1 + Math.floor(Math.random() * 8); }
+      draw();
+    }
+    new IntersectionObserver(es => { clearInterval(timer); if (es[0].isIntersecting && !still) timer = setInterval(step, 140); }).observe(sec);
+    addEventListener('resize', size);
+    size();
+  })();
+
+  /* cartões espalhados: sobem e descem em velocidades diferentes conforme a rolagem */
+  (function () {
+    const sec = document.getElementById('evento');
+    function tilt() {
+      if (still || matchMedia('(max-width: 860px)').matches) return;
+      const r = sec.getBoundingClientRect();
+      sec.style.setProperty('--sp', clamp(1 - (r.top + r.height) / (innerHeight + r.height)).toFixed(3));
+    }
+    addEventListener('scroll', tilt, { passive: true }); tilt();
+  })();
+
+  /* topo: letras aleatórias "hackeando" nos primeiros segundos e depois formando o título (inspirado no site do Hack Brasil) */
+  (function () {
+    const h1 = document.querySelector('.hero h1');
+    const letters = split(h1);
+    letters.forEach(c => { c.dataset.f = c.textContent; c.style.setProperty('--q', 1); c.style.setProperty('--qp', 1); c.style.transform = 'none'; c.style.opacity = 1; });
+    /* trava a largura de cada letra para o texto não pular enquanto troca de caractere */
+    letters.forEach(c => { c.style.width = c.getBoundingClientRect().width + 'px'; c.style.textAlign = 'center'; });
+    const pool = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#+*;:%&';
+    const cv = document.getElementById('ruido'), hero = document.querySelector('.hero');
+    const ctx = cv.getContext('2d');
+    let cells = [], cols = 0, rows = 0;
+    function size() { const d = Math.min(devicePixelRatio || 1, 2); cv.width = hero.clientWidth * d; cv.height = hero.clientHeight * d; ctx.setTransform(d, 0, 0, d, 0, 0);
+      cols = Math.ceil(hero.clientWidth / 12); rows = Math.ceil(hero.clientHeight / 20); }
+    size();
+    if (still) { cv.style.display = 'none'; letters.forEach(c => { c.style.width = ''; c.style.textAlign = ''; }); return; }
+    const DUR = 1900, t0 = performance.now();
+    function frame(now) {
+      const t = now - t0, p = Math.min(1, t / DUR);
+      const done = Math.floor(p * letters.length);
+      letters.forEach((c, i) => {
+        const sp = c.dataset.f === ' ';
+        if (i < done || sp) { c.textContent = c.dataset.f; c.style.color = ''; }
+        else { c.textContent = pool[Math.floor(Math.random() * pool.length)]; c.style.color = 'rgba(255,90,74,.9)'; }
+      });
+      /* chuva de caracteres vermelhos que some */
+      ctx.clearRect(0, 0, hero.clientWidth, hero.clientHeight);
+      ctx.font = '14px ui-monospace, Consolas, monospace'; ctx.textBaseline = 'top';
+      const fade = Math.max(0, 1 - t / (DUR + 600));
+      const n = Math.floor(cols * rows * 0.05 * fade);
+      for (let k = 0; k < n; k++) {
+        const x = Math.floor(Math.random() * cols) * 12, y = Math.floor(Math.random() * rows) * 20;
+        ctx.fillStyle = 'rgba(255,90,74,' + (0.15 + Math.random() * 0.5 * fade).toFixed(2) + ')';
+        ctx.fillText(pool[Math.floor(Math.random() * pool.length)], x, y);
+      }
+      if (t < DUR + 600) requestAnimationFrame(frame);
+      else { letters.forEach(c => { c.textContent = c.dataset.f; c.style.color = ''; c.style.width = ''; c.style.textAlign = ''; }); cv.style.display = 'none'; }
+    }
+    requestAnimationFrame(frame);
+  })();
+
+  /* faixa de parceiros: duplica a lista para o carrossel fechar o círculo sem emenda; botão de pausar */
+  (function () {
+    const tr = document.getElementById('trilho');
+    tr.innerHTML = tr.innerHTML + tr.innerHTML;
+    const faixa = document.getElementById('faixa'), b = document.getElementById('pausar');
+    b.addEventListener('click', () => { const on = faixa.classList.toggle('pausada'); b.textContent = on ? 'Retomar' : 'Pausar'; b.setAttribute('aria-pressed', on); });
+  })();
+
+  /* anel 3D: os logos giram em círculo; arrastar gira à mão; pausa ao passar o mouse ou no botão */
+  (function () {
+    const box = document.getElementById('anelBox'), ring = document.getElementById('anel');
+    const cards = [...ring.children], N = cards.length, step = 360 / N;
+    const btn = null;
+    let R = 300, angle = 0, paused = false, hover = false, drag = false, lastX = 0, visible = false, last = performance.now();
+    function measure() { const w = cards[0].offsetWidth; R = (w / 2) / Math.tan(Math.PI / N) + 44; R = Math.min(R, document.documentElement.clientWidth / 2 - w / 2 - 10); layout(); }
+    function layout() {
+      cards.forEach((c, i) => {
+        const a = i * step + angle, rad = a * Math.PI / 180, depth = (Math.cos(rad) + 1) / 2;
+        c.style.transform = 'rotateY(' + a.toFixed(2) + 'deg) translateZ(' + R.toFixed(1) + 'px) rotateY(' + (-a).toFixed(2) + 'deg)';
+        c.style.opacity = (0.18 + 0.82 * depth).toFixed(2);
+        c.style.zIndex = Math.round(depth * 100);
+      });
+    }
+    function tick(now) {
+      const dt = Math.min(64, now - last) / 1000; last = now;
+      if (visible && !paused && !hover && !drag && !still) { angle += 9 * dt; layout(); }
+      requestAnimationFrame(tick);
+    }
+    new IntersectionObserver(es => { visible = es[0].isIntersecting; }).observe(box);
+    box.addEventListener('mouseenter', () => { hover = true; });
+    box.addEventListener('mouseleave', () => { hover = false; });
+    box.addEventListener('pointerdown', e => { if (e.target === btn) return; drag = true; lastX = e.clientX; box.setPointerCapture(e.pointerId); });
+    box.addEventListener('pointermove', e => { if (!drag) return; angle += (e.clientX - lastX) * 0.4; lastX = e.clientX; layout(); });
+    const end = () => { drag = false; };
+    box.addEventListener('pointerup', end); box.addEventListener('pointercancel', end);
+    addEventListener('resize', measure);
+    measure();
+    requestAnimationFrame(tick);
+  })();
+
+  /* título do evento: letras trocando e depois acertando, toda vez que ele entra na tela */
+  (function () {
+    const h2 = document.querySelector('#evento h2');
+    const L = split(h2);
+    L.forEach(c => { c.dataset.f = c.textContent; c.style.setProperty('--q', 1); c.style.setProperty('--qp', 1); c.style.transform = 'none'; c.style.opacity = 1; });
+    const pool = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#+*;:%&';
+    let running = false, inside = false;
+    function lock() { L.forEach(c => { c.style.width = ''; }); L.forEach(c => { c.style.width = c.getBoundingClientRect().width + 'px'; c.style.textAlign = 'center'; }); }
+    function run() {
+      if (still || running) return;
+      running = true; lock();
+      const DUR = 1500, t0 = performance.now();
+      (function frame(now) {
+        const p = Math.min(1, (now - t0) / DUR), done = Math.floor(p * L.length);
+        L.forEach((c, i) => {
+          if (i < done || c.dataset.f === ' ') { c.textContent = c.dataset.f; c.style.color = ''; }
+          else { c.textContent = pool[Math.floor(Math.random() * pool.length)]; c.style.color = 'rgba(255,90,74,.9)'; }
+        });
+        if (p < 1) requestAnimationFrame(frame);
+        else { L.forEach(c => { c.textContent = c.dataset.f; c.style.color = ''; c.style.width = ''; c.style.textAlign = ''; }); running = false; }
+      })(t0);
+    }
+    new IntersectionObserver(es => { const now = es[0].isIntersecting; if (now && !inside) run(); inside = now; }, { threshold: 0.6 }).observe(h2);
+  })();
+
+  /* gato em linha reta: atravessa o topo uma vez e o arco-íris cinza fica desenhado atrás dele; o gato para no fim */
+  (function () {
+    if (still) return;
+    const box = document.getElementById('minhoca'), gato = document.getElementById('gato2'), hero = document.querySelector('.hero');
+    const paths = [...box.querySelectorAll('path.faixa-gris')];
+    const SPEED = 230;                                   /* px por segundo */
+    let W = 0, H = 0, y0 = 0, xFim = 0, total = 0, s = 0, pronto = false, last = performance.now();
+    function build() {
+      W = document.documentElement.clientWidth; H = hero.offsetHeight;
+      box.style.height = H + 'px';
+      const tTop = hero.querySelector('h1').getBoundingClientRect().top - hero.getBoundingClientRect().top;
+      y0 = Math.max(110, Math.min(H * 0.15, tTop - 80)); /* abaixo do menu e acima do título */
+      xFim = W * 0.93; total = xFim + 60;
+      const k = Math.min(1, W / 1100);
+      const d = 'M-60 ' + y0.toFixed(1) + ' L' + xFim.toFixed(1) + ' ' + y0.toFixed(1);
+      paths.forEach(pa => { pa.setAttribute('d', d); pa.setAttribute('stroke-width', (44 * k * parseFloat(pa.dataset.k)).toFixed(1)); });
+      gato.style.width = Math.max(78, 112 * k) + 'px';
+      draw(pronto ? total : s);
+    }
+    function draw(sv) {
+      const head = Math.min(sv, total);
+      paths.forEach(pa => { pa.style.strokeDasharray = head.toFixed(1) + ' ' + (total * 2).toFixed(1); pa.style.strokeDashoffset = '0'; });
+      const x = -60 + head, w = gato.offsetWidth, h = gato.offsetHeight;
+      gato.style.opacity = 1;
+      gato.style.transform = 'translate(' + (x - w * 0.62).toFixed(1) + 'px,' + (y0 - h / 2).toFixed(1) + 'px)';
+    }
+    function frame(now) {
+      const dt = Math.min(64, now - last) / 1000; last = now;
+      s += SPEED * dt;
+      if (s >= total) { s = total; pronto = true; gato.classList.add('parado'); draw(total); return; }
+      draw(s);
+      requestAnimationFrame(frame);
+    }
+    build();
+    requestAnimationFrame(frame);
+    addEventListener('resize', build);
+    new ResizeObserver(build).observe(hero);
+  })();
+</script>
+</body>
+</html>
