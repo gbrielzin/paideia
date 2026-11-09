@@ -56,42 +56,33 @@ export default function Calculator() {
         }}
         className="space-y-5"
       >
-        <div className="grid gap-x-8 gap-y-2 md:grid-cols-3">
+        {/* Grade compacta, como um cartão-resposta: colunas de 15 (3 no computador, 2 no celular). */}
+        <div className="max-w-xl columns-2 gap-x-5 sm:columns-3 sm:gap-x-6" role="group" aria-label="Gabarito, questões 136 a 180">
           {answers.map((current, index) => {
             const position = FIRST_POSITION + index
             return (
-              <fieldset key={position} className="flex items-center gap-3">
+              <fieldset key={position} className="m-0 flex min-w-0 break-inside-avoid items-center border-0 p-0">
                 <legend className="sr-only">Questão {position}</legend>
-                <span aria-hidden="true" className="w-8 font-mono text-sm text-muted">
+                <span aria-hidden="true" className="w-6 font-mono text-[10px] text-muted sm:w-6">
                   {position}
                 </span>
-                <span className="flex gap-1.5">
-                  {LETTERS.map((letter) => (
-                    <label key={letter} className="cursor-pointer">
-                      <input
-                        type="radio"
-                        name={`q${position}`}
-                        value={letter}
-                        checked={current === letter}
-                        onChange={() => mark(index, letter)}
-                        className="peer sr-only"
-                      />
-                      <span className="grid h-8 w-8 place-items-center rounded-full border border-rule text-xs text-muted peer-checked:border-ink peer-checked:bg-ink peer-checked:text-paper peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-pen">
-                        {letter}
-                      </span>
-                    </label>
-                  ))}
-                </span>
-                {current !== '.' && (
-                  <button
-                    type="button"
-                    onClick={() => mark(index, '.')}
-                    className="text-xs text-muted underline underline-offset-2 hover:text-pen"
-                    aria-label={`Limpar a questão ${position}`}
-                  >
-                    limpar
-                  </button>
-                )}
+                {LETTERS.map((letter) => (
+                  <label key={letter} className="grid h-[26px] w-6 cursor-pointer place-items-center sm:h-[19px] sm:w-[18px]">
+                    <input
+                      type="radio"
+                      name={`q${position}`}
+                      value={letter}
+                      checked={current === letter}
+                      onChange={() => {}}
+                      // Tocar de novo na marcada limpa a resposta
+                      onClick={() => mark(index, current === letter ? '.' : letter)}
+                      className="peer sr-only"
+                    />
+                    <span className="grid h-5 w-5 place-items-center rounded-full border border-rule text-[9px] leading-none text-muted peer-checked:border-ink peer-checked:bg-ink peer-checked:text-paper peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-1 peer-focus-visible:outline-pen sm:h-[15px] sm:w-[15px] sm:text-[8px]">
+                      {letter}
+                    </span>
+                  </label>
+                ))}
               </fieldset>
             )
           })}
@@ -105,7 +96,7 @@ export default function Calculator() {
           >
             {status === 'loading' ? 'Calculando...' : 'Calcular'}
           </button>
-          <span className="text-sm text-muted">{marked} de {TOTAL} marcadas</span>
+          <span className="text-sm text-muted">{marked} de {TOTAL} marcadas. Toque de novo na marcada para limpar.</span>
         </div>
       </form>
 
