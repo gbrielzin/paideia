@@ -19,6 +19,7 @@
   #calculadora-root h3 { font-family: var(--font-serif); text-transform: uppercase; letter-spacing: 0.02em; font-weight: 700; font-size: 26px; }
   #calculadora-root table { border-collapse: collapse; }
   #calculadora-root th { font-weight: 600; }
+  #calculadora-root button { font-family: var(--font-sans); cursor: pointer; }
 }
 
 /* Botão no mesmo estilo dos botões vazados da página (.btn) */
