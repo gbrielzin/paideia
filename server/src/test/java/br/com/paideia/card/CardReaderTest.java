@@ -47,6 +47,14 @@ class CardReaderTest {
 		assertEquals(truth, r.answers());
 	}
 
+	/** A medição achou um erro aqui: marcas giradas a 30 graus eram recusadas porque o filtro de "quadrado cheio" era rígido demais. */
+	@Test
+	void readsACardRotatedBy30Degrees() {
+		String truth = randomTruth(new Random(3));
+		CardReading r = readPhoto(truth, new Conditions(-30, 0.01, 0, false, 0, 0, 0, 0.55), 13);
+		assertEquals(truth, r.answers());
+	}
+
 	@Test
 	void refusesAPhotoWithoutTheFourMarks() {
 		BufferedImage white = new BufferedImage(800, 1000, BufferedImage.TYPE_INT_RGB);
