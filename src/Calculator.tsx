@@ -4,9 +4,13 @@ import { analyze, type Analysis } from './api'
 const LETTERS = ['A', 'B', 'C', 'D', 'E']
 const FIRST_POSITION = 136
 const TOTAL = 45
+const BLANK_CHANCE = 0.12
 
 const points = (n: number) => n.toLocaleString('pt-BR', { maximumFractionDigits: 0 })
 const gain = (n: number) => n.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })
+
+const SECONDARY_BUTTON =
+  'border border-rule bg-transparent px-4 py-3 text-sm text-ink hover:border-ink'
 
 type Status = 'idle' | 'loading' | 'invalid' | 'unavailable' | 'done'
 
@@ -18,6 +22,19 @@ export default function Calculator({ embedded = false }: { embedded?: boolean })
   const [result, setResult] = useState<Analysis | null>(null)
 
   const marked = answers.filter((a) => a !== '.').length
+
+  // Só para teste e demonstração: letras sorteadas no próprio navegador, algumas questões em branco de propósito.
+  function fillRandom() {
+    setAnswers(Array.from({ length: TOTAL }, () => (Math.random() < BLANK_CHANCE ? '.' : LETTERS[Math.floor(Math.random() * LETTERS.length)])))
+    setStatus('idle')
+    setResult(null)
+  }
+
+  function clearAll() {
+    setAnswers(Array(TOTAL).fill('.'))
+    setStatus('idle')
+    setResult(null)
+  }
 
   function mark(index: number, letter: string) {
     setAnswers((prev) => prev.map((a, i) => (i === index ? letter : a)))
@@ -68,7 +85,7 @@ export default function Calculator({ embedded = false }: { embedded?: boolean })
             return (
               <fieldset key={position} className="m-0 flex min-w-0 break-inside-avoid items-center border-0 p-0">
                 <legend className="sr-only">Questão {position}</legend>
-                <span aria-hidden="true" className="w-6 font-mono text-[10px] text-muted sm:w-6">
+                <span aria-hidden="true" className="w-6 font-mono text-[11px] text-muted sm:w-6">
                   {position}
                 </span>
                 {LETTERS.map((letter) => (
@@ -83,7 +100,7 @@ export default function Calculator({ embedded = false }: { embedded?: boolean })
                       onClick={() => mark(index, current === letter ? '.' : letter)}
                       className="peer sr-only"
                     />
-                    <span className="grid h-5 w-5 place-items-center rounded-full border border-rule text-[9px] leading-none text-muted peer-checked:border-ink peer-checked:bg-ink peer-checked:text-paper peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-1 peer-focus-visible:outline-pen sm:h-[15px] sm:w-[15px] sm:text-[8px]">
+                    <span className="grid h-5 w-5 place-items-center rounded-full border border-ink/70 text-[11px] font-medium leading-none text-ink peer-checked:border-pen peer-checked:bg-pen peer-checked:font-bold peer-checked:text-paper peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-1 peer-focus-visible:outline-pen sm:h-[15px] sm:w-[15px] sm:text-[10px]">
                       {letter}
                     </span>
                   </label>
@@ -101,8 +118,17 @@ export default function Calculator({ embedded = false }: { embedded?: boolean })
           >
             {status === 'loading' ? 'Calculando...' : 'Calcular'}
           </button>
-          <span className="text-sm text-muted">{marked} de {TOTAL} marcadas. Toque de novo na marcada para limpar.</span>
+          <button type="button" onClick={clearAll} className={SECONDARY_BUTTON}>
+            Limpar tudo
+          </button>
+          <button type="button" onClick={fillRandom} className={SECONDARY_BUTTON}>
+            Preencher com respostas aleatórias (só teste)
+          </button>
         </div>
+        <p className="text-sm text-muted">
+          {marked} de {TOTAL} marcadas. Toque de novo na marcada para limpar. O botão de respostas aleatórias é só para
+          testar: ele não representa uma prova real.
+        </p>
       </form>
 
       <div aria-live="polite" className="space-y-8">

@@ -278,6 +278,10 @@
   @media (prefers-reduced-motion: reduce) {html:not(.mov) #minhoca { display: none; } }
   .hero { min-height: max(100svh, 820px); }
   .hero .mini { margin: 12px 0 0; font-size: 14px; color: var(--muted); max-width: none; }
+  /* celular: o texto do topo começa perto do topo da tela (antes ficava colado no fundo de uma altura mínima de 820px) */
+  @media (max-width: 860px) {
+    .hero { min-height: 100svh; align-items: flex-start; padding-top: 104px; }
+  }
 </style>
 </head>
 <body>
