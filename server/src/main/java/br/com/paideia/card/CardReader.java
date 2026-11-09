@@ -254,38 +254,54 @@ public class CardReader {
 			double aspect = (double) bw / bh;
 			double fill = (double) count / ((double) bw * bh);
 			if (bw >= minSide && bh >= minSide && bw <= maxSide && bh <= maxSide
-					&& aspect >= 0.6 && aspect <= 1.67 && fill >= 0.55) {
+					&& aspect >= 0.6 && aspect <= 1.67 && fill >= 0.45) {
 				out.add(new Blob((double) sx / count, (double) sy / count, count, bw, bh));
 			}
 		}
 		return out;
 	}
 
-	/** Ordena 4 pontos em topo esquerdo, topo direito, base direita, base esquerda (vale para giros até ~40 graus). */
+	/**
+	 * Ordena 4 pontos em topo esquerdo, topo direito, base direita, base esquerda. Põe os pontos em ordem horária e
+	 * escolhe o canto inicial de modo que o lado de cima seja o lado curto da folha (A4 em pé) e fique mais alto na
+	 * foto. Vale para folha em pé girada em até uns 80 graus; de cabeça para baixo não dá para distinguir.
+	 */
 	private static double[][] order(Blob[] q) {
-		int tl = 0;
-		int br = 0;
-		int tr = 0;
-		int bl = 0;
-		for (int i = 1; i < 4; i++) {
-			if (q[i].cx + q[i].cy < q[tl].cx + q[tl].cy) {
-				tl = i;
+		double mx = 0;
+		double my = 0;
+		for (Blob b : q) {
+			mx += b.cx / 4;
+			my += b.cy / 4;
+		}
+		final double cx = mx;
+		final double cy = my;
+		Blob[] c = q.clone();
+		java.util.Arrays.sort(c, Comparator.comparingDouble(b -> Math.atan2(b.cy - cy, b.cx - cx)));
+		int best = -1;
+		double bestTopY = Double.MAX_VALUE;
+		for (int k = 0; k < 4; k++) {
+			double top = Math.hypot(c[k].cx - c[(k + 1) % 4].cx, c[k].cy - c[(k + 1) % 4].cy)
+					+ Math.hypot(c[(k + 2) % 4].cx - c[(k + 3) % 4].cx, c[(k + 2) % 4].cy - c[(k + 3) % 4].cy);
+			double side = Math.hypot(c[(k + 1) % 4].cx - c[(k + 2) % 4].cx, c[(k + 1) % 4].cy - c[(k + 2) % 4].cy)
+					+ Math.hypot(c[(k + 3) % 4].cx - c[k].cx, c[(k + 3) % 4].cy - c[k].cy);
+			if (top >= side) {
+				continue;
 			}
-			if (q[i].cx + q[i].cy > q[br].cx + q[br].cy) {
-				br = i;
-			}
-			if (q[i].cx - q[i].cy > q[tr].cx - q[tr].cy) {
-				tr = i;
-			}
-			if (q[i].cx - q[i].cy < q[bl].cx - q[bl].cy) {
-				bl = i;
+			double topY = c[k].cy + c[(k + 1) % 4].cy;
+			if (topY < bestTopY) {
+				bestTopY = topY;
+				best = k;
 			}
 		}
-		if (tl + br + tr + bl != 6 || tl == br || tl == tr || tl == bl || br == tr || br == bl || tr == bl) {
+		if (best < 0) {
 			return null;
 		}
-		return new double[][] { { q[tl].cx, q[tl].cy }, { q[tr].cx, q[tr].cy }, { q[br].cx, q[br].cy },
-				{ q[bl].cx, q[bl].cy } };
+		double[][] out = new double[4][];
+		for (int i = 0; i < 4; i++) {
+			Blob b = c[(best + i) % 4];
+			out[i] = new double[] { b.cx, b.cy };
+		}
+		return out;
 	}
 
 	/** Quanto menor, mais o quadrilátero parece o cartão (proporção, lados opostos parecidos, marcas do mesmo tamanho). */
