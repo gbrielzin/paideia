@@ -8,4 +8,6 @@ export default defineConfig({
       react(),
       tailwindcss(),
   ],
+  // Em desenvolvimento, repassa /api para a API Spring local.
+  server: { proxy: { '/api': 'http://localhost:8080' } },
 })

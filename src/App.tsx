@@ -1,3 +1,5 @@
+import Calculator from './Calculator'
+
 const LETTERS = ['A', 'B', 'C', 'D', 'E']
 
 type Row = { q: number; marked: number; wrong: boolean; rank?: string }
@@ -89,6 +91,8 @@ function App() {
           </div>
           <AnswerSheet />
         </section>
+
+        <Calculator />
 
         <section className="grid gap-8 md:grid-cols-[1fr_2fr]">
           <h2 className="font-serif text-2xl font-semibold">Para quem é</h2>
