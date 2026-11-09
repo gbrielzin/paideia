@@ -1,0 +1,18 @@
+{
+ "description": "Medidas do cartao-resposta em milimetros, origem no canto superior esquerdo da folha A4. Usado pelo gerador do PDF (data/make_answer_card.py) e pelo leitor em Java.",
+ "pageWidthMm": 210,
+ "pageHeightMm": 297,
+ "markSizeMm": 10,
+ "markCentersMm": [[15, 15], [195, 15], [195, 282], [15, 282]],
+ "markOrder": "canto superior esquerdo, superior direito, inferior direito, inferior esquerdo",
+ "firstPosition": 136,
+ "questions": 45,
+ "rowsPerBlock": 15,
+ "blockOriginsXMm": [22, 79, 136],
+ "firstRowCenterYMm": 86,
+ "rowPitchMm": 11.5,
+ "firstBubbleOffsetXMm": 14,
+ "bubblePitchMm": 8.5,
+ "bubbleDiameterMm": 6,
+ "letters": "ABCDE"
+}

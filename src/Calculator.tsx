@@ -118,6 +118,9 @@ export default function Calculator({ embedded = false }: { embedded?: boolean })
           >
             {status === 'loading' ? 'Calculando...' : 'Calcular'}
           </button>
+          <a href="/cartao-resposta-mt-2025.pdf" download className={`${SECONDARY_BUTTON} inline-block no-underline`}>
+            Baixar cartão em PDF
+          </a>
           <button type="button" onClick={clearAll} className={SECONDARY_BUTTON}>
             Limpar tudo
           </button>

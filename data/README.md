@@ -41,3 +41,9 @@ python -m unittest discover -s data                                         # te
 
 ## O que o Java precisa reproduzir
 Mesma grade, mesma fórmula, mesma escala. A tolerância é definida no teste do Java.
+
+## Cartão-resposta em PDF
+- Arquivo para baixar: `public/cartao-resposta-mt-2025.pdf` (A4, preto e branco, 4 quadrados pretos nos cantos, 45 questões em 3 blocos de 15). O site o serve em `/cartao-resposta-mt-2025.pdf` e a seção de cálculo tem o botão "Baixar cartão em PDF".
+- Medidas (em milímetros) ficam em `server/src/main/resources/card/layout.json`. O PDF e o leitor de foto usam o mesmo arquivo, então as bolinhas ficam onde o leitor espera.
+- Para gerar de novo: `python data/make_answer_card.py`. Sai o mesmo arquivo para o mesmo layout (sem data nem hora dentro). O teste `data/test_answer_card.py` falha se o PDF commitado ficar diferente do que o script gera.
+- Conferi o desenho abrindo o PDF no PDF.js (print em `docs/evidence/screenshots/13_cartao_pdf_render_2026-11-09.png`). **Não** imprimi numa impressora real nem medi com régua.
