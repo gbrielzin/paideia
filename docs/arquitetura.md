@@ -49,3 +49,21 @@ flowchart TB
 - Onde os dados do INEP ficam: arquivo carregado na subida da API (sem banco) ou banco. Impacta a hospedagem.
 - Onde a API fica no ar e como é o deploy (CD). Testar cedo (decisão `0003`, a criar).
 - Como será a leitura por foto, se entrar.
+
+## API do núcleo (implementada)
+`POST /api/analysis` (endpoint stateless, decisão [0003](decisions/0003-onde-roda-o-calculo-e-privacidade.md)). Recebe as 45 respostas e devolve nota estimada, erro, mapa de erros e a lista "revise primeiro". Não grava e não registra em log o que recebeu.
+
+```mermaid
+sequenceDiagram
+  participant F as Front React
+  participant A as API Spring
+  participant M as Motor TRI (em memória)
+  F->>A: POST /api/analysis {"answers": "45 letras"}
+  A->>A: valida o formato (A-E ou ponto)
+  A->>M: analyze(respostas)
+  M-->>A: nota, erro, mapa de erros
+  A-->>F: JSON (notice, exam, score, error, errorMap, reviewFirst)
+  Note over A: nada é gravado; nenhum log do conteúdo
+```
+
+Entrada: `{"answers": "CBDC..."}`, 45 caracteres, letras A a E (ou `.` para branco), na ordem da prova (posições 136 a 180). Resposta: `notice`, `exam`, `score`, `error`, `errorMap` (ordenado do custo maior ao menor), `reviewFirst` (os 5 primeiros do mapa). Entrada inválida: HTTP 400 com mensagem fixa.
