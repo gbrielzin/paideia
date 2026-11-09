@@ -2,7 +2,13 @@
 
 - **Data:** 09/11/2026
 - **Quem participou:** Gabriel (pediu a ideia); rascunho escrito por agente de IA. Murilo ainda não viu.
-- **Estado:** **PROPOSTA.** Nada decidido, nada construído. Esta foto é uma camada de fora (regra de corte do `AGENTS.md`): só começa depois que o núcleo (tabela, motor, mapa de erros) estiver no ar.
+- **Estado:** **ACEITA PELO GABRIEL em 09/11/2026: opção C (leitura em Java, na própria API), com PDF fixo pronto. Aguardando o ok do Murilo.** Telegram continua fora desta rodada. A foto é uma camada de fora (regra de corte do `AGENTS.md`).
+
+## Decisão do Gabriel (09/11/2026)
+- Seguir a **opção C**: o leitor da foto roda em Java dentro da API (`POST /api/read-card`), com o cartão em **PDF fixo** já pronto (`public/cartao-resposta-mt-2025.pdf`, gerado por `data/make_answer_card.py`).
+- Ele **aceita que a foto saia do aparelho**, com uma condição que vale como regra de código (a mesma da [0003](0003-onde-roda-o-calculo-e-privacidade.md)): **a API não guarda nada e não registra nem a foto nem as respostas lidas.** Na prática: a foto fica só na memória durante a chamada, o Spring é configurado para não gravar o envio em arquivo temporário, e há teste automatizado que confere que nada da foto nem das respostas aparece no log.
+- O texto público (README, página do site e página do design) passa a dizer: se o aluno enviar a foto, ela viaja até a API, é lida na memória e descartada.
+- Ainda **não** vale: o aluno sempre confere as respostas lidas na grade antes de calcular; Telegram não foi construído; o que a leitura acerta em foto de celular de verdade **ainda não foi medido** (só com fotos sintéticas).
 
 ## Problema
 O Gabriel quer que o aluno **imprima um cartão-resposta em PDF** gerado pelo Paideia, com **marcas de alinhamento nos cantos**, preencha, **tire uma foto** e tenha as 45 respostas **lidas automaticamente**. A mesma foto também poderia ser enviada a um **bot do Telegram**.
