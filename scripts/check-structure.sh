@@ -5,7 +5,7 @@
 # Raiz. O front (React) fica na raiz e o Java fica em server/ (decisão 0002).
 # Os nomes de arquivo do front são os padrões do Vite/React/Tailwind; ajuste se o gerador criar outros.
 # data/ guarda a referência em Python da TRI, os casos de teste e o README dos dados.
-ROOT_OK="vercel.json .env.example .gitattributes .githooks .github .gitignore AGENTS.md CLAUDE.md LICENSE README.md data docs scripts server eslint.config.js index.html package-lock.json package.json postcss.config.js public src tailwind.config.js tsconfig.app.json tsconfig.json tsconfig.node.json vite.config.js vite.config.ts"
+ROOT_OK="previa-visual vercel.json .env.example .gitattributes .githooks .github .gitignore AGENTS.md CLAUDE.md LICENSE README.md data docs scripts server eslint.config.js index.html package-lock.json package.json postcss.config.js public src tailwind.config.js tsconfig.app.json tsconfig.json tsconfig.node.json vite.config.js vite.config.ts"
 # Dentro de docs/
 DOCS_OK="agents arquitetura.md decisions evidence hackbrasil journey metricas.md referencias.md templates"
 

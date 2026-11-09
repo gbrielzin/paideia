@@ -37,7 +37,7 @@ Cada regra diz o que fazer, por quê e como é conferida. Se uma regra atrapalha
 - `docs/metricas.md`: um arquivo só, uma linha por número medido (antes, depois, como medimos).
 - `docs/arquitetura.md`: um arquivo só, criado depois da call: diagrama, como funciona o fluxo e links para as decisões (stack e framework).
 - `scratch/fontes/`: material bruto de terceiros, **ignorado pelo git**.
-- **Front (React)** na raiz do repositório (`src/`, `public/`, `package.json` etc.). **Back-end Java/Spring** em `server/`. `data/` guarda a referência em Python da TRI, os casos de teste e o README dos dados. Decisão: [`0002`](docs/decisions/0002-front-na-raiz-java-em-server.md).
+- **Front (React)** na raiz do repositório (`src/`, `public/`, `package.json` etc.). `previa-visual/` na raiz guarda a página do design (HTML) que o Vite publica junto com o cálculo em React; as imagens e vídeos dela ficam em `public/previa-visual/`. **Back-end Java/Spring** em `server/`. `data/` guarda a referência em Python da TRI, os casos de teste e o README dos dados. Decisão: [`0002`](docs/decisions/0002-front-na-raiz-java-em-server.md).
 - **Este mapa é conferido por máquina:** `scripts/check-structure.sh` (rodado na CI) falha se existir algo fora dele. Ao criar algo novo, atualize o mapa e as listas do script no mesmo PR.
 
 ## Convenções

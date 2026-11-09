@@ -121,6 +121,11 @@
   footer { padding: 36px var(--pad) 56px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,.08); }
 
 
+  /* CÁLCULO: seção com o título no padrão da página e a grade de marcação */
+  .calc { padding: 110px var(--pad) 90px; border-top: 1px solid rgba(255,255,255,.08); }
+  .calc .block h2 { font-size: clamp(38px, 5.2vw, 76px); }
+  #calculadora-root { margin-top: 36px; max-width: 860px; }
+
   /* EFEITO DAS LETRAS: caem de cima, começam cinzas e ganham a cor final ao chegar */
   .c { display: inline-block; will-change: transform, opacity;
        transform: translate3d(calc((1 - var(--qp, 1)) * var(--x, 0px)), calc((1 - var(--qp, 1)) * -42vh), 0) rotate(calc((1 - var(--qp, 1)) * var(--r, 0deg)));
@@ -281,6 +286,7 @@
   <a class="brand" href="#topo">PAIDEIA</a>
   <ul>
     <li><a class="l" href="#como">Como funciona</a></li>
+    <li><a class="l" href="#calcular">Calcular</a></li>
     <li><a class="l" href="#limites">Limites</a></li>
     <li><a class="l" href="#video">Vídeo</a></li>
     <li><a class="l" href="#evento">Evento</a></li>
@@ -346,6 +352,14 @@
       </div>
     </div>
   </div>
+
+  <section class="calc" id="calcular">
+    <div class="block">
+      <h2>Calcule com a prova de <em>Matemática</em></h2>
+      <p>ENEM 2025, prova azul, questões 136 a 180. Marque o que você respondeu e deixe em branco o que não marcou. As questões que o INEP anulou não entram na conta.</p>
+    </div>
+    <div id="calculadora-root"></div>
+  </section>
 
   <section class="sec" id="limites">
     <video class="bgvid" src="/previa-visual/caderno_loop.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
@@ -628,5 +642,6 @@
 
   
 </script>
+<script type="module" src="/src/previa-entry.tsx"></script>
 </body>
 </html>

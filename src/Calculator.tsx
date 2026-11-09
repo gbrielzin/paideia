@@ -10,7 +10,8 @@ const gain = (n: number) => n.toLocaleString('pt-BR', { minimumFractionDigits: 1
 
 type Status = 'idle' | 'loading' | 'invalid' | 'unavailable' | 'done'
 
-export default function Calculator() {
+/** embedded: a página que hospeda o componente já traz o título e a introdução. O aviso de estimativa sempre aparece. */
+export default function Calculator({ embedded = false }: { embedded?: boolean }) {
   // Uma letra por questão, ou '.' para branco. Fica só na memória da página.
   const [answers, setAnswers] = useState<string[]>(() => Array(TOTAL).fill('.'))
   const [status, setStatus] = useState<Status>('idle')
@@ -34,16 +35,20 @@ export default function Calculator() {
   }
 
   return (
-    <section id="calcular" className="space-y-6">
+    <section id={embedded ? undefined : 'calcular'} className="space-y-6">
       <div className="space-y-3">
-        <h2 className="font-serif text-2xl font-semibold">Calcule com a prova de Matemática do ENEM 2025</h2>
-        <p className="max-w-2xl text-lg leading-relaxed text-muted">
-          Prova azul, questões 136 a 180. Marque o que você respondeu e deixe em branco o que você não
-          marcou. As questões que o INEP anulou não entram na conta.
-        </p>
+        {!embedded && (
+          <>
+            <h2 className="font-serif text-2xl font-semibold">Calcule com a prova de Matemática do ENEM 2025</h2>
+            <p className="max-w-2xl text-lg leading-relaxed text-muted">
+              Prova azul, questões 136 a 180. Marque o que você respondeu e deixe em branco o que você não
+              marcou. As questões que o INEP anulou não entram na conta.
+            </p>
+          </>
+        )}
         <p
           role="note"
-          className="max-w-2xl border-l-2 border-pen bg-white/60 px-4 py-3 text-sm font-medium text-pen"
+          className="max-w-2xl border-l-2 border-pen bg-ink/5 px-4 py-3 text-sm font-medium text-pen"
         >
           Estimativa, não é a nota oficial. O resultado tem um erro, mostrado junto.
         </p>
