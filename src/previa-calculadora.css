@@ -1,0 +1,30 @@
+/* Estilo do cálculo dentro da página do design. Usa as cores e fontes da própria página.
+   Sem o "preflight" do Tailwind, para não alterar o resto da página. */
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  --color-paper: #050505;
+  --color-ink: #f3f0ea;
+  --color-muted: #b3aea4;
+  --color-rule: rgba(243, 240, 234, 0.35);
+  --color-pen: #ff5a4a;
+  --font-serif: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-sans: "Barlow", system-ui, sans-serif;
+}
+
+@layer base {
+  #calculadora-root { font-family: var(--font-sans); }
+  #calculadora-root :is(h3, p, ol, ul, table) { margin: 0; }
+  #calculadora-root h3 { font-family: var(--font-serif); text-transform: uppercase; letter-spacing: 0.02em; font-weight: 700; font-size: 26px; }
+  #calculadora-root table { border-collapse: collapse; }
+  #calculadora-root th { font-weight: 600; }
+}
+
+/* Botão no mesmo estilo dos botões vazados da página (.btn) */
+#calculadora-root button[type="submit"] {
+  font-family: var(--font-serif); font-weight: 600; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 15px 22px; background: rgba(0, 0, 0, 0.25); color: var(--color-ink); border: 1px solid var(--color-rule);
+  transition: background 0.2s, border-color 0.2s;
+}
+#calculadora-root button[type="submit"]:hover:not(:disabled) { background: rgba(255, 255, 255, 0.12); border-color: var(--color-ink); }

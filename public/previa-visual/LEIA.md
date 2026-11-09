@@ -1,8 +1,8 @@
 # Prévia do visual (HTML estático)
 
-Protótipo do novo visual da página, **fora do app React**: serve só para o time ver e opinar antes de portar. Não é a página publicada.
+Imagens, vídeos e a `demo.html` da página do design. O HTML principal agora fica em `previa-visual/index.html` (raiz do repositório) e o Vite o publica junto com o cálculo em React.
 
-Para abrir: `python -m http.server 4180` dentro desta pasta e acessar `http://localhost:4180/index.html`.
+Para abrir: `npm run dev` e acessar `http://localhost:5173/previa-visual/`.
 
 Pontos de atenção:
 - Nas prévias os efeitos rodam mesmo com "reduzir movimento" ligado no sistema. Use `?reduzir=1` para ver o modo acessível. Na versão final, o padrão deve respeitar essa configuração.
