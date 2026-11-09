@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { analyze, type Analysis } from './api'
+import { analyze, readCard, shrinkPhoto, type Analysis } from './api'
 
 const LETTERS = ['A', 'B', 'C', 'D', 'E']
 const FIRST_POSITION = 136
@@ -13,6 +13,7 @@ const SECONDARY_BUTTON =
   'border border-rule bg-transparent px-4 py-3 text-sm text-ink hover:border-ink'
 
 type Status = 'idle' | 'loading' | 'invalid' | 'unavailable' | 'done'
+type PhotoStatus = 'idle' | 'reading' | 'read' | 'not-found' | 'bad-image' | 'unavailable'
 
 /** embedded: a página que hospeda o componente já traz o título e a introdução. O aviso de estimativa sempre aparece. */
 export default function Calculator({ embedded = false }: { embedded?: boolean }) {
@@ -20,6 +21,9 @@ export default function Calculator({ embedded = false }: { embedded?: boolean })
   const [answers, setAnswers] = useState<string[]>(() => Array(TOTAL).fill('.'))
   const [status, setStatus] = useState<Status>('idle')
   const [result, setResult] = useState<Analysis | null>(null)
+  // Questões que a leitura da foto pediu para conferir (somem quando o aluno mexe na questão)
+  const [review, setReview] = useState<number[]>([])
+  const [photoStatus, setPhotoStatus] = useState<PhotoStatus>('idle')
 
   const marked = answers.filter((a) => a !== '.').length
 
@@ -32,11 +36,29 @@ export default function Calculator({ embedded = false }: { embedded?: boolean })
 
   function clearAll() {
     setAnswers(Array(TOTAL).fill('.'))
+    setReview([])
+    setPhotoStatus('idle')
     setStatus('idle')
     setResult(null)
   }
 
+  async function sendPhoto(file: File) {
+    setPhotoStatus('reading')
+    try {
+      const reading = await readCard(await shrinkPhoto(file))
+      setAnswers(reading.answers.split(''))
+      setReview(reading.review)
+      setResult(null)
+      setStatus('idle')
+      setPhotoStatus('read')
+    } catch (e) {
+      const code = e instanceof Error ? e.message : ''
+      setPhotoStatus(code === 'card-not-found' ? 'not-found' : code === 'bad-image' ? 'bad-image' : 'unavailable')
+    }
+  }
+
   function mark(index: number, letter: string) {
+    setReview((prev) => prev.filter((p) => p !== FIRST_POSITION + index))
     setAnswers((prev) => prev.map((a, i) => (i === index ? letter : a)))
   }
 
@@ -83,9 +105,12 @@ export default function Calculator({ embedded = false }: { embedded?: boolean })
           {answers.map((current, index) => {
             const position = FIRST_POSITION + index
             return (
-              <fieldset key={position} className="m-0 flex min-w-0 break-inside-avoid items-center border-0 p-0">
-                <legend className="sr-only">Questão {position}</legend>
-                <span aria-hidden="true" className="w-6 font-mono text-[11px] text-muted sm:w-6">
+              <fieldset
+                key={position}
+                className={`m-0 flex min-w-0 break-inside-avoid items-center border-0 p-0 ${review.includes(position) ? 'bg-pen/20' : ''}`}
+              >
+                <legend className="sr-only">Questão {position}{review.includes(position) ? ', conferir' : ''}</legend>
+                <span aria-hidden="true" className={`w-6 font-mono text-[11px] sm:w-6 ${review.includes(position) ? 'font-bold text-pen' : 'text-muted'}`}>
                   {position}
                 </span>
                 {LETTERS.map((letter) => (
@@ -121,6 +146,20 @@ export default function Calculator({ embedded = false }: { embedded?: boolean })
           <a href="/cartao-resposta-mt-2025.pdf" download className={`${SECONDARY_BUTTON} inline-block no-underline`}>
             Baixar cartão em PDF
           </a>
+          <label className={`${SECONDARY_BUTTON} cursor-pointer`}>
+            {photoStatus === 'reading' ? 'Lendo a foto...' : 'Enviar foto do cartão'}
+            <input
+              type="file"
+              accept="image/jpeg,image/png"
+              className="sr-only"
+              disabled={photoStatus === 'reading'}
+              onChange={(e) => {
+                const file = e.target.files?.[0]
+                e.target.value = ''
+                if (file) void sendPhoto(file)
+              }}
+            />
+          </label>
           <button type="button" onClick={clearAll} className={SECONDARY_BUTTON}>
             Limpar tudo
           </button>
@@ -128,6 +167,19 @@ export default function Calculator({ embedded = false }: { embedded?: boolean })
             Preencher com respostas aleatórias (só teste)
           </button>
         </div>
+        <p className="max-w-2xl text-sm text-muted">
+          A foto do cartão é enviada à nossa API só para ler as bolinhas: ela é lida na memória, descartada e não vai
+          para nenhum registro. Você sempre confere as respostas na grade antes de calcular.
+        </p>
+        <p role="status" className="max-w-2xl text-sm font-medium text-pen">
+          {photoStatus === 'read' &&
+            (review.length > 0
+              ? `Foto lida. Confira as ${review.length} questões destacadas e corrija se preciso. Depois clique em Calcular.`
+              : 'Foto lida. Confira a grade e clique em Calcular.')}
+          {photoStatus === 'not-found' && 'Não encontrei os 4 quadrados pretos dos cantos. Fotografe a folha inteira, de frente e com boa luz.'}
+          {photoStatus === 'bad-image' && 'Envie uma foto JPEG ou PNG de até 8 MB.'}
+          {photoStatus === 'unavailable' && 'Não consegui falar com a leitura agora. A API pode estar fora do ar.'}
+        </p>
         <p className="text-sm text-muted">
           {marked} de {TOTAL} marcadas. Toque de novo na marcada para limpar. O botão de respostas aleatórias é só para
           testar: ele não representa uma prova real.
