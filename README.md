@@ -25,7 +25,7 @@ O **Paideia** é uma plataforma open-source que traduz os parâmetros estatísti
 * 🎯 **Mapa de Erros Quantificado:** Exibição clara do tipo: *"Esta questão custou 18,5 pontos na sua nota"*.
 * 📚 **Recomendação Prioritária:** Algoritmo que seleciona os **3 temas de maior impacto** para revisão imediata.
 * ♿ **Acessibilidade Nativa:** Suporte a leitor de tela (síntese de voz), alto contraste e simplificação de texto (Linguagem Simples).
-* 🔒 **Privacidade:** a API calcula o mapa de erros a partir das respostas enviadas e **não as armazena** (sem banco e sem registro do conteúdo delas). Compromisso de projeto, a ser verificado no código (ver [decisão 0003](docs/decisions/0003-onde-roda-o-calculo-e-privacidade.md)). A demo usa só dados fictícios ou do próprio aluno, nunca dados pessoais de terceiros (regulamento 6.9).
+* 🔒 **Privacidade:** a API calcula o mapa de erros a partir das respostas enviadas e **não as armazena** (sem banco e sem registro do conteúdo delas). Se o aluno enviar a **foto do cartão-resposta**, a foto viaja até a API, é lida na memória e **descartada**: não é gravada e nem a foto nem as respostas lidas entram em registro (ver [decisão 0010](docs/decisions/0010-leitura-do-cartao-resposta-por-foto.md)). Compromisso de projeto, a ser verificado no código (ver [decisão 0003](docs/decisions/0003-onde-roda-o-calculo-e-privacidade.md)). A demo usa só dados fictícios ou do próprio aluno, nunca dados pessoais de terceiros (regulamento 6.9).
 
 ---
 

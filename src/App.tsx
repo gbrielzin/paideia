@@ -126,7 +126,7 @@ function App() {
           <ul className="max-w-2xl list-disc space-y-3 pl-5 text-lg leading-relaxed">
             <li>O resultado é sempre uma estimativa, nunca a nota oficial.</li>
             <li>A margem de erro ainda vai ser medida, e só depois a mostramos.</li>
-            <li>O cálculo roda na nossa API, que não armazena as suas respostas.</li>
+            <li>O cálculo roda na nossa API, que não armazena as suas respostas. Se você enviar a foto do cartão, ela viaja até a API, é lida na memória e descartada, sem gravar a foto nem as respostas lidas.</li>
             <li>Acessibilidade está planejada desde o início, mas ainda não foi construída.</li>
           </ul>
         </section>
