@@ -7,7 +7,7 @@
 # data/ está reservada para scripts de dados em Python, se forem usados.
 ROOT_OK="vercel.json .env.example .gitattributes .githooks .github .gitignore AGENTS.md CLAUDE.md LICENSE README.md data docs scripts server eslint.config.js index.html package-lock.json package.json postcss.config.js public src tailwind.config.js tsconfig.app.json tsconfig.json tsconfig.node.json vite.config.js vite.config.ts"
 # Dentro de docs/
-DOCS_OK="agents arquitetura.md decisions evidence hackbrasil journey metricas.md referencias.md templates"
+DOCS_OK="agents arquitetura.md decisions evidence hackbrasil journey metricas.md referencias.md templates guia-uso-api.md"
 
 fail=0
 
