@@ -8,7 +8,8 @@
 | Back-end | Java 21 + Spring Boot 4.1.2, em `server/` | [0001](decisions/0001-java-21-spring-boot-4-1.md) |
 | Front | React + Tailwind, na raiz do repositório | [0002](decisions/0002-front-na-raiz-java-em-server.md) |
 | Cálculo da TRI | Na API Spring, que não armazena as respostas | [0003](decisions/0003-onde-roda-o-calculo-e-privacidade.md) |
-| Hospedagem, dados, leitura por foto | **a decidir** | |
+| Arquitetura do Back-end | Motor TRI 3PL (EAP) + Catálogo em memória em `server/` | [0006](decisions/0006-arquitetura-e-plano-backend-java-tri.md) |
+| Hospedagem, leitura por foto | **a decidir** | |
 
 ## Fluxo principal (proposta)
 ```mermaid
@@ -46,6 +47,5 @@ flowchart TB
 ```
 
 ## Em aberto
-- Onde os dados do INEP ficam: arquivo carregado na subida da API (sem banco) ou banco. Impacta a hospedagem.
-- Onde a API fica no ar e como é o deploy (CD). Testar cedo (decisão `0003`, a criar).
+- Onde a API fica no ar e como é o deploy (CD). Testar cedo.
 - Como será a leitura por foto, se entrar.
