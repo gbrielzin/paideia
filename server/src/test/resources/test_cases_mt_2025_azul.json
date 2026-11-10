@@ -1,0 +1,3280 @@
+{
+ "examCode": 1471,
+ "note": "Respostas ficticias sorteadas com semente 2025. Saida gerada por data/tri_reference.py.",
+ "cases": [
+  {
+   "name": "tudo certo",
+   "answers": "CBECECCADDBECBDDDACBECCDEABBADEDEABEAAACCBEAD",
+   "expected": {
+    "score": 988.908256991771,
+    "error": 55.25556653440095,
+    "errorMap": []
+   }
+  },
+  {
+   "name": "tudo errado",
+   "answers": "AAAAAAABAAAAAAAAABAAAAAAABAABAAAABAABBAAAAABA",
+   "expected": {
+    "score": 314.9519391485113,
+    "error": 80.02954346182088,
+    "errorMap": [
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 367.3950404110154,
+      "cost": 52.44310126250406
+     },
+     {
+      "position": 145,
+      "skill": 20,
+      "scoreIfCorrect": 347.6812870655158,
+      "cost": 32.729347917004475
+     },
+     {
+      "position": 151,
+      "skill": 1,
+      "scoreIfCorrect": 343.7842607180566,
+      "cost": 28.832321569545286
+     },
+     {
+      "position": 179,
+      "skill": 10,
+      "scoreIfCorrect": 334.14026616103456,
+      "cost": 19.188327012523246
+     },
+     {
+      "position": 163,
+      "skill": 25,
+      "scoreIfCorrect": 333.81657389708806,
+      "cost": 18.864634748576748
+     },
+     {
+      "position": 143,
+      "skill": 17,
+      "scoreIfCorrect": 333.40243837632096,
+      "cost": 18.450499227809644
+     },
+     {
+      "position": 146,
+      "skill": 3,
+      "scoreIfCorrect": 328.85029586549143,
+      "cost": 13.898356716980118
+     },
+     {
+      "position": 136,
+      "skill": 4,
+      "scoreIfCorrect": 326.4167703771524,
+      "cost": 11.46483122864106
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 324.73726169553186,
+      "cost": 9.785322547020542
+     },
+     {
+      "position": 155,
+      "skill": 2,
+      "scoreIfCorrect": 324.40614063319254,
+      "cost": 9.45420148468122
+     },
+     {
+      "position": 176,
+      "skill": 16,
+      "scoreIfCorrect": 323.4238302493278,
+      "cost": 8.471891100816492
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 322.86832263833605,
+      "cost": 7.916383489824739
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 322.6945478825552,
+      "cost": 7.74260873404387
+     },
+     {
+      "position": 164,
+      "skill": 8,
+      "scoreIfCorrect": 322.26138069480567,
+      "cost": 7.309441546294352
+     },
+     {
+      "position": 147,
+      "skill": 24,
+      "scoreIfCorrect": 320.4505309662484,
+      "cost": 5.498591817737065
+     },
+     {
+      "position": 159,
+      "skill": 12,
+      "scoreIfCorrect": 319.8367265289576,
+      "cost": 4.884787380446312
+     },
+     {
+      "position": 165,
+      "skill": 29,
+      "scoreIfCorrect": 318.6472449125454,
+      "cost": 3.6953057640340603
+     },
+     {
+      "position": 161,
+      "skill": 6,
+      "scoreIfCorrect": 318.4924930938777,
+      "cost": 3.540553945366412
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 318.26011679148144,
+      "cost": 3.308177642970122
+     },
+     {
+      "position": 139,
+      "skill": 9,
+      "scoreIfCorrect": 316.96128299884975,
+      "cost": 2.009343850338439
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 316.92609882339093,
+      "cost": 1.9741596748796155
+     },
+     {
+      "position": 141,
+      "skill": 5,
+      "scoreIfCorrect": 316.39027294469315,
+      "cost": 1.438333796181837
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 316.2891115460038,
+      "cost": 1.337172397492509
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 316.0293436356948,
+      "cost": 1.0774044871834576
+     },
+     {
+      "position": 138,
+      "skill": 6,
+      "scoreIfCorrect": 315.87013807032145,
+      "cost": 0.9181989218101307
+     },
+     {
+      "position": 173,
+      "skill": 13,
+      "scoreIfCorrect": 315.8291475450326,
+      "cost": 0.8772083965212687
+     },
+     {
+      "position": 157,
+      "skill": 19,
+      "scoreIfCorrect": 315.7517060218015,
+      "cost": 0.7997668732901957
+     },
+     {
+      "position": 166,
+      "skill": 30,
+      "scoreIfCorrect": 315.7295049067057,
+      "cost": 0.7775657581943847
+     },
+     {
+      "position": 169,
+      "skill": 15,
+      "scoreIfCorrect": 315.6431010649344,
+      "cost": 0.6911619164230842
+     },
+     {
+      "position": 158,
+      "skill": 18,
+      "scoreIfCorrect": 315.61671234077664,
+      "cost": 0.6647731922653293
+     },
+     {
+      "position": 152,
+      "skill": 28,
+      "scoreIfCorrect": 315.5356569795756,
+      "cost": 0.5837178310642912
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 315.4384305223065,
+      "cost": 0.48649137379516105
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 315.27102669121825,
+      "cost": 0.3190875427069386
+     },
+     {
+      "position": 175,
+      "skill": 3,
+      "scoreIfCorrect": 315.1619918401284,
+      "cost": 0.2100526916170793
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 315.1444311786786,
+      "cost": 0.1924920301672728
+     },
+     {
+      "position": 171,
+      "skill": 9,
+      "scoreIfCorrect": 315.1265905433171,
+      "cost": 0.17465139480577818
+     },
+     {
+      "position": 137,
+      "skill": 28,
+      "scoreIfCorrect": 315.1247108981105,
+      "cost": 0.1727717495991783
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 315.10113360716673,
+      "cost": 0.14919445865541547
+     },
+     {
+      "position": 149,
+      "skill": 8,
+      "scoreIfCorrect": 315.0711609235469,
+      "cost": 0.11922177503561215
+     },
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 315.06358494392316,
+      "cost": 0.11164579541184594
+     },
+     {
+      "position": 167,
+      "skill": 25,
+      "scoreIfCorrect": 314.9780098239088,
+      "cost": 0.026070675397477316
+     },
+     {
+      "position": 177,
+      "skill": 12,
+      "scoreIfCorrect": 314.9657200470092,
+      "cost": 0.013780898497884664
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 314.9543824331205,
+      "cost": 0.0024432846091713145
+     }
+    ]
+   }
+  },
+  {
+   "name": "tudo em branco",
+   "answers": ".............................................",
+   "expected": {
+    "score": 314.9519391485113,
+    "error": 80.02954346182088,
+    "errorMap": [
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 367.3950404110154,
+      "cost": 52.44310126250406
+     },
+     {
+      "position": 145,
+      "skill": 20,
+      "scoreIfCorrect": 347.6812870655158,
+      "cost": 32.729347917004475
+     },
+     {
+      "position": 151,
+      "skill": 1,
+      "scoreIfCorrect": 343.7842607180566,
+      "cost": 28.832321569545286
+     },
+     {
+      "position": 179,
+      "skill": 10,
+      "scoreIfCorrect": 334.14026616103456,
+      "cost": 19.188327012523246
+     },
+     {
+      "position": 163,
+      "skill": 25,
+      "scoreIfCorrect": 333.81657389708806,
+      "cost": 18.864634748576748
+     },
+     {
+      "position": 143,
+      "skill": 17,
+      "scoreIfCorrect": 333.40243837632096,
+      "cost": 18.450499227809644
+     },
+     {
+      "position": 146,
+      "skill": 3,
+      "scoreIfCorrect": 328.85029586549143,
+      "cost": 13.898356716980118
+     },
+     {
+      "position": 136,
+      "skill": 4,
+      "scoreIfCorrect": 326.4167703771524,
+      "cost": 11.46483122864106
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 324.73726169553186,
+      "cost": 9.785322547020542
+     },
+     {
+      "position": 155,
+      "skill": 2,
+      "scoreIfCorrect": 324.40614063319254,
+      "cost": 9.45420148468122
+     },
+     {
+      "position": 176,
+      "skill": 16,
+      "scoreIfCorrect": 323.4238302493278,
+      "cost": 8.471891100816492
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 322.86832263833605,
+      "cost": 7.916383489824739
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 322.6945478825552,
+      "cost": 7.74260873404387
+     },
+     {
+      "position": 164,
+      "skill": 8,
+      "scoreIfCorrect": 322.26138069480567,
+      "cost": 7.309441546294352
+     },
+     {
+      "position": 147,
+      "skill": 24,
+      "scoreIfCorrect": 320.4505309662484,
+      "cost": 5.498591817737065
+     },
+     {
+      "position": 159,
+      "skill": 12,
+      "scoreIfCorrect": 319.8367265289576,
+      "cost": 4.884787380446312
+     },
+     {
+      "position": 165,
+      "skill": 29,
+      "scoreIfCorrect": 318.6472449125454,
+      "cost": 3.6953057640340603
+     },
+     {
+      "position": 161,
+      "skill": 6,
+      "scoreIfCorrect": 318.4924930938777,
+      "cost": 3.540553945366412
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 318.26011679148144,
+      "cost": 3.308177642970122
+     },
+     {
+      "position": 139,
+      "skill": 9,
+      "scoreIfCorrect": 316.96128299884975,
+      "cost": 2.009343850338439
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 316.92609882339093,
+      "cost": 1.9741596748796155
+     },
+     {
+      "position": 141,
+      "skill": 5,
+      "scoreIfCorrect": 316.39027294469315,
+      "cost": 1.438333796181837
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 316.2891115460038,
+      "cost": 1.337172397492509
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 316.0293436356948,
+      "cost": 1.0774044871834576
+     },
+     {
+      "position": 138,
+      "skill": 6,
+      "scoreIfCorrect": 315.87013807032145,
+      "cost": 0.9181989218101307
+     },
+     {
+      "position": 173,
+      "skill": 13,
+      "scoreIfCorrect": 315.8291475450326,
+      "cost": 0.8772083965212687
+     },
+     {
+      "position": 157,
+      "skill": 19,
+      "scoreIfCorrect": 315.7517060218015,
+      "cost": 0.7997668732901957
+     },
+     {
+      "position": 166,
+      "skill": 30,
+      "scoreIfCorrect": 315.7295049067057,
+      "cost": 0.7775657581943847
+     },
+     {
+      "position": 169,
+      "skill": 15,
+      "scoreIfCorrect": 315.6431010649344,
+      "cost": 0.6911619164230842
+     },
+     {
+      "position": 158,
+      "skill": 18,
+      "scoreIfCorrect": 315.61671234077664,
+      "cost": 0.6647731922653293
+     },
+     {
+      "position": 152,
+      "skill": 28,
+      "scoreIfCorrect": 315.5356569795756,
+      "cost": 0.5837178310642912
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 315.4384305223065,
+      "cost": 0.48649137379516105
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 315.27102669121825,
+      "cost": 0.3190875427069386
+     },
+     {
+      "position": 175,
+      "skill": 3,
+      "scoreIfCorrect": 315.1619918401284,
+      "cost": 0.2100526916170793
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 315.1444311786786,
+      "cost": 0.1924920301672728
+     },
+     {
+      "position": 171,
+      "skill": 9,
+      "scoreIfCorrect": 315.1265905433171,
+      "cost": 0.17465139480577818
+     },
+     {
+      "position": 137,
+      "skill": 28,
+      "scoreIfCorrect": 315.1247108981105,
+      "cost": 0.1727717495991783
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 315.10113360716673,
+      "cost": 0.14919445865541547
+     },
+     {
+      "position": 149,
+      "skill": 8,
+      "scoreIfCorrect": 315.0711609235469,
+      "cost": 0.11922177503561215
+     },
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 315.06358494392316,
+      "cost": 0.11164579541184594
+     },
+     {
+      "position": 167,
+      "skill": 25,
+      "scoreIfCorrect": 314.9780098239088,
+      "cost": 0.026070675397477316
+     },
+     {
+      "position": 177,
+      "skill": 12,
+      "scoreIfCorrect": 314.9657200470092,
+      "cost": 0.013780898497884664
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 314.9543824331205,
+      "cost": 0.0024432846091713145
+     }
+    ]
+   }
+  },
+  {
+   "name": "letras minusculas",
+   "answers": "cbececcaddbecbdddacbeccdeabbadedeabeaaaccbead",
+   "expected": {
+    "score": 988.908256991771,
+    "error": 55.25556653440095,
+    "errorMap": []
+   }
+  },
+  {
+   "name": "metade certa, anulados como no gabarito",
+   "answers": "ABACACAAADAEABADAAABACADAAABBDADAAAEAAACABAAA",
+   "expected": {
+    "score": 622.1392197505498,
+    "error": 56.361881572952456,
+    "errorMap": [
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 660.152666024879,
+      "cost": 38.01344627432911
+     },
+     {
+      "position": 136,
+      "skill": 4,
+      "scoreIfCorrect": 655.081642272029,
+      "cost": 32.9424225214791
+     },
+     {
+      "position": 166,
+      "skill": 30,
+      "scoreIfCorrect": 654.6378410671839,
+      "cost": 32.49862131663406
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 654.2250279919617,
+      "cost": 32.08580824141188
+     },
+     {
+      "position": 176,
+      "skill": 16,
+      "scoreIfCorrect": 651.0553247191716,
+      "cost": 28.916104968621767
+     },
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 650.945225401861,
+      "cost": 28.806005651311125
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 648.0671865479687,
+      "cost": 25.92796679741889
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 647.7498681726199,
+      "cost": 25.610648422070085
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 646.0461071098777,
+      "cost": 23.90688735932781
+     },
+     {
+      "position": 138,
+      "skill": 6,
+      "scoreIfCorrect": 645.9872554927624,
+      "cost": 23.848035742212573
+     },
+     {
+      "position": 146,
+      "skill": 3,
+      "scoreIfCorrect": 644.4528878799997,
+      "cost": 22.313668129449866
+     },
+     {
+      "position": 158,
+      "skill": 18,
+      "scoreIfCorrect": 641.890545781592,
+      "cost": 19.75132603104214
+     },
+     {
+      "position": 164,
+      "skill": 8,
+      "scoreIfCorrect": 638.2754195512166,
+      "cost": 16.13619980066676
+     },
+     {
+      "position": 152,
+      "skill": 28,
+      "scoreIfCorrect": 637.2367753182973,
+      "cost": 15.097555567747463
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 635.6968935992874,
+      "cost": 13.557673848737522
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 635.6625132531509,
+      "cost": 13.523293502601064
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 633.7737754022346,
+      "cost": 11.634555651684764
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 631.0167705084667,
+      "cost": 8.877550757916879
+     },
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 630.1761873375088,
+      "cost": 8.036967586959008
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 628.0655113262532,
+      "cost": 5.926291575703317
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 623.8985458412852,
+      "cost": 1.7593260907353852
+     }
+    ]
+   }
+  },
+  {
+   "name": "metade certa, anulados trocados",
+   "answers": "ABACACAAADAEABADAAABACADAAABBDADAAAECACCABAAA",
+   "expected": {
+    "score": 622.1392197505498,
+    "error": 56.361881572952456,
+    "errorMap": [
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 660.152666024879,
+      "cost": 38.01344627432911
+     },
+     {
+      "position": 136,
+      "skill": 4,
+      "scoreIfCorrect": 655.081642272029,
+      "cost": 32.9424225214791
+     },
+     {
+      "position": 166,
+      "skill": 30,
+      "scoreIfCorrect": 654.6378410671839,
+      "cost": 32.49862131663406
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 654.2250279919617,
+      "cost": 32.08580824141188
+     },
+     {
+      "position": 176,
+      "skill": 16,
+      "scoreIfCorrect": 651.0553247191716,
+      "cost": 28.916104968621767
+     },
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 650.945225401861,
+      "cost": 28.806005651311125
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 648.0671865479687,
+      "cost": 25.92796679741889
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 647.7498681726199,
+      "cost": 25.610648422070085
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 646.0461071098777,
+      "cost": 23.90688735932781
+     },
+     {
+      "position": 138,
+      "skill": 6,
+      "scoreIfCorrect": 645.9872554927624,
+      "cost": 23.848035742212573
+     },
+     {
+      "position": 146,
+      "skill": 3,
+      "scoreIfCorrect": 644.4528878799997,
+      "cost": 22.313668129449866
+     },
+     {
+      "position": 158,
+      "skill": 18,
+      "scoreIfCorrect": 641.890545781592,
+      "cost": 19.75132603104214
+     },
+     {
+      "position": 164,
+      "skill": 8,
+      "scoreIfCorrect": 638.2754195512166,
+      "cost": 16.13619980066676
+     },
+     {
+      "position": 152,
+      "skill": 28,
+      "scoreIfCorrect": 637.2367753182973,
+      "cost": 15.097555567747463
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 635.6968935992874,
+      "cost": 13.557673848737522
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 635.6625132531509,
+      "cost": 13.523293502601064
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 633.7737754022346,
+      "cost": 11.634555651684764
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 631.0167705084667,
+      "cost": 8.877550757916879
+     },
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 630.1761873375088,
+      "cost": 8.036967586959008
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 628.0655113262532,
+      "cost": 5.926291575703317
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 623.8985458412852,
+      "cost": 1.7593260907353852
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 10% de acerto, repeticao 1",
+   "answers": "EADAACEADDCAEDABBBDBCBDEAEACDCCBCCBBECAEBCDCA",
+   "expected": {
+    "score": 385.40543114165786,
+    "error": 77.2812298332526,
+    "errorMap": [
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 434.8186828235274,
+      "cost": 49.41325168186955
+     },
+     {
+      "position": 151,
+      "skill": 1,
+      "scoreIfCorrect": 422.2098830220503,
+      "cost": 36.804451880392435
+     },
+     {
+      "position": 179,
+      "skill": 10,
+      "scoreIfCorrect": 413.7356181237527,
+      "cost": 28.330186982094858
+     },
+     {
+      "position": 163,
+      "skill": 25,
+      "scoreIfCorrect": 412.67142339122006,
+      "cost": 27.265992249562203
+     },
+     {
+      "position": 136,
+      "skill": 4,
+      "scoreIfCorrect": 406.17527391655676,
+      "cost": 20.769842774898905
+     },
+     {
+      "position": 146,
+      "skill": 3,
+      "scoreIfCorrect": 404.5802079357607,
+      "cost": 19.174776794102854
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 401.3971806561933,
+      "cost": 15.991749514535456
+     },
+     {
+      "position": 176,
+      "skill": 16,
+      "scoreIfCorrect": 400.6515620561495,
+      "cost": 15.24613091449163
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 400.5844576300186,
+      "cost": 15.179026488360762
+     },
+     {
+      "position": 147,
+      "skill": 24,
+      "scoreIfCorrect": 399.88924117022196,
+      "cost": 14.483810028564108
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 398.94728776329464,
+      "cost": 13.541856621636782
+     },
+     {
+      "position": 164,
+      "skill": 8,
+      "scoreIfCorrect": 395.8254170371259,
+      "cost": 10.419985895468017
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 394.0934472246338,
+      "cost": 8.688016082975935
+     },
+     {
+      "position": 159,
+      "skill": 12,
+      "scoreIfCorrect": 393.8539331931402,
+      "cost": 8.448502051482365
+     },
+     {
+      "position": 161,
+      "skill": 6,
+      "scoreIfCorrect": 393.4164583854399,
+      "cost": 8.011027243782053
+     },
+     {
+      "position": 165,
+      "skill": 29,
+      "scoreIfCorrect": 391.36042060214027,
+      "cost": 5.954989460482409
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 388.62547812364693,
+      "cost": 3.2200469819890714
+     },
+     {
+      "position": 139,
+      "skill": 9,
+      "scoreIfCorrect": 388.3791994112888,
+      "cost": 2.973768269630966
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 388.21159979563276,
+      "cost": 2.8061686539749076
+     },
+     {
+      "position": 157,
+      "skill": 19,
+      "scoreIfCorrect": 388.00066163821225,
+      "cost": 2.595230496554393
+     },
+     {
+      "position": 166,
+      "skill": 30,
+      "scoreIfCorrect": 387.8045032333383,
+      "cost": 2.399072091680466
+     },
+     {
+      "position": 138,
+      "skill": 6,
+      "scoreIfCorrect": 387.7849564650464,
+      "cost": 2.3795253233885205
+     },
+     {
+      "position": 173,
+      "skill": 13,
+      "scoreIfCorrect": 387.38744364358746,
+      "cost": 1.9820125019296029
+     },
+     {
+      "position": 169,
+      "skill": 15,
+      "scoreIfCorrect": 387.17037456314205,
+      "cost": 1.7649434214841904
+     },
+     {
+      "position": 158,
+      "skill": 18,
+      "scoreIfCorrect": 387.1153138842628,
+      "cost": 1.7098827426049183
+     },
+     {
+      "position": 152,
+      "skill": 28,
+      "scoreIfCorrect": 386.81414752489553,
+      "cost": 1.4087163832376746
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 386.5326913615006,
+      "cost": 1.1272602198427535
+     },
+     {
+      "position": 137,
+      "skill": 28,
+      "scoreIfCorrect": 386.087102959963,
+      "cost": 0.6816718183051194
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 385.9305767534539,
+      "cost": 0.5251456117960629
+     },
+     {
+      "position": 171,
+      "skill": 9,
+      "scoreIfCorrect": 385.8940322216716,
+      "cost": 0.4886010800137228
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 385.86837385415924,
+      "cost": 0.46294271250138763
+     },
+     {
+      "position": 175,
+      "skill": 3,
+      "scoreIfCorrect": 385.8646820293856,
+      "cost": 0.45925088772776235
+     },
+     {
+      "position": 149,
+      "skill": 8,
+      "scoreIfCorrect": 385.7432688676696,
+      "cost": 0.3378377260117418
+     },
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 385.7252986455901,
+      "cost": 0.31986750393224384
+     },
+     {
+      "position": 167,
+      "skill": 25,
+      "scoreIfCorrect": 385.54521492576464,
+      "cost": 0.1397837841067826
+     },
+     {
+      "position": 177,
+      "skill": 12,
+      "scoreIfCorrect": 385.45808109130155,
+      "cost": 0.05264994964369407
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 385.41658191464523,
+      "cost": 0.011150772987377877
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 10% de acerto, repeticao 2",
+   "answers": "CCBDBDBCEACDBBCEACEEABBABCADBAACBDADDDCAEADDA",
+   "expected": {
+    "score": 326.5773306108373,
+    "error": 82.26929431474144,
+    "errorMap": [
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 382.6494200785131,
+      "cost": 56.07208946767582
+     },
+     {
+      "position": 145,
+      "skill": 20,
+      "scoreIfCorrect": 363.3360714272678,
+      "cost": 36.75874081643053
+     },
+     {
+      "position": 151,
+      "skill": 1,
+      "scoreIfCorrect": 359.67947531022514,
+      "cost": 33.10214469938785
+     },
+     {
+      "position": 179,
+      "skill": 10,
+      "scoreIfCorrect": 349.2708096675475,
+      "cost": 22.693479056710203
+     },
+     {
+      "position": 163,
+      "skill": 25,
+      "scoreIfCorrect": 348.7516246581841,
+      "cost": 22.17429404734679
+     },
+     {
+      "position": 143,
+      "skill": 17,
+      "scoreIfCorrect": 347.55162757358846,
+      "cost": 20.97429696275117
+     },
+     {
+      "position": 146,
+      "skill": 3,
+      "scoreIfCorrect": 342.6342023383576,
+      "cost": 16.05687172752033
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 338.3143357430359,
+      "cost": 11.73700513219859
+     },
+     {
+      "position": 155,
+      "skill": 2,
+      "scoreIfCorrect": 337.2814070355571,
+      "cost": 10.704076424719801
+     },
+     {
+      "position": 176,
+      "skill": 16,
+      "scoreIfCorrect": 336.97317281532617,
+      "cost": 10.395842204488872
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 336.2828618462251,
+      "cost": 9.70553123538781
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 336.1565691000849,
+      "cost": 9.579238489247587
+     },
+     {
+      "position": 164,
+      "skill": 8,
+      "scoreIfCorrect": 335.03285307017325,
+      "cost": 8.455522459335953
+     },
+     {
+      "position": 147,
+      "skill": 24,
+      "scoreIfCorrect": 334.01985358471507,
+      "cost": 7.442522973877772
+     },
+     {
+      "position": 159,
+      "skill": 12,
+      "scoreIfCorrect": 332.47658617563076,
+      "cost": 5.899255564793464
+     },
+     {
+      "position": 161,
+      "skill": 6,
+      "scoreIfCorrect": 331.1445090230219,
+      "cost": 4.567178412184603
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 331.01853013319135,
+      "cost": 4.441199522354054
+     },
+     {
+      "position": 165,
+      "skill": 29,
+      "scoreIfCorrect": 330.9578226224012,
+      "cost": 4.380492011563888
+     },
+     {
+      "position": 139,
+      "skill": 9,
+      "scoreIfCorrect": 328.9089128559009,
+      "cost": 2.3315822450636006
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 328.84777604297324,
+      "cost": 2.2704454321359435
+     },
+     {
+      "position": 141,
+      "skill": 5,
+      "scoreIfCorrect": 328.38043082786237,
+      "cost": 1.8031002170250758
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 328.3205953866958,
+      "cost": 1.7432647758585063
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 327.8849737851453,
+      "cost": 1.307643174307998
+     },
+     {
+      "position": 138,
+      "skill": 6,
+      "scoreIfCorrect": 327.79626177943953,
+      "cost": 1.2189311686022393
+     },
+     {
+      "position": 157,
+      "skill": 19,
+      "scoreIfCorrect": 327.70603926198396,
+      "cost": 1.1287086511466669
+     },
+     {
+      "position": 173,
+      "skill": 13,
+      "scoreIfCorrect": 327.70098530459614,
+      "cost": 1.1236546937588514
+     },
+     {
+      "position": 166,
+      "skill": 30,
+      "scoreIfCorrect": 327.65918440874077,
+      "cost": 1.0818537979034772
+     },
+     {
+      "position": 169,
+      "skill": 15,
+      "scoreIfCorrect": 327.49066827465504,
+      "cost": 0.9133376638177424
+     },
+     {
+      "position": 158,
+      "skill": 18,
+      "scoreIfCorrect": 327.45740168276734,
+      "cost": 0.8800710719300469
+     },
+     {
+      "position": 152,
+      "skill": 28,
+      "scoreIfCorrect": 327.33718500842355,
+      "cost": 0.7598543975862526
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 327.2038936656785,
+      "cost": 0.6265630548411991
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 327.0025789450549,
+      "cost": 0.4252483342175992
+     },
+     {
+      "position": 175,
+      "skill": 3,
+      "scoreIfCorrect": 326.84376265729975,
+      "cost": 0.2664320464624552
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 326.83578055073826,
+      "cost": 0.2584499399009701
+     },
+     {
+      "position": 137,
+      "skill": 28,
+      "scoreIfCorrect": 326.83447328739885,
+      "cost": 0.257142676561557
+     },
+     {
+      "position": 171,
+      "skill": 9,
+      "scoreIfCorrect": 326.8133893726664,
+      "cost": 0.23605876182909924
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 326.78471221324133,
+      "cost": 0.20738160240404113
+     },
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 326.7291650812894,
+      "cost": 0.1518344704521155
+     },
+     {
+      "position": 167,
+      "skill": 25,
+      "scoreIfCorrect": 326.61986135064353,
+      "cost": 0.04253073980623867
+     },
+     {
+      "position": 177,
+      "skill": 12,
+      "scoreIfCorrect": 326.5976321530643,
+      "cost": 0.020301542227002756
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 326.5811237388158,
+      "cost": 0.0037931279784970684
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 20% de acerto, repeticao 1",
+   "answers": "DBEECDCBBEACCDCDCECDCBBBDECADDCEBCADBAABABEAD",
+   "expected": {
+    "score": 441.7495402670157,
+    "error": 84.33951453913835,
+    "errorMap": [
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 498.7578383876467,
+      "cost": 57.008298120631025
+     },
+     {
+      "position": 145,
+      "skill": 20,
+      "scoreIfCorrect": 491.32959630615375,
+      "cost": 49.58005603913807
+     },
+     {
+      "position": 163,
+      "skill": 25,
+      "scoreIfCorrect": 483.2484731289559,
+      "cost": 41.498932861940204
+     },
+     {
+      "position": 136,
+      "skill": 4,
+      "scoreIfCorrect": 479.6395740821759,
+      "cost": 37.89003381516022
+     },
+     {
+      "position": 147,
+      "skill": 24,
+      "scoreIfCorrect": 478.47000358039986,
+      "cost": 36.72046331338419
+     },
+     {
+      "position": 143,
+      "skill": 17,
+      "scoreIfCorrect": 475.18588935703974,
+      "cost": 33.436349090024066
+     },
+     {
+      "position": 146,
+      "skill": 3,
+      "scoreIfCorrect": 471.0514849766594,
+      "cost": 29.30194470964375
+     },
+     {
+      "position": 176,
+      "skill": 16,
+      "scoreIfCorrect": 470.50825698404833,
+      "cost": 28.758716717032655
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 465.4069094869214,
+      "cost": 23.657369219905718
+     },
+     {
+      "position": 161,
+      "skill": 6,
+      "scoreIfCorrect": 461.08907077127935,
+      "cost": 19.339530504263678
+     },
+     {
+      "position": 155,
+      "skill": 2,
+      "scoreIfCorrect": 459.9192206038316,
+      "cost": 18.16968033681593
+     },
+     {
+      "position": 164,
+      "skill": 8,
+      "scoreIfCorrect": 458.6716111215891,
+      "cost": 16.922070854573406
+     },
+     {
+      "position": 159,
+      "skill": 12,
+      "scoreIfCorrect": 457.94275079759177,
+      "cost": 16.193210530576096
+     },
+     {
+      "position": 157,
+      "skill": 19,
+      "scoreIfCorrect": 451.2479609799167,
+      "cost": 9.498420712901009
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 450.4498558704869,
+      "cost": 8.70031560347121
+     },
+     {
+      "position": 166,
+      "skill": 30,
+      "scoreIfCorrect": 450.1244018172172,
+      "cost": 8.374861550201501
+     },
+     {
+      "position": 141,
+      "skill": 5,
+      "scoreIfCorrect": 448.69699325451717,
+      "cost": 6.947452987501492
+     },
+     {
+      "position": 139,
+      "skill": 9,
+      "scoreIfCorrect": 446.90683485202305,
+      "cost": 5.157294585007378
+     },
+     {
+      "position": 169,
+      "skill": 15,
+      "scoreIfCorrect": 446.8982624914121,
+      "cost": 5.148722224396408
+     },
+     {
+      "position": 158,
+      "skill": 18,
+      "scoreIfCorrect": 446.7776537721294,
+      "cost": 5.0281135051137085
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 446.45269268604517,
+      "cost": 4.703152419029493
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 445.82935777436415,
+      "cost": 4.07981750734848
+     },
+     {
+      "position": 152,
+      "skill": 28,
+      "scoreIfCorrect": 445.6536395013052,
+      "cost": 3.904099234289504
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 444.3420333921416,
+      "cost": 2.592493125125941
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 443.4186512412067,
+      "cost": 1.6691109741910282
+     },
+     {
+      "position": 171,
+      "skill": 9,
+      "scoreIfCorrect": 443.34451064901765,
+      "cost": 1.594970382001975
+     },
+     {
+      "position": 175,
+      "skill": 3,
+      "scoreIfCorrect": 442.9168442456693,
+      "cost": 1.1673039786536492
+     },
+     {
+      "position": 149,
+      "skill": 8,
+      "scoreIfCorrect": 442.8700662138372,
+      "cost": 1.1205259468215445
+     },
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 442.82310039654084,
+      "cost": 1.0735601295251627
+     },
+     {
+      "position": 167,
+      "skill": 25,
+      "scoreIfCorrect": 442.6972840911359,
+      "cost": 0.9477438241202094
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 441.81250049222524,
+      "cost": 0.06296022520956512
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 20% de acerto, repeticao 2",
+   "answers": "ECECBABCEBCCDCCBABDCBEACABDBADECCBABDDCDCABBC",
+   "expected": {
+    "score": 367.44717527692524,
+    "error": 85.36988462619675,
+    "errorMap": [
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 428.29896137928824,
+      "cost": 60.85178610236301
+     },
+     {
+      "position": 145,
+      "skill": 20,
+      "scoreIfCorrect": 413.0474767201143,
+      "cost": 45.60030144318904
+     },
+     {
+      "position": 151,
+      "skill": 1,
+      "scoreIfCorrect": 410.9929503060156,
+      "cost": 43.54577502909035
+     },
+     {
+      "position": 179,
+      "skill": 10,
+      "scoreIfCorrect": 400.24789883830385,
+      "cost": 32.80072356137862
+     },
+     {
+      "position": 143,
+      "skill": 17,
+      "scoreIfCorrect": 394.9218121579702,
+      "cost": 27.474636881044944
+     },
+     {
+      "position": 136,
+      "skill": 4,
+      "scoreIfCorrect": 390.9010668860016,
+      "cost": 23.45389160907638
+     },
+     {
+      "position": 146,
+      "skill": 3,
+      "scoreIfCorrect": 389.6057609320131,
+      "cost": 22.158585655087847
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 385.54421504361983,
+      "cost": 18.097039766694593
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 384.3771065477902,
+      "cost": 16.929931270864984
+     },
+     {
+      "position": 147,
+      "skill": 24,
+      "scoreIfCorrect": 383.43506401163063,
+      "cost": 15.987888734705393
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 382.6651344185666,
+      "cost": 15.217959141641359
+     },
+     {
+      "position": 155,
+      "skill": 2,
+      "scoreIfCorrect": 381.54661663975844,
+      "cost": 14.099441362833204
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 376.94885079804146,
+      "cost": 9.501675521116226
+     },
+     {
+      "position": 159,
+      "skill": 12,
+      "scoreIfCorrect": 376.8710996406908,
+      "cost": 9.423924363765536
+     },
+     {
+      "position": 161,
+      "skill": 6,
+      "scoreIfCorrect": 376.22898591765164,
+      "cost": 8.781810640726405
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 370.9434926531461,
+      "cost": 3.4963173762208726
+     },
+     {
+      "position": 141,
+      "skill": 5,
+      "scoreIfCorrect": 370.68975532163176,
+      "cost": 3.2425800447065285
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 370.62509871109586,
+      "cost": 3.177923434170623
+     },
+     {
+      "position": 157,
+      "skill": 19,
+      "scoreIfCorrect": 370.2621279895723,
+      "cost": 2.8149527126470844
+     },
+     {
+      "position": 173,
+      "skill": 13,
+      "scoreIfCorrect": 369.5998239916614,
+      "cost": 2.1526487147361877
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 369.5956312607509,
+      "cost": 2.14845598382567
+     },
+     {
+      "position": 169,
+      "skill": 15,
+      "scoreIfCorrect": 369.3564427631873,
+      "cost": 1.909267486262081
+     },
+     {
+      "position": 158,
+      "skill": 18,
+      "scoreIfCorrect": 369.29648273879855,
+      "cost": 1.849307461873309
+     },
+     {
+      "position": 152,
+      "skill": 28,
+      "scoreIfCorrect": 368.9722230456367,
+      "cost": 1.525047768711488
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 368.66862469265004,
+      "cost": 1.2214494157248055
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 368.3595136257859,
+      "cost": 0.9123383488606578
+     },
+     {
+      "position": 137,
+      "skill": 28,
+      "scoreIfCorrect": 368.1907204847804,
+      "cost": 0.7435452078551634
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 368.01365371932616,
+      "cost": 0.5664784424009213
+     },
+     {
+      "position": 171,
+      "skill": 9,
+      "scoreIfCorrect": 367.97415748679504,
+      "cost": 0.5269822098698
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 367.94693396911003,
+      "cost": 0.4997586921847983
+     },
+     {
+      "position": 175,
+      "skill": 3,
+      "scoreIfCorrect": 367.9455326514966,
+      "cost": 0.49835737457135565
+     },
+     {
+      "position": 149,
+      "skill": 8,
+      "scoreIfCorrect": 367.81145985437564,
+      "cost": 0.3642845774504053
+     },
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 367.7920823787075,
+      "cost": 0.3449071017822689
+     },
+     {
+      "position": 167,
+      "skill": 25,
+      "scoreIfCorrect": 367.6038183117863,
+      "cost": 0.15664303486107656
+     },
+     {
+      "position": 177,
+      "skill": 12,
+      "scoreIfCorrect": 367.5044281233671,
+      "cost": 0.057252846441883776
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 367.4594604514535,
+      "cost": 0.012285174528244625
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 30% de acerto, repeticao 1",
+   "answers": "ABCCBACCBACBCEECDDCACCBEBCADACBDEDADCEADAECAB",
+   "expected": {
+    "score": 462.88100841433607,
+    "error": 72.96883284523288,
+    "errorMap": [
+     {
+      "position": 151,
+      "skill": 1,
+      "scoreIfCorrect": 505.0502283263832,
+      "cost": 42.16921991204714
+     },
+     {
+      "position": 145,
+      "skill": 20,
+      "scoreIfCorrect": 503.8376713266704,
+      "cost": 40.95666291233431
+     },
+     {
+      "position": 163,
+      "skill": 25,
+      "scoreIfCorrect": 498.31841288983486,
+      "cost": 35.437404475498795
+     },
+     {
+      "position": 147,
+      "skill": 24,
+      "scoreIfCorrect": 497.6218991973115,
+      "cost": 34.74089078297544
+     },
+     {
+      "position": 136,
+      "skill": 4,
+      "scoreIfCorrect": 496.5678174334954,
+      "cost": 33.68680901915934
+     },
+     {
+      "position": 143,
+      "skill": 17,
+      "scoreIfCorrect": 490.8271394050152,
+      "cost": 27.946130990679137
+     },
+     {
+      "position": 176,
+      "skill": 16,
+      "scoreIfCorrect": 488.67446940106436,
+      "cost": 25.79346098672829
+     },
+     {
+      "position": 146,
+      "skill": 3,
+      "scoreIfCorrect": 487.80619617467164,
+      "cost": 24.925187760335575
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 485.783477036997,
+      "cost": 22.902468622660933
+     },
+     {
+      "position": 161,
+      "skill": 6,
+      "scoreIfCorrect": 481.25222735163084,
+      "cost": 18.37121893729477
+     },
+     {
+      "position": 155,
+      "skill": 2,
+      "scoreIfCorrect": 478.1583581769296,
+      "cost": 15.27734976259353
+     },
+     {
+      "position": 159,
+      "skill": 12,
+      "scoreIfCorrect": 477.5126872851321,
+      "cost": 14.631678870796009
+     },
+     {
+      "position": 165,
+      "skill": 29,
+      "scoreIfCorrect": 472.66177185918394,
+      "cost": 9.780763444847878
+     },
+     {
+      "position": 166,
+      "skill": 30,
+      "scoreIfCorrect": 471.49229563566666,
+      "cost": 8.611287221330599
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 471.4169237005234,
+      "cost": 8.535915286187333
+     },
+     {
+      "position": 138,
+      "skill": 6,
+      "scoreIfCorrect": 469.8550985180092,
+      "cost": 6.97409010367312
+     },
+     {
+      "position": 141,
+      "skill": 5,
+      "scoreIfCorrect": 469.50399250049884,
+      "cost": 6.622984086162774
+     },
+     {
+      "position": 169,
+      "skill": 15,
+      "scoreIfCorrect": 468.0292250850441,
+      "cost": 5.148216670708052
+     },
+     {
+      "position": 158,
+      "skill": 18,
+      "scoreIfCorrect": 467.91706085719215,
+      "cost": 5.036052442856089
+     },
+     {
+      "position": 173,
+      "skill": 13,
+      "scoreIfCorrect": 467.8686676015167,
+      "cost": 4.987659187180611
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 466.97870001203427,
+      "cost": 4.097691597698201
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 466.6736513681758,
+      "cost": 3.7926429538397315
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 465.84661287355425,
+      "cost": 2.9656044592181843
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 465.50644828073877,
+      "cost": 2.6254398664027008
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 464.64355922496725,
+      "cost": 1.7625508106311827
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 464.5845946128272,
+      "cost": 1.7035861984911094
+     },
+     {
+      "position": 171,
+      "skill": 9,
+      "scoreIfCorrect": 464.51705386319793,
+      "cost": 1.6360454488618643
+     },
+     {
+      "position": 149,
+      "skill": 8,
+      "scoreIfCorrect": 464.0344512217204,
+      "cost": 1.1534428073843515
+     },
+     {
+      "position": 175,
+      "skill": 3,
+      "scoreIfCorrect": 464.0206391012238,
+      "cost": 1.139630686887756
+     },
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 463.988524149459,
+      "cost": 1.107515735122945
+     },
+     {
+      "position": 177,
+      "skill": 12,
+      "scoreIfCorrect": 463.1449695822928,
+      "cost": 0.2639611679567224
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 462.9515020158891,
+      "cost": 0.0704936015530393
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 30% de acerto, repeticao 2",
+   "answers": "AABEDEECCDBEABBDDEDEBBBEDCECCEEABACDABABDCCDA",
+   "expected": {
+    "score": 425.2036655314638,
+    "error": 79.58988995787537,
+    "errorMap": [
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 477.7113944496261,
+      "cost": 52.507728918162286
+     },
+     {
+      "position": 179,
+      "skill": 10,
+      "scoreIfCorrect": 462.3162798706738,
+      "cost": 37.11261433920998
+     },
+     {
+      "position": 163,
+      "skill": 25,
+      "scoreIfCorrect": 460.6588360817671,
+      "cost": 35.45517055030331
+     },
+     {
+      "position": 136,
+      "skill": 4,
+      "scoreIfCorrect": 456.0055625838183,
+      "cost": 30.80189705235449
+     },
+     {
+      "position": 143,
+      "skill": 17,
+      "scoreIfCorrect": 454.10197919545567,
+      "cost": 28.89831366399187
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 449.2314596606887,
+      "cost": 24.0277941292249
+     },
+     {
+      "position": 176,
+      "skill": 16,
+      "scoreIfCorrect": 448.20567690781377,
+      "cost": 23.00201137634997
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 448.02674323997195,
+      "cost": 22.82307770850815
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 445.18581462006875,
+      "cost": 19.982149088604956
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 442.1627503369513,
+      "cost": 16.95908480548752
+     },
+     {
+      "position": 155,
+      "skill": 2,
+      "scoreIfCorrect": 440.5854827772923,
+      "cost": 15.381817245828529
+     },
+     {
+      "position": 161,
+      "skill": 6,
+      "scoreIfCorrect": 439.50664788375093,
+      "cost": 14.302982352287131
+     },
+     {
+      "position": 164,
+      "skill": 8,
+      "scoreIfCorrect": 439.19521029138167,
+      "cost": 13.991544759917872
+     },
+     {
+      "position": 159,
+      "skill": 12,
+      "scoreIfCorrect": 437.9769700819758,
+      "cost": 12.773304550512023
+     },
+     {
+      "position": 165,
+      "skill": 29,
+      "scoreIfCorrect": 433.90272041254383,
+      "cost": 8.69905488108003
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 431.36249121569836,
+      "cost": 6.158825684234557
+     },
+     {
+      "position": 157,
+      "skill": 19,
+      "scoreIfCorrect": 431.32807649955987,
+      "cost": 6.124410968096072
+     },
+     {
+      "position": 141,
+      "skill": 5,
+      "scoreIfCorrect": 430.3333064379566,
+      "cost": 5.129640906492796
+     },
+     {
+      "position": 138,
+      "skill": 6,
+      "scoreIfCorrect": 430.01398705176814,
+      "cost": 4.810321520304342
+     },
+     {
+      "position": 139,
+      "skill": 9,
+      "scoreIfCorrect": 429.3606584052012,
+      "cost": 4.1569928737374084
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 429.0310270804349,
+      "cost": 3.827361548971112
+     },
+     {
+      "position": 173,
+      "skill": 13,
+      "scoreIfCorrect": 428.86291209955397,
+      "cost": 3.6592465680901682
+     },
+     {
+      "position": 158,
+      "skill": 18,
+      "scoreIfCorrect": 428.65866406998407,
+      "cost": 3.4549985385202717
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 428.31330329279865,
+      "cost": 3.1096377613348523
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 427.33157257412927,
+      "cost": 2.12790704266547
+     },
+     {
+      "position": 137,
+      "skill": 28,
+      "scoreIfCorrect": 427.0958314075193,
+      "cost": 1.8921658760555147
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 426.95731340010707,
+      "cost": 1.7536478686432702
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 426.3190822233568,
+      "cost": 1.1154166918930173
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 426.2826170738626,
+      "cost": 1.0789515423987837
+     },
+     {
+      "position": 171,
+      "skill": 9,
+      "scoreIfCorrect": 426.2604746804101,
+      "cost": 1.0568091489462859
+     },
+     {
+      "position": 175,
+      "skill": 3,
+      "scoreIfCorrect": 426.0400199418976,
+      "cost": 0.8363544104337848
+     },
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 425.90835493433957,
+      "cost": 0.704689402875772
+     },
+     {
+      "position": 167,
+      "skill": 25,
+      "scoreIfCorrect": 425.6987441924215,
+      "cost": 0.49507866095768804
+     },
+     {
+      "position": 177,
+      "skill": 12,
+      "scoreIfCorrect": 425.3473729839725,
+      "cost": 0.14370745250869277
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 425.2385485459741,
+      "cost": 0.03488301451028519
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 40% de acerto, repeticao 1",
+   "answers": "EDBBBDABCDCEAEABAACBAEBBEADBADEDCADEDAACDAEEC",
+   "expected": {
+    "score": 489.13200199424784,
+    "error": 83.91680906342617,
+    "errorMap": [
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 546.224470667744,
+      "cost": 57.092468673496114
+     },
+     {
+      "position": 151,
+      "skill": 1,
+      "scoreIfCorrect": 543.9117260949064,
+      "cost": 54.77972410065854
+     },
+     {
+      "position": 179,
+      "skill": 10,
+      "scoreIfCorrect": 539.5493708698585,
+      "cost": 50.41736887561069
+     },
+     {
+      "position": 136,
+      "skill": 4,
+      "scoreIfCorrect": 537.6836214512573,
+      "cost": 48.55161945700945
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 531.327153595553,
+      "cost": 42.195151601305156
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 529.0022163567705,
+      "cost": 39.87021436252269
+     },
+     {
+      "position": 176,
+      "skill": 16,
+      "scoreIfCorrect": 527.714835693711,
+      "cost": 38.58283369946321
+     },
+     {
+      "position": 143,
+      "skill": 17,
+      "scoreIfCorrect": 526.9196508502148,
+      "cost": 37.78764885596695
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 525.1346187071115,
+      "cost": 36.00261671286364
+     },
+     {
+      "position": 146,
+      "skill": 3,
+      "scoreIfCorrect": 523.843081403817,
+      "cost": 34.71107940956915
+     },
+     {
+      "position": 159,
+      "skill": 12,
+      "scoreIfCorrect": 512.0170380956505,
+      "cost": 22.885036101402648
+     },
+     {
+      "position": 157,
+      "skill": 19,
+      "scoreIfCorrect": 510.45021575720403,
+      "cost": 21.31821376295619
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 505.2118671512078,
+      "cost": 16.079865156959954
+     },
+     {
+      "position": 138,
+      "skill": 6,
+      "scoreIfCorrect": 502.95980689077504,
+      "cost": 13.827804896527198
+     },
+     {
+      "position": 141,
+      "skill": 5,
+      "scoreIfCorrect": 500.8740057211011,
+      "cost": 11.742003726853284
+     },
+     {
+      "position": 158,
+      "skill": 18,
+      "scoreIfCorrect": 499.25861580139554,
+      "cost": 10.126613807147692
+     },
+     {
+      "position": 137,
+      "skill": 28,
+      "scoreIfCorrect": 498.2738721340771,
+      "cost": 9.14187013982928
+     },
+     {
+      "position": 152,
+      "skill": 28,
+      "scoreIfCorrect": 496.7313419516243,
+      "cost": 7.599339957376458
+     },
+     {
+      "position": 139,
+      "skill": 9,
+      "scoreIfCorrect": 496.14700258994543,
+      "cost": 7.015000595697586
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 495.5679330489082,
+      "cost": 6.43593105466033
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 494.6241598645409,
+      "cost": 5.492157870293056
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 493.21766660937743,
+      "cost": 4.085664615129588
+     },
+     {
+      "position": 149,
+      "skill": 8,
+      "scoreIfCorrect": 491.6807199301944,
+      "cost": 2.54871793594657
+     },
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 491.59665816329107,
+      "cost": 2.4646561690432236
+     },
+     {
+      "position": 177,
+      "skill": 12,
+      "scoreIfCorrect": 489.843967594626,
+      "cost": 0.7119656003781643
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 489.3470408999559,
+      "cost": 0.21503890570807016
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 40% de acerto, repeticao 2",
+   "answers": "CCDCAACADCBACBDDEBCBABDCABAABBBEBBBEEAACDCEAA",
+   "expected": {
+    "score": 552.3389323766555,
+    "error": 57.68145439371312,
+    "errorMap": [
+     {
+      "position": 147,
+      "skill": 24,
+      "scoreIfCorrect": 588.3577682144326,
+      "cost": 36.01883583777703
+     },
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 581.2223127511102,
+      "cost": 28.883380374454646
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 580.8911105902637,
+      "cost": 28.55217821360816
+     },
+     {
+      "position": 145,
+      "skill": 20,
+      "scoreIfCorrect": 579.9871271435422,
+      "cost": 27.648194766886718
+     },
+     {
+      "position": 163,
+      "skill": 25,
+      "scoreIfCorrect": 579.2123496209875,
+      "cost": 26.873417244332018
+     },
+     {
+      "position": 176,
+      "skill": 16,
+      "scoreIfCorrect": 576.4323259725012,
+      "cost": 24.09339359584567
+     },
+     {
+      "position": 161,
+      "skill": 6,
+      "scoreIfCorrect": 574.7292846379431,
+      "cost": 22.390352261287603
+     },
+     {
+      "position": 157,
+      "skill": 19,
+      "scoreIfCorrect": 571.698405906616,
+      "cost": 19.359473529960496
+     },
+     {
+      "position": 166,
+      "skill": 30,
+      "scoreIfCorrect": 569.1907571616812,
+      "cost": 16.851824785025656
+     },
+     {
+      "position": 159,
+      "skill": 12,
+      "scoreIfCorrect": 567.7113126145892,
+      "cost": 15.372380237933726
+     },
+     {
+      "position": 164,
+      "skill": 8,
+      "scoreIfCorrect": 565.411368128016,
+      "cost": 13.072435751360445
+     },
+     {
+      "position": 138,
+      "skill": 6,
+      "scoreIfCorrect": 564.5728649690448,
+      "cost": 12.233932592389237
+     },
+     {
+      "position": 165,
+      "skill": 29,
+      "scoreIfCorrect": 562.711781917938,
+      "cost": 10.372849541282449
+     },
+     {
+      "position": 137,
+      "skill": 28,
+      "scoreIfCorrect": 562.5230008569004,
+      "cost": 10.184068480244832
+     },
+     {
+      "position": 141,
+      "skill": 5,
+      "scoreIfCorrect": 561.7708542254901,
+      "cost": 9.431921848834577
+     },
+     {
+      "position": 169,
+      "skill": 15,
+      "scoreIfCorrect": 561.710712560829,
+      "cost": 9.37178018417353
+     },
+     {
+      "position": 158,
+      "skill": 18,
+      "scoreIfCorrect": 561.6013208651186,
+      "cost": 9.262388488463102
+     },
+     {
+      "position": 152,
+      "skill": 28,
+      "scoreIfCorrect": 559.2454318772257,
+      "cost": 6.906499500570135
+     },
+     {
+      "position": 167,
+      "skill": 25,
+      "scoreIfCorrect": 557.1464266675305,
+      "cost": 4.807494290874956
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 556.7036092384931,
+      "cost": 4.364676861837552
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 556.4882411013542,
+      "cost": 4.149308724698699
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 556.0331189415646,
+      "cost": 3.694186564909046
+     },
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 554.9230493527189,
+      "cost": 2.584116976063342
+     },
+     {
+      "position": 177,
+      "skill": 12,
+      "scoreIfCorrect": 553.2055502237486,
+      "cost": 0.866617847093039
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 552.6206249042118,
+      "cost": 0.28169252755628804
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 50% de acerto, repeticao 1",
+   "answers": "CAEBECDDDDBEEBDDDADBACCACABEADEBCACEACACCBDAA",
+   "expected": {
+    "score": 697.0054136726615,
+    "error": 39.42274987957151,
+    "errorMap": [
+     {
+      "position": 167,
+      "skill": 25,
+      "scoreIfCorrect": 727.725140141288,
+      "cost": 30.719726468626504
+     },
+     {
+      "position": 137,
+      "skill": 28,
+      "scoreIfCorrect": 724.1372144913521,
+      "cost": 27.131800818690635
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 720.8080204625699,
+      "cost": 23.802606789908396
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 716.2100025949369,
+      "cost": 19.204588922275434
+     },
+     {
+      "position": 163,
+      "skill": 25,
+      "scoreIfCorrect": 713.4523480926166,
+      "cost": 16.44693441995514
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 712.8105468513982,
+      "cost": 15.805133178736696
+     },
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 712.6083361133549,
+      "cost": 15.602922440693419
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 712.4813803828832,
+      "cost": 15.475966710221769
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 712.3692754158071,
+      "cost": 15.363861743145662
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 710.9486673028994,
+      "cost": 13.943253630237905
+     },
+     {
+      "position": 173,
+      "skill": 13,
+      "scoreIfCorrect": 710.6072187686673,
+      "cost": 13.601805096005819
+     },
+     {
+      "position": 159,
+      "skill": 12,
+      "scoreIfCorrect": 710.347918152795,
+      "cost": 13.342504480133584
+     },
+     {
+      "position": 143,
+      "skill": 17,
+      "scoreIfCorrect": 709.5994334543592,
+      "cost": 12.594019781697739
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 708.3178987895956,
+      "cost": 11.312485116934113
+     },
+     {
+      "position": 139,
+      "skill": 9,
+      "scoreIfCorrect": 702.1472150222759,
+      "cost": 5.141801349614411
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 701.2907474862527,
+      "cost": 4.285333813591251
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 50% de acerto, repeticao 2",
+   "answers": "CCECECCADDBECCCDDEDDEDCDEEBBCBEDAAEECABCCBABB",
+   "expected": {
+    "score": 717.9526214599578,
+    "error": 35.68100792919939,
+    "errorMap": [
+     {
+      "position": 137,
+      "skill": 28,
+      "scoreIfCorrect": 742.7038740582566,
+      "cost": 24.751252598298834
+     },
+     {
+      "position": 157,
+      "skill": 19,
+      "scoreIfCorrect": 740.7059462093166,
+      "cost": 22.753324749358853
+     },
+     {
+      "position": 161,
+      "skill": 6,
+      "scoreIfCorrect": 735.2121786445986,
+      "cost": 17.259557184640812
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 733.9555273230609,
+      "cost": 16.002905863103138
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 733.4767786859943,
+      "cost": 15.52415722603655
+     },
+     {
+      "position": 179,
+      "skill": 10,
+      "scoreIfCorrect": 732.6018637703215,
+      "cost": 14.649242310363775
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 731.3649693314849,
+      "cost": 13.412347871527118
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 731.2833462683061,
+      "cost": 13.33072480834835
+     },
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 731.1220738038486,
+      "cost": 13.169452343890839
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 729.9150163639389,
+      "cost": 11.962394903981135
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 728.7897874306601,
+      "cost": 10.837165970702358
+     },
+     {
+      "position": 149,
+      "skill": 8,
+      "scoreIfCorrect": 728.7595733016584,
+      "cost": 10.806951841700652
+     },
+     {
+      "position": 165,
+      "skill": 29,
+      "scoreIfCorrect": 726.7402664022309,
+      "cost": 8.787644942273118
+     },
+     {
+      "position": 164,
+      "skill": 8,
+      "scoreIfCorrect": 726.5388152840404,
+      "cost": 8.58619382408267
+     },
+     {
+      "position": 155,
+      "skill": 2,
+      "scoreIfCorrect": 725.340610510271,
+      "cost": 7.387989050313195
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 60% de acerto, repeticao 1",
+   "answers": "ABACBCDBADEBCDEBDDCAACCDDABBADBDEABEBAACCBCAC",
+   "expected": {
+    "score": 680.5443000522466,
+    "error": 46.5524431853607,
+    "errorMap": [
+     {
+      "position": 147,
+      "skill": 24,
+      "scoreIfCorrect": 711.8586332183313,
+      "cost": 31.31433316608468
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 709.5794600868682,
+      "cost": 29.035160034621526
+     },
+     {
+      "position": 166,
+      "skill": 30,
+      "scoreIfCorrect": 709.0639982986683,
+      "cost": 28.519698246421626
+     },
+     {
+      "position": 136,
+      "skill": 4,
+      "scoreIfCorrect": 704.6151652302897,
+      "cost": 24.07086517804305
+     },
+     {
+      "position": 138,
+      "skill": 6,
+      "scoreIfCorrect": 702.7675662508611,
+      "cost": 22.22326619861451
+     },
+     {
+      "position": 151,
+      "skill": 1,
+      "scoreIfCorrect": 702.1319179378982,
+      "cost": 21.587617885651525
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 701.9818928932809,
+      "cost": 21.437592841034302
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 699.9683424113036,
+      "cost": 19.42404235905701
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 697.8656863874959,
+      "cost": 17.321386335249258
+     },
+     {
+      "position": 146,
+      "skill": 3,
+      "scoreIfCorrect": 696.9823203297159,
+      "cost": 16.438020277469263
+     },
+     {
+      "position": 143,
+      "skill": 17,
+      "scoreIfCorrect": 696.796479928792,
+      "cost": 16.25217987654537
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 693.7495799708838,
+      "cost": 13.205279918637189
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 693.4866890776752,
+      "cost": 12.94238902542861
+     },
+     {
+      "position": 149,
+      "skill": 8,
+      "scoreIfCorrect": 691.8200006653897,
+      "cost": 11.275700613143044
+     },
+     {
+      "position": 155,
+      "skill": 2,
+      "scoreIfCorrect": 691.6480883094922,
+      "cost": 11.103788257245583
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 689.4403093751021,
+      "cost": 8.896009322855434
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 685.855720996461,
+      "cost": 5.311420944214319
+     },
+     {
+      "position": 140,
+      "skill": 18,
+      "scoreIfCorrect": 684.8120420847798,
+      "cost": 4.267742032533192
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 60% de acerto, repeticao 2",
+   "answers": "EDECECCADEBEDDDCDBACCCCDACBDEDECEBCEDAACABEAB",
+   "expected": {
+    "score": 615.529899180812,
+    "error": 62.09924660033668,
+    "errorMap": [
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 656.346822604761,
+      "cost": 40.81692342394899
+     },
+     {
+      "position": 136,
+      "skill": 4,
+      "scoreIfCorrect": 651.603046883146,
+      "cost": 36.07314770233404
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 650.5498181561752,
+      "cost": 35.019918975363225
+     },
+     {
+      "position": 151,
+      "skill": 1,
+      "scoreIfCorrect": 649.3241414962806,
+      "cost": 33.79424231546864
+     },
+     {
+      "position": 161,
+      "skill": 6,
+      "scoreIfCorrect": 649.0174688300115,
+      "cost": 33.487569649199486
+     },
+     {
+      "position": 163,
+      "skill": 25,
+      "scoreIfCorrect": 647.7306442837504,
+      "cost": 32.20074510293841
+     },
+     {
+      "position": 176,
+      "skill": 16,
+      "scoreIfCorrect": 647.2629075748707,
+      "cost": 31.733008394058743
+     },
+     {
+      "position": 145,
+      "skill": 20,
+      "scoreIfCorrect": 647.2277836198525,
+      "cost": 31.697884439040536
+     },
+     {
+      "position": 137,
+      "skill": 28,
+      "scoreIfCorrect": 646.2424438081459,
+      "cost": 30.712544627333955
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 643.7418957058987,
+      "cost": 28.21199652508676
+     },
+     {
+      "position": 167,
+      "skill": 25,
+      "scoreIfCorrect": 640.1899368997003,
+      "cost": 24.66003771888836
+     },
+     {
+      "position": 169,
+      "skill": 15,
+      "scoreIfCorrect": 636.3777382625681,
+      "cost": 20.847839081756092
+     },
+     {
+      "position": 164,
+      "skill": 8,
+      "scoreIfCorrect": 633.5912887618194,
+      "cost": 18.06138958100746
+     },
+     {
+      "position": 155,
+      "skill": 2,
+      "scoreIfCorrect": 632.0080628982951,
+      "cost": 16.478163717483085
+     },
+     {
+      "position": 170,
+      "skill": 14,
+      "scoreIfCorrect": 629.6277019834346,
+      "cost": 14.097802802622596
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 629.3557323714398,
+      "cost": 13.825833190627804
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 626.2052395593589,
+      "cost": 10.675340378546935
+     },
+     {
+      "position": 149,
+      "skill": 8,
+      "scoreIfCorrect": 623.8553030272261,
+      "cost": 8.325403846414133
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 622.1422750349839,
+      "cost": 6.612375854171887
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 70% de acerto, repeticao 1",
+   "answers": "CBEDECCAACBACAADEECBECCEEABBADEDEBBEAAACCBAAD",
+   "expected": {
+    "score": 786.6981824756688,
+    "error": 31.684815694394295,
+    "errorMap": [
+     {
+      "position": 147,
+      "skill": 24,
+      "scoreIfCorrect": 805.6092396507938,
+      "cost": 18.911057175125052
+     },
+     {
+      "position": 169,
+      "skill": 15,
+      "scoreIfCorrect": 801.8148169651686,
+      "cost": 15.116634489499802
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 801.5092566507217,
+      "cost": 14.811074175052909
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 800.8832964385549,
+      "cost": 14.185113962886135
+     },
+     {
+      "position": 149,
+      "skill": 8,
+      "scoreIfCorrect": 800.6504496544696,
+      "cost": 13.952267178800867
+     },
+     {
+      "position": 152,
+      "skill": 28,
+      "scoreIfCorrect": 800.1410109078188,
+      "cost": 13.442828432150009
+     },
+     {
+      "position": 178,
+      "skill": 29,
+      "scoreIfCorrect": 798.6523162354575,
+      "cost": 11.95413375978876
+     },
+     {
+      "position": 145,
+      "skill": 20,
+      "scoreIfCorrect": 797.6884978449722,
+      "cost": 10.990315369303403
+     },
+     {
+      "position": 159,
+      "skill": 12,
+      "scoreIfCorrect": 797.0828928091516,
+      "cost": 10.384710333482872
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 794.3331174559762,
+      "cost": 7.634934980307435
+     },
+     {
+      "position": 139,
+      "skill": 9,
+      "scoreIfCorrect": 791.520900529117,
+      "cost": 4.82271805344817
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 70% de acerto, repeticao 2",
+   "answers": "CBECEDAAEBBEDBBBDDCACCCDEABBADADEABEAAACCBEAD",
+   "expected": {
+    "score": 780.1682937754526,
+    "error": 34.60028602469079,
+    "errorMap": [
+     {
+      "position": 166,
+      "skill": 30,
+      "scoreIfCorrect": 802.4635403547182,
+      "cost": 22.29524657926561
+     },
+     {
+      "position": 156,
+      "skill": 11,
+      "scoreIfCorrect": 800.8341342681722,
+      "cost": 20.665840492719553
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 797.3383265225154,
+      "cost": 17.170032747062805
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 796.6127889012992,
+      "cost": 16.444495125846515
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 796.3828165555665,
+      "cost": 16.21452278011384
+     },
+     {
+      "position": 151,
+      "skill": 1,
+      "scoreIfCorrect": 794.1941689759476,
+      "cost": 14.025875200494966
+     },
+     {
+      "position": 141,
+      "skill": 5,
+      "scoreIfCorrect": 793.4977750928513,
+      "cost": 13.329481317398631
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 793.3475000673984,
+      "cost": 13.179206291945775
+     },
+     {
+      "position": 145,
+      "skill": 20,
+      "scoreIfCorrect": 793.0425902992533,
+      "cost": 12.874296523800695
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 788.9570265795005,
+      "cost": 8.788732804047868
+     },
+     {
+      "position": 155,
+      "skill": 2,
+      "scoreIfCorrect": 787.7125224036877,
+      "cost": 7.544228628235032
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 80% de acerto, repeticao 1",
+   "answers": "CBECECCCDDBECBDDDACBECCDDABBADEBEABEAAACCBEAB",
+   "expected": {
+    "score": 874.1757036743782,
+    "error": 34.951994557685076,
+    "errorMap": [
+     {
+      "position": 167,
+      "skill": 25,
+      "scoreIfCorrect": 914.7924560372344,
+      "cost": 40.61675236285623
+     },
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 899.4492868781015,
+      "cost": 25.27358320372332
+     },
+     {
+      "position": 143,
+      "skill": 17,
+      "scoreIfCorrect": 885.6663550537651,
+      "cost": 11.490651379386918
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 880.4880415763064,
+      "cost": 6.312337901928231
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 80% de acerto, repeticao 2",
+   "answers": "CBECECBADDCECBADDEBBECCDCDBBEDEDBABEAAAACBEAC",
+   "expected": {
+    "score": 799.4288471376767,
+    "error": 32.37903743660279,
+    "errorMap": [
+     {
+      "position": 180,
+      "skill": 2,
+      "scoreIfCorrect": 817.9896229763958,
+      "cost": 18.56077583871911
+     },
+     {
+      "position": 161,
+      "skill": 6,
+      "scoreIfCorrect": 815.2342682509849,
+      "cost": 15.80542111330817
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 815.0627142190242,
+      "cost": 15.63386708134749
+     },
+     {
+      "position": 153,
+      "skill": 22,
+      "scoreIfCorrect": 814.8256303834193,
+      "cost": 15.39678324574254
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 811.4858350200037,
+      "cost": 12.056987882327007
+     },
+     {
+      "position": 142,
+      "skill": 27,
+      "scoreIfCorrect": 811.2553010651227,
+      "cost": 11.826453927445982
+     },
+     {
+      "position": 168,
+      "skill": 4,
+      "scoreIfCorrect": 810.7822767414467,
+      "cost": 11.353429603769996
+     },
+     {
+      "position": 146,
+      "skill": 3,
+      "scoreIfCorrect": 809.1463340319419,
+      "cost": 9.717486894265221
+     },
+     {
+      "position": 175,
+      "skill": 3,
+      "scoreIfCorrect": 808.0237276220853,
+      "cost": 8.594880484408577
+     },
+     {
+      "position": 164,
+      "skill": 8,
+      "scoreIfCorrect": 807.4488218289479,
+      "cost": 8.019974691271159
+     },
+     {
+      "position": 160,
+      "skill": 19,
+      "scoreIfCorrect": 803.7928588785126,
+      "cost": 4.364011740835849
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 90% de acerto, repeticao 1",
+   "answers": "CBECECCADDBECBDDDACEEECDEABBADEDEABEAAACCBEAD",
+   "expected": {
+    "score": 925.397711143957,
+    "error": 41.7889793767187,
+    "errorMap": [
+     {
+      "position": 157,
+      "skill": 19,
+      "scoreIfCorrect": 969.2195910074169,
+      "cost": 43.8218798634598
+     },
+     {
+      "position": 155,
+      "skill": 2,
+      "scoreIfCorrect": 938.2383925844675,
+      "cost": 12.84068144051048
+     }
+    ]
+   }
+  },
+  {
+   "name": "sorteio 90% de acerto, repeticao 2",
+   "answers": "CBECECCACDBEBBEDEABBECCDEAABADEDEABEABBCCBEED",
+   "expected": {
+    "score": 824.0080212236867,
+    "error": 32.35326494643173,
+    "errorMap": [
+     {
+      "position": 162,
+      "skill": 23,
+      "scoreIfCorrect": 840.8857711757178,
+      "cost": 16.87774995203108
+     },
+     {
+      "position": 150,
+      "skill": 16,
+      "scoreIfCorrect": 840.1124220260401,
+      "cost": 16.10440080235344
+     },
+     {
+      "position": 152,
+      "skill": 28,
+      "scoreIfCorrect": 839.122371685083,
+      "cost": 15.11435046139627
+     },
+     {
+      "position": 148,
+      "skill": 11,
+      "scoreIfCorrect": 839.0417787145784,
+      "cost": 15.03375749089173
+     },
+     {
+      "position": 173,
+      "skill": 13,
+      "scoreIfCorrect": 838.1346922603248,
+      "cost": 14.126671036638072
+     },
+     {
+      "position": 179,
+      "skill": 10,
+      "scoreIfCorrect": 837.0451023223884,
+      "cost": 13.03708109870172
+     },
+     {
+      "position": 154,
+      "skill": 26,
+      "scoreIfCorrect": 836.2865712616202,
+      "cost": 12.278550037933542
+     },
+     {
+      "position": 144,
+      "skill": 7,
+      "scoreIfCorrect": 832.9422170544577,
+      "cost": 8.934195830771046
+     }
+    ]
+   }
+  }
+ ]
+}

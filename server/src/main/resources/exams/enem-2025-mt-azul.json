@@ -1,0 +1,461 @@
+{
+ "source": "INEP, microdados do ENEM 2025, arquivo DADOS/ITENS_PROVA_2025.csv",
+ "sourceUrl": "https://download.inep.gov.br/microdados/microdados_enem_2025.zip",
+ "retrievedOn": "2026-11-09",
+ "edition": 2025,
+ "area": "MT",
+ "color": "AZUL",
+ "examCode": 1471,
+ "items": [
+  {
+   "position": 136,
+   "itemCode": 60344,
+   "answerKey": "C",
+   "skill": 4,
+   "annulled": false,
+   "a": 1.84431,
+   "b": 0.87782,
+   "c": 0.13438
+  },
+  {
+   "position": 137,
+   "itemCode": 96778,
+   "answerKey": "B",
+   "skill": 28,
+   "annulled": false,
+   "a": 3.12993,
+   "b": 1.8995,
+   "c": 0.08299
+  },
+  {
+   "position": 138,
+   "itemCode": 125905,
+   "answerKey": "E",
+   "skill": 6,
+   "annulled": false,
+   "a": 2.19978,
+   "b": 1.77865,
+   "c": 0.17051
+  },
+  {
+   "position": 139,
+   "itemCode": 86942,
+   "answerKey": "C",
+   "skill": 9,
+   "annulled": false,
+   "a": 1.01265,
+   "b": 2.90829,
+   "c": 0.31125
+  },
+  {
+   "position": 140,
+   "itemCode": 141568,
+   "answerKey": "E",
+   "skill": 18,
+   "annulled": false,
+   "a": 3.46557,
+   "b": 2.92476,
+   "c": 0.07945
+  },
+  {
+   "position": 141,
+   "itemCode": 63293,
+   "answerKey": "C",
+   "skill": 5,
+   "annulled": false,
+   "a": 1.7134,
+   "b": 1.91607,
+   "c": 0.24889
+  },
+  {
+   "position": 142,
+   "itemCode": 38222,
+   "answerKey": "C",
+   "skill": 27,
+   "annulled": false,
+   "a": 1.5176,
+   "b": 0.98928,
+   "c": 0.20278
+  },
+  {
+   "position": 143,
+   "itemCode": 95625,
+   "answerKey": "A",
+   "skill": 17,
+   "annulled": false,
+   "a": 1.20166,
+   "b": 0.77428,
+   "c": 0.16195
+  },
+  {
+   "position": 144,
+   "itemCode": 49136,
+   "answerKey": "D",
+   "skill": 7,
+   "annulled": false,
+   "a": 1.41236,
+   "b": 2.97953,
+   "c": 0.14906
+  },
+  {
+   "position": 145,
+   "itemCode": 117764,
+   "answerKey": "D",
+   "skill": 20,
+   "annulled": false,
+   "a": 1.4441,
+   "b": -0.18872,
+   "c": 0.19786
+  },
+  {
+   "position": 146,
+   "itemCode": 153134,
+   "answerKey": "B",
+   "skill": 3,
+   "annulled": false,
+   "a": 1.25353,
+   "b": 0.84993,
+   "c": 0.21314
+  },
+  {
+   "position": 147,
+   "itemCode": 50210,
+   "answerKey": "E",
+   "skill": 24,
+   "annulled": false,
+   "a": 2.4952,
+   "b": 0.97163,
+   "c": 0.106
+  },
+  {
+   "position": 148,
+   "itemCode": 125926,
+   "answerKey": "C",
+   "skill": 11,
+   "annulled": false,
+   "a": 1.87604,
+   "b": 1.07428,
+   "c": 0.14024
+  },
+  {
+   "position": 149,
+   "itemCode": 16540,
+   "answerKey": "B",
+   "skill": 8,
+   "annulled": false,
+   "a": 2.35807,
+   "b": 2.35402,
+   "c": 0.24099
+  },
+  {
+   "position": 150,
+   "itemCode": 31953,
+   "answerKey": "D",
+   "skill": 16,
+   "annulled": false,
+   "a": 2.05503,
+   "b": 1.52998,
+   "c": 0.26701
+  },
+  {
+   "position": 151,
+   "itemCode": 96979,
+   "answerKey": "D",
+   "skill": 1,
+   "annulled": false,
+   "a": 1.5765,
+   "b": 0.09067,
+   "c": 0.17135
+  },
+  {
+   "position": 152,
+   "itemCode": 16995,
+   "answerKey": "D",
+   "skill": 28,
+   "annulled": false,
+   "a": 2.02208,
+   "b": 2.22726,
+   "c": 0.16081
+  },
+  {
+   "position": 153,
+   "itemCode": 88952,
+   "answerKey": "A",
+   "skill": 22,
+   "annulled": false,
+   "a": 2.27648,
+   "b": 2.43408,
+   "c": 0.15585
+  },
+  {
+   "position": 154,
+   "itemCode": 83162,
+   "answerKey": "C",
+   "skill": 26,
+   "annulled": false,
+   "a": 1.55368,
+   "b": 1.18413,
+   "c": 0.18289
+  },
+  {
+   "position": 155,
+   "itemCode": 84096,
+   "answerKey": "B",
+   "skill": 2,
+   "annulled": false,
+   "a": 0.94228,
+   "b": 2.28567,
+   "c": 0.11961
+  },
+  {
+   "position": 156,
+   "itemCode": 15396,
+   "answerKey": "E",
+   "skill": 11,
+   "annulled": false,
+   "a": 2.36212,
+   "b": 1.38945,
+   "c": 0.08082
+  },
+  {
+   "position": 157,
+   "itemCode": 117625,
+   "answerKey": "C",
+   "skill": 19,
+   "annulled": false,
+   "a": 2.7122,
+   "b": 1.24373,
+   "c": 0.27269
+  },
+  {
+   "position": 158,
+   "itemCode": 117856,
+   "answerKey": "C",
+   "skill": 18,
+   "annulled": false,
+   "a": 2.16927,
+   "b": 1.82953,
+   "c": 0.22624
+  },
+  {
+   "position": 159,
+   "itemCode": 41895,
+   "answerKey": "D",
+   "skill": 12,
+   "annulled": false,
+   "a": 1.45957,
+   "b": 1.3946,
+   "c": 0.2655
+  },
+  {
+   "position": 160,
+   "itemCode": 95816,
+   "answerKey": "E",
+   "skill": 19,
+   "annulled": false,
+   "a": 0.9255,
+   "b": 4.23744,
+   "c": 0.12086
+  },
+  {
+   "position": 161,
+   "itemCode": 141518,
+   "answerKey": "A",
+   "skill": 6,
+   "annulled": false,
+   "a": 2.02129,
+   "b": 1.26856,
+   "c": 0.1775
+  },
+  {
+   "position": 162,
+   "itemCode": 83575,
+   "answerKey": "B",
+   "skill": 23,
+   "annulled": false,
+   "a": 2.38253,
+   "b": 2.46253,
+   "c": 0.18571
+  },
+  {
+   "position": 163,
+   "itemCode": 96852,
+   "answerKey": "B",
+   "skill": 25,
+   "annulled": false,
+   "a": 1.55357,
+   "b": 0.3164,
+   "c": 0.23751
+  },
+  {
+   "position": 164,
+   "itemCode": 28216,
+   "answerKey": "A",
+   "skill": 8,
+   "annulled": false,
+   "a": 1.10653,
+   "b": 1.83497,
+   "c": 0.18515
+  },
+  {
+   "position": 165,
+   "itemCode": 49227,
+   "answerKey": "D",
+   "skill": 29,
+   "annulled": false,
+   "a": 1.25608,
+   "b": 1.96379,
+   "c": 0.24858
+  },
+  {
+   "position": 166,
+   "itemCode": 63713,
+   "answerKey": "E",
+   "skill": 30,
+   "annulled": false,
+   "a": 2.59281,
+   "b": 1.73411,
+   "c": 0.09568
+  },
+  {
+   "position": 167,
+   "itemCode": 44306,
+   "answerKey": "D",
+   "skill": 25,
+   "annulled": false,
+   "a": 3.86308,
+   "b": 1.72136,
+   "c": 0.21606
+  },
+  {
+   "position": 168,
+   "itemCode": 63313,
+   "answerKey": "E",
+   "skill": 4,
+   "annulled": false,
+   "a": 1.42101,
+   "b": 0.31713,
+   "c": 0.01503
+  },
+  {
+   "position": 169,
+   "itemCode": 111771,
+   "answerKey": "A",
+   "skill": 15,
+   "annulled": false,
+   "a": 2.15434,
+   "b": 2.18988,
+   "c": 0.10351
+  },
+  {
+   "position": 170,
+   "itemCode": 111673,
+   "answerKey": "B",
+   "skill": 14,
+   "annulled": false,
+   "a": 2.2167,
+   "b": 2.02265,
+   "c": 0.27721
+  },
+  {
+   "position": 171,
+   "itemCode": 141562,
+   "answerKey": "E",
+   "skill": 9,
+   "annulled": false,
+   "a": 2.33222,
+   "b": 2.57378,
+   "c": 0.10579
+  },
+  {
+   "position": 172,
+   "itemCode": 97593,
+   "answerKey": "A",
+   "skill": 22,
+   "annulled": true,
+   "a": null,
+   "b": null,
+   "c": null
+  },
+  {
+   "position": 173,
+   "itemCode": 111422,
+   "answerKey": "A",
+   "skill": 13,
+   "annulled": false,
+   "a": 1.88957,
+   "b": 2.16503,
+   "c": 0.17038
+  },
+  {
+   "position": 174,
+   "itemCode": 31350,
+   "answerKey": "X",
+   "skill": 21,
+   "annulled": true,
+   "a": null,
+   "b": null,
+   "c": null
+  },
+  {
+   "position": 175,
+   "itemCode": 27847,
+   "answerKey": "C",
+   "skill": 3,
+   "annulled": false,
+   "a": 1.7861,
+   "b": 3.4637,
+   "c": 0.09228
+  },
+  {
+   "position": 176,
+   "itemCode": 28587,
+   "answerKey": "C",
+   "skill": 16,
+   "annulled": false,
+   "a": 1.69872,
+   "b": 1.05549,
+   "c": 0.16885
+  },
+  {
+   "position": 177,
+   "itemCode": 44510,
+   "answerKey": "B",
+   "skill": 12,
+   "annulled": false,
+   "a": 3.04149,
+   "b": 2.37391,
+   "c": 0.30057
+  },
+  {
+   "position": 178,
+   "itemCode": 8460,
+   "answerKey": "E",
+   "skill": 29,
+   "annulled": false,
+   "a": 1.92684,
+   "b": 2.8078,
+   "c": 0.08127
+  },
+  {
+   "position": 179,
+   "itemCode": 126023,
+   "answerKey": "A",
+   "skill": 10,
+   "annulled": false,
+   "a": 1.6235,
+   "b": 0.45598,
+   "c": 0.1784
+  },
+  {
+   "position": 180,
+   "itemCode": 84405,
+   "answerKey": "D",
+   "skill": 2,
+   "annulled": false,
+   "a": 2.5667,
+   "b": 2.27494,
+   "c": 0.13245
+  }
+ ]
+}
