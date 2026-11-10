@@ -1,0 +1,458 @@
+{
+  "year": 2024,
+  "knowledgeArea": "MATHEMATICS",
+  "bookletColor": "BLUE",
+  "totalQuestions": 45,
+  "items": [
+    {
+      "questionNumber": 136,
+      "correctAlternative": "B",
+      "discriminationA": 1.85,
+      "difficultyB": -1.20,
+      "guessingC": 0.18,
+      "topic": "Grandezas Proporcionais e Escalas",
+      "skillCode": "H1",
+      "skillDescription": "Reconhecer e aplicar grandezas direta ou inversamente proporcionais e leitura de escalas."
+    },
+    {
+      "questionNumber": 137,
+      "correctAlternative": "D",
+      "discriminationA": 2.10,
+      "difficultyB": -0.90,
+      "guessingC": 0.15,
+      "topic": "Estatística e Médias",
+      "skillCode": "H27",
+      "skillDescription": "Calcular e interpretar medidas de tendência central (média, mediana e moda) em conjuntos de dados."
+    },
+    {
+      "questionNumber": 138,
+      "correctAlternative": "A",
+      "discriminationA": 1.45,
+      "difficultyB": -1.50,
+      "guessingC": 0.20,
+      "topic": "Aritmética e Operações Básicas",
+      "skillCode": "H3",
+      "skillDescription": "Resolver problemas envolvendo operações elementares e conversão de unidades monetárias e de tempo."
+    },
+    {
+      "questionNumber": 139,
+      "correctAlternative": "C",
+      "discriminationA": 2.30,
+      "difficultyB": -0.40,
+      "guessingC": 0.16,
+      "topic": "Geometria Plana e Áreas",
+      "skillCode": "H8",
+      "skillDescription": "Calcular áreas de figuras poligonais e circulares em projetos e plantas baixas."
+    },
+    {
+      "questionNumber": 140,
+      "correctAlternative": "E",
+      "discriminationA": 1.90,
+      "difficultyB": -0.10,
+      "guessingC": 0.19,
+      "topic": "Função Afim e Gráficos",
+      "skillCode": "H19",
+      "skillDescription": "Modelar situações reais por meio de funções do primeiro grau e interpretar coeficientes angular e linear."
+    },
+    {
+      "questionNumber": 141,
+      "correctAlternative": "A",
+      "discriminationA": 2.40,
+      "difficultyB": 0.25,
+      "guessingC": 0.14,
+      "topic": "Geometria Espacial (Prismas e Cilindros)",
+      "skillCode": "H9",
+      "skillDescription": "Calcular volume e capacidade de reservatórios cilíndricos e prismáticos."
+    },
+    {
+      "questionNumber": 142,
+      "correctAlternative": "C",
+      "discriminationA": 1.60,
+      "difficultyB": -0.75,
+      "guessingC": 0.20,
+      "topic": "Porcentagem e Matemática Financeira",
+      "skillCode": "H4",
+      "skillDescription": "Calcular acréscimos, descontos sucessivos e juros simples aplicados ao comércio."
+    },
+    {
+      "questionNumber": 143,
+      "correctAlternative": "B",
+      "discriminationA": 2.20,
+      "difficultyB": 0.50,
+      "guessingC": 0.17,
+      "topic": "Probabilidade Simples e Condicional",
+      "skillCode": "H28",
+      "skillDescription": "Avaliar chances de ocorrência de eventos em espaços amostrais finitos e equiprováveis."
+    },
+    {
+      "questionNumber": 144,
+      "correctAlternative": "D",
+      "discriminationA": 1.70,
+      "difficultyB": 0.10,
+      "guessingC": 0.18,
+      "topic": "Função Quadrática e Vértice da Parábola",
+      "skillCode": "H20",
+      "skillDescription": "Determinar pontos de máximo ou mínimo em trajetórias e lucros modelados por funções quadráticas."
+    },
+    {
+      "questionNumber": 145,
+      "correctAlternative": "E",
+      "discriminationA": 2.05,
+      "difficultyB": 0.65,
+      "guessingC": 0.15,
+      "topic": "Geometria Espacial (Cones e Esferas)",
+      "skillCode": "H9",
+      "skillDescription": "Resolver problemas envolvendo áreas e volumes de sólidos de revolução."
+    },
+    {
+      "questionNumber": 146,
+      "correctAlternative": "B",
+      "discriminationA": 1.95,
+      "difficultyB": -0.60,
+      "guessingC": 0.18,
+      "topic": "Grandezas Proporcionais e Escalas",
+      "skillCode": "H1",
+      "skillDescription": "Interpretar razões, proporções e mapas em diferentes escalas lineares e de área."
+    },
+    {
+      "questionNumber": 147,
+      "correctAlternative": "A",
+      "discriminationA": 1.50,
+      "difficultyB": -1.10,
+      "guessingC": 0.22,
+      "topic": "Estatística e Médias",
+      "skillCode": "H27",
+      "skillDescription": "Interpretar gráficos de barras, setores e dispersão com cálculo de média aritmética ponderada."
+    },
+    {
+      "questionNumber": 148,
+      "correctAlternative": "C",
+      "discriminationA": 2.50,
+      "difficultyB": 0.85,
+      "guessingC": 0.13,
+      "topic": "Análise Combinatória (Princípio Multiplicativo e Combinações)",
+      "skillCode": "H2",
+      "skillDescription": "Contar agrupamentos ordenados e não ordenados em problemas de formação de equipes e senhas."
+    },
+    {
+      "questionNumber": 149,
+      "correctAlternative": "D",
+      "discriminationA": 1.80,
+      "difficultyB": 0.30,
+      "guessingC": 0.16,
+      "topic": "Trigonometria no Triângulo Retângulo",
+      "skillCode": "H7",
+      "skillDescription": "Aplicar relações seno, cosseno e tangente na determinação de alturas e distâncias inacessíveis."
+    },
+    {
+      "questionNumber": 150,
+      "correctAlternative": "E",
+      "discriminationA": 2.15,
+      "difficultyB": 1.20,
+      "guessingC": 0.15,
+      "topic": "Função Exponencial e Logaritmos",
+      "skillCode": "H21",
+      "skillDescription": "Modelar crescimento populacional, meia-vida radioativa e escalas logarítmicas (Richter/pH)."
+    },
+    {
+      "questionNumber": 151,
+      "correctAlternative": "A",
+      "discriminationA": 1.65,
+      "difficultyB": -0.30,
+      "guessingC": 0.19,
+      "topic": "Geometria Plana e Teorema de Pitágoras",
+      "skillCode": "H6",
+      "skillDescription": "Calcular perímetros, diagonais e aplicar relações métricas em triângulos retângulos."
+    },
+    {
+      "questionNumber": 152,
+      "correctAlternative": "B",
+      "discriminationA": 2.35,
+      "difficultyB": 0.40,
+      "guessingC": 0.14,
+      "topic": "Porcentagem e Matemática Financeira",
+      "skillCode": "H4",
+      "skillDescription": "Comparar opções de financiamento, parcelamento com juros compostos e inflação."
+    },
+    {
+      "questionNumber": 153,
+      "correctAlternative": "C",
+      "discriminationA": 1.75,
+      "difficultyB": -0.80,
+      "guessingC": 0.18,
+      "topic": "Aritmética e Divisibilidade (MMC e MDC)",
+      "skillCode": "H3",
+      "skillDescription": "Resolver problemas de periodicidade, encontros e divisões em partes iguais usando MMC e MDC."
+    },
+    {
+      "questionNumber": 154,
+      "correctAlternative": "E",
+      "discriminationA": 2.60,
+      "difficultyB": 1.45,
+      "guessingC": 0.12,
+      "topic": "Geometria Espacial (Troncos e Inscrição de Sólidos)",
+      "skillCode": "H10",
+      "skillDescription": "Analisar relações métricas em troncos de pirâmides e sólidos compostos."
+    },
+    {
+      "questionNumber": 155,
+      "correctAlternative": "D",
+      "discriminationA": 1.90,
+      "difficultyB": 0.05,
+      "guessingC": 0.17,
+      "topic": "Sistemas Lineares e Equações",
+      "skillCode": "H18",
+      "skillDescription": "Formular e resolver sistemas lineares de 2 equações e 2 incógnitas aplicados a compras e misturas."
+    },
+    {
+      "questionNumber": 156,
+      "correctAlternative": "A",
+      "discriminationA": 1.40,
+      "difficultyB": -1.35,
+      "guessingC": 0.20,
+      "topic": "Leitura e Interpretação de Gráficos e Tabelas",
+      "skillCode": "H25",
+      "skillDescription": "Extrair informações diretas de infográficos e tabelas de dupla entrada."
+    },
+    {
+      "questionNumber": 157,
+      "correctAlternative": "C",
+      "discriminationA": 2.25,
+      "difficultyB": 0.70,
+      "guessingC": 0.16,
+      "topic": "Probabilidade da União e Condicional",
+      "skillCode": "H29",
+      "skillDescription": "Calcular probabilidades de eventos dependentes e mutuamente exclusivos."
+    },
+    {
+      "questionNumber": 158,
+      "correctAlternative": "B",
+      "discriminationA": 1.80,
+      "difficultyB": -0.20,
+      "guessingC": 0.18,
+      "topic": "Progressão Aritmética (PA)",
+      "skillCode": "H15",
+      "skillDescription": "Calcular termo geral e soma dos termos de uma PA em sequências numéricas e padrões geométricos."
+    },
+    {
+      "questionNumber": 159,
+      "correctAlternative": "E",
+      "discriminationA": 2.40,
+      "difficultyB": 1.10,
+      "guessingC": 0.13,
+      "topic": "Análise Combinatória (Arranjos e Permutações com Repetição)",
+      "skillCode": "H2",
+      "skillDescription": "Resolver problemas complexos de contagem com restrições e elementos repetidos."
+    },
+    {
+      "questionNumber": 160,
+      "correctAlternative": "D",
+      "discriminationA": 1.70,
+      "difficultyB": 0.20,
+      "guessingC": 0.17,
+      "topic": "Geometria Plana (Círculos e Setores Circulares)",
+      "skillCode": "H8",
+      "skillDescription": "Calcular comprimento de arcos e área de setores e coroas circulares."
+    },
+    {
+      "questionNumber": 161,
+      "correctAlternative": "A",
+      "discriminationA": 2.00,
+      "difficultyB": 0.55,
+      "guessingC": 0.15,
+      "topic": "Progressão Geométrica (PG)",
+      "skillCode": "H16",
+      "skillDescription": "Aplicar fórmula do termo geral e soma da PG infinita a problemas de decaimento e fractal."
+    },
+    {
+      "questionNumber": 162,
+      "correctAlternative": "C",
+      "discriminationA": 1.55,
+      "difficultyB": -0.95,
+      "guessingC": 0.19,
+      "topic": "Grandezas Proporcionais e Regra de Três Composta",
+      "skillCode": "H1",
+      "skillDescription": "Resolver problemas envolvendo produção, tempo e mão de obra com grandezas compostas."
+    },
+    {
+      "questionNumber": 163,
+      "correctAlternative": "B",
+      "discriminationA": 2.10,
+      "difficultyB": 0.80,
+      "guessingC": 0.14,
+      "topic": "Geometria Analítica (Equação da Reta e Distância entre Pontos)",
+      "skillCode": "H11",
+      "skillDescription": "Calcular distâncias e declividades no plano cartesiano para rotas e posicionamento GPS."
+    },
+    {
+      "questionNumber": 164,
+      "correctAlternative": "E",
+      "discriminationA": 1.65,
+      "difficultyB": -0.45,
+      "guessingC": 0.20,
+      "topic": "Estatística (Variância e Desvio Padrão)",
+      "skillCode": "H28",
+      "skillDescription": "Avaliar regularidade e dispersão de atletas e processos produtivos por meio do desvio padrão."
+    },
+    {
+      "questionNumber": 165,
+      "correctAlternative": "D",
+      "discriminationA": 2.50,
+      "difficultyB": 1.60,
+      "guessingC": 0.11,
+      "topic": "Funções Trigonométricas (Senoide e Periodicidade)",
+      "skillCode": "H22",
+      "skillDescription": "Interpretar ondas sonoras, marés e fenômenos periódicos modelados por funções senoidais."
+    },
+    {
+      "questionNumber": 166,
+      "correctAlternative": "A",
+      "discriminationA": 1.85,
+      "difficultyB": -0.05,
+      "guessingC": 0.16,
+      "topic": "Geometria Espacial (Projeção Ortogonal)",
+      "skillCode": "H7",
+      "skillDescription": "Identificar sombras e projeções ortogonais de trajetórias tridimensionais no plano."
+    },
+    {
+      "questionNumber": 167,
+      "correctAlternative": "C",
+      "discriminationA": 2.15,
+      "difficultyB": 0.95,
+      "guessingC": 0.15,
+      "topic": "Logaritmos e Propriedades Operatórias",
+      "skillCode": "H21",
+      "skillDescription": "Simplificar expressões e resolver equações logarítmicas usando mudança de base."
+    },
+    {
+      "questionNumber": 168,
+      "correctAlternative": "B",
+      "discriminationA": 1.90,
+      "difficultyB": 0.35,
+      "guessingC": 0.17,
+      "topic": "Matrizes e Operações em Grafos",
+      "skillCode": "H17",
+      "skillDescription": "Utilizar multiplicação de matrizes para contabilizar rotas e conexões de voos."
+    },
+    {
+      "questionNumber": 169,
+      "correctAlternative": "D",
+      "discriminationA": 1.50,
+      "difficultyB": -1.05,
+      "guessingC": 0.21,
+      "topic": "Unidades de Medida e Conversões (Volume e Massa)",
+      "skillCode": "H5",
+      "skillDescription": "Efetuar conversões entre litros, metros cúbicos, gramas e quilogramas em dosagens médicas."
+    },
+    {
+      "questionNumber": 170,
+      "correctAlternative": "A",
+      "discriminationA": 2.30,
+      "difficultyB": 1.30,
+      "guessingC": 0.13,
+      "topic": "Geometria Analítica (Circunferência no Plano)",
+      "skillCode": "H12",
+      "skillDescription": "Determinar posição relativa entre pontos, retas e áreas de cobertura de antenas circulares."
+    },
+    {
+      "questionNumber": 171,
+      "correctAlternative": "E",
+      "discriminationA": 1.75,
+      "difficultyB": 0.15,
+      "guessingC": 0.18,
+      "topic": "Polinômios e Equações Algébricas",
+      "skillCode": "H23",
+      "skillDescription": "Identificar raízes e comportamento gráfico de funções polinomiais."
+    },
+    {
+      "questionNumber": 172,
+      "correctAlternative": "C",
+      "discriminationA": 2.00,
+      "difficultyB": 0.60,
+      "guessingC": 0.15,
+      "topic": "Geometria Plana (Semelhança de Triângulos)",
+      "skillCode": "H6",
+      "skillDescription": "Aplicar o Teorema de Tales e proporções métricas para medir obstáculos naturais."
+    },
+    {
+      "questionNumber": 173,
+      "correctAlternative": "B",
+      "discriminationA": 1.60,
+      "difficultyB": -0.50,
+      "guessingC": 0.19,
+      "topic": "Média Harmônica e Geométrica",
+      "skillCode": "H27",
+      "skillDescription": "Calcular velocidade média e taxas médias de crescimento em intervalos sucessivos."
+    },
+    {
+      "questionNumber": 174,
+      "correctAlternative": "D",
+      "discriminationA": 2.70,
+      "difficultyB": 1.75,
+      "guessingC": 0.10,
+      "topic": "Probabilidade Condicional e Teorema de Bayes",
+      "skillCode": "H30",
+      "skillDescription": "Calcular falsos positivos e sensibilidade diagnóstica em testes laboratoriais."
+    },
+    {
+      "questionNumber": 175,
+      "correctAlternative": "A",
+      "discriminationA": 1.85,
+      "difficultyB": 0.45,
+      "guessingC": 0.16,
+      "topic": "Geometria Espacial (Volume de Pirâmides)",
+      "skillCode": "H9",
+      "skillDescription": "Calcular capacidade e quantidade de material em monumentos e telhados piramidais."
+    },
+    {
+      "questionNumber": 176,
+      "correctAlternative": "E",
+      "discriminationA": 1.45,
+      "difficultyB": -1.40,
+      "guessingC": 0.22,
+      "topic": "Aritmética e Razão Percentual",
+      "skillCode": "H3",
+      "skillDescription": "Calcular fração e porcentagem de acertos em eleições e pesquisas de opinião."
+    },
+    {
+      "questionNumber": 177,
+      "correctAlternative": "C",
+      "discriminationA": 2.20,
+      "difficultyB": 1.05,
+      "guessingC": 0.14,
+      "topic": "Trigonometria (Lei dos Senos e Cossenos)",
+      "skillCode": "H7",
+      "skillDescription": "Calcular distâncias e ângulos em triângulos quaisquer em projetos de topografia."
+    },
+    {
+      "questionNumber": 178,
+      "correctAlternative": "B",
+      "discriminationA": 1.95,
+      "difficultyB": 0.25,
+      "guessingC": 0.17,
+      "topic": "Geometria Plana (Áreas de Polígonos Regulares)",
+      "skillCode": "H8",
+      "skillDescription": "Calcular pavimentação e ladrilhamento com hexágonos e octógonos regulares."
+    },
+    {
+      "questionNumber": 179,
+      "correctAlternative": "D",
+      "discriminationA": 2.45,
+      "difficultyB": 1.50,
+      "guessingC": 0.12,
+      "topic": "Otimização e Máximos/Mínimos com Restrições",
+      "skillCode": "H24",
+      "skillDescription": "Determinar dimensões ótimas de caixas para minimizar desperdício de papelão."
+    },
+    {
+      "questionNumber": 180,
+      "correctAlternative": "A",
+      "discriminationA": 1.70,
+      "difficultyB": -0.15,
+      "guessingC": 0.18,
+      "topic": "Estatística (Mediana e Quartis)",
+      "skillCode": "H27",
+      "skillDescription": "Construir e interpretar boxplot e distribuição de salários por quartis."
+    }
+  ]
+}

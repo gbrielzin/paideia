@@ -1,0 +1,58 @@
+{
+  "year": 2024,
+  "knowledgeArea": "NATURAL_SCIENCES",
+  "bookletColor": "BLUE",
+  "totalQuestions": 45,
+  "items": [
+    {
+      "questionNumber": 91,
+      "correctAlternative": "C",
+      "discriminationA": 1.70,
+      "difficultyB": -0.80,
+      "guessingC": 0.20,
+      "topic": "Ecologia e Cadeias Alimentares",
+      "skillCode": "H14",
+      "skillDescription": "Identificar padrões em relações tróficas e fluxo de energia em ecossistemas."
+    },
+    {
+      "questionNumber": 92,
+      "correctAlternative": "A",
+      "discriminationA": 2.10,
+      "difficultyB": 0.20,
+      "guessingC": 0.17,
+      "topic": "Termologia e Calorimetria",
+      "skillCode": "H5",
+      "skillDescription": "Calcular trocas de calor, equilíbrio térmico e mudanças de fase."
+    },
+    {
+      "questionNumber": 93,
+      "correctAlternative": "E",
+      "discriminationA": 1.95,
+      "difficultyB": 0.60,
+      "guessingC": 0.16,
+      "topic": "Estequiometria e Rendimento",
+      "skillCode": "H17",
+      "skillDescription": "Calcular massas e volumes em reações químicas com reagente limitante."
+    },
+    {
+      "questionNumber": 94,
+      "correctAlternative": "B",
+      "discriminationA": 1.50,
+      "difficultyB": -1.20,
+      "guessingC": 0.22,
+      "topic": "Citologia e Membrana Plasmática",
+      "skillCode": "H13",
+      "skillDescription": "Reconhecer mecanismos de transporte celular (osmose e difusão)."
+    },
+    {
+      "questionNumber": 95,
+      "correctAlternative": "D",
+      "discriminationA": 2.30,
+      "difficultyB": 0.90,
+      "guessingC": 0.14,
+      "topic": "Eletrodinâmica e Circuitos Elétricos",
+      "skillCode": "H6",
+      "skillDescription": "Analisar associação de resistores e consumo de energia elétrica residencial."
+    }
+  ]
+}
