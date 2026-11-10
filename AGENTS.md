@@ -36,6 +36,7 @@ Cada regra diz o que fazer, por quê e como é conferida. Se uma regra atrapalha
 - `docs/referencias.md`: um arquivo só, uma linha por fonte (link, data, o que aprendemos).
 - `docs/metricas.md`: um arquivo só, uma linha por número medido (antes, depois, como medimos).
 - `docs/arquitetura.md`: um arquivo só, criado depois da call: diagrama, como funciona o fluxo e links para as decisões (stack e framework).
+- `docs/guia-uso-api.md`: Contém a tabela de endpoint possíveis e como usar cada endpoin, com status de sucesso, URIs e respotas/requisições em JSON de exemplo.
 - `scratch/fontes/`: material bruto de terceiros, **ignorado pelo git**.
 - **Front (React)** na raiz do repositório (`src/`, `public/`, `package.json` etc.). **Back-end Java/Spring** em `server/`. `data/` reservada para scripts de dados, se houver. Decisão: [`0002`](docs/decisions/0002-front-na-raiz-java-em-server.md).
 - **Este mapa é conferido por máquina:** `scripts/check-structure.sh` (rodado na CI) falha se existir algo fora dele. Ao criar algo novo, atualize o mapa e as listas do script no mesmo PR.
