@@ -1,3 +1,5 @@
+import Calculator from './Calculator'
+
 const LETTERS = ['A', 'B', 'C', 'D', 'E']
 
 type Row = { q: number; marked: number; wrong: boolean; rank?: string }
@@ -76,6 +78,9 @@ function App() {
               nota. O Paideia estima esse custo e mostra o que revisar primeiro.
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+              <a className="underline underline-offset-4 hover:text-pen" href="#calcular">
+                Calcular nota agora
+              </a>
               <a className="underline underline-offset-4 hover:text-pen" href="#video">
                 Vídeo de apresentação
               </a>
@@ -89,6 +94,8 @@ function App() {
           </div>
           <AnswerSheet />
         </section>
+
+        <Calculator />
 
         <section className="grid gap-8 md:grid-cols-[1fr_2fr]">
           <h2 className="font-serif text-2xl font-semibold">Para quem é</h2>
